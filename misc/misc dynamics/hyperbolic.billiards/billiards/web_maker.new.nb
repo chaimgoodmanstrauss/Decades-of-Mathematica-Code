@@ -1,0 +1,619 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='%s' *)
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       131,          6]
+NotebookDataLength[     17238,        613]
+NotebookOptionsPosition[     13868,        491]
+NotebookOutlinePosition[     14415,        516]
+CellTagsIndexPosition[     14372,        513]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+
+Cell["n[x_]:=N[x,10]", "Input",
+ InitializationCell->True],
+
+Cell[CellGroupData[{Cell["Hyperbolic stuff", "Subsubsection"],
+
+Cell[CellGroupData[{Cell["\<\
+Hyperbolic Geometry:
+We assume that VERTICAL GEODESICS will be present. This assumption will speed \
+computations.  In practice,  this will be true if none present initially.
+
+First 
+Given two points z=A+iC  and w=B+iD,    t + i0  is the center of the \
+hyperbolic line in
+the upper half plane model that runs between w and z;   R is the radius of \
+this line.
+More formally:\
+\>", "Text"],
+
+Cell["\<\
+Cent[{A_,C_},{B_,D_}]:=
+\tn[(A^2 - B^2 + C^2 - D^2)/(2*(A - B))]
+\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+Rad[{A_,C_},{B_,D_}]:=n[Abs[
+(\t(A^2-2*A*B+B^2+C^2-2*C*D+D^2)*
+ \t(A^2-2*A*B+B^2+C^2+2*C*D+D^2)\t)^(1/2)
+  /(2(-A + B))]]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+
+Use a mobius transformation
+line  zw, with rt hand end b=T+R and left hand end a=T-R  (thus azwb)
+to a->0, z->i , w->Phi[w,z] b->infinity
+
+Then take Phi^-1 of w^2.\
+\>", "Text"],
+
+Cell["phi[x_,Z_]:=(x+r-t)(Z-r-t)/(x-r-t)/(Z+r-t)", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+phiinv[x_,Z_]:=Block[{p1=n[phi[1,Z]],p0=n[phi[0,Z]],
+\tpi=n[(Z-r-t)/(Z+r-t)]},
+
+\t(p1-pi)(x-p0)/(p1-p0)/(x-pi)]
+
+\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+
+And so: we now give the eqn for the point   x  that lies on zw  d(z,w) beyond \
+w:
+
+z={A,C} \"=\" A+iC         w={B,D}
+\
+\>", "Text"],
+
+Cell["\<\
+NewPoint[{z_,w_}]:=Block[{A=z[[1]],B=w[[1]],
+\t\t\t\tC=z[[2]],D=w[[2]],
+\t\t\t\tr=Rad[w,z],t=Cent[w,z],Z=A+I*C},
+\t
+\tIf[B===A, n[{B,D^2/C}], 
+\t\tBlock[{NP=n[phiinv[n[phi[B+I*D,Z]^2],Z]]},
+\t\t\t{Re[NP],Im[NP]} ],{0} ]]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+\
+\>", "Input"]}, Open]]}, Open]],
+
+Cell[CellGroupData[{Cell["Polygons", "Subsubsection"],
+
+Cell[CellGroupData[{Cell["\<\
+We now consider a polygon
+
+We need various data: edges, endpoints of edges, etc\
+\>", "Text"],
+
+Cell["\<\
+Each line, in turn, has associated with it  (at least!) the following useful \
+information:
+(1) corner p1, (2) corner p2, (3) radius, (4) center, (5)\"p3 is below line\" \
+(true/false or right/left if vertical), (6) start and  (7) stop of  theta in \
+parametric plot, (8) radius squared\
+\>", "Text"],
+
+Cell["\<\
+entry[p1_,p2_,p3_]:=Block[{r=Rad[p1,p2],rr=r^2,c=Cent[p1,p2]}
+\t,Join[{p1,p2,r,c},
+\t If[c===inf, If[p3[[1]]>p1[[1]],
+\t\t{Right,p1[[1]],p2[[1]],inf},{Left,p1[[1]],p2[[1]],inf},{yyy}]
+\t\t\t\t\t\t\t\t\t
+\t,{((p3[[1]]-c)^2+p3[[2]]^2)<rr,ArcCos[(p1[[1]]-c)/r],
+\t\tArcCos[(p2[[1]]-c)/r],rr}, {xxx}]
+]]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+makestrand[p1_,p2_,cone_]:=Block[
+\t{r=Rad[p1,p2],rr=r^2,c=Cent[p1,p2]}
+\t,{p1,p2,r,c,ArcCos[(p1[[1]]-c)/r],
+\t\tArcCos[(p2[[1]]-c)/r],cone}]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+edges[{ {x1,y1}, {x2,y2}, ...}}]     returns a list of {#entries, entry1, \
+entry2, ...}\
+\>", "Text"],
+
+Cell["\<\
+edges[p_]:=Block[{len=Length[p]},
+\t
+Join[{len},
+Table[entry[p[[k-2]],p[[k-1]],p[[k]] ],{k,3,len}],
+{ 
+entry[p[[len-1]],p[[len]],p[[1]] ],
+entry[p[[len]],p[[1]],p[[2]] ]}
+ ]]\
+\>", "Input",
+ InitializationCell->True]}, Open]]}, Open]],
+
+Cell[CellGroupData[{Cell["And for graphing:", "Subsubsection"],
+
+Cell["\<\
+PlotLines[e_]:=Join[
+Table[If[e[[k]][[3]]===inf, 
+\t{e[[k]][[1]][[1]],10(theta)},
+\t{e[[k]][[3]]Cos[Pi*theta]+e[[k]][[4]], 
+\t\t\te[[k]][[3]]Sin[theta*Pi]\t},{1,theta}
+\t] ,{k,2,Length[e]}]  ]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+PlotStrands[e_]:=
+Table[
+\t{e[[k,3]]Cos[theta*e[[k,5]]+(1-theta)e[[k,6]]]+e[[k,4]], 
+\t\t\te[[k,3]]Sin[theta*e[[k,5]]+(1-theta)e[[k,6]]]} ,
+\t\t\t\t\t\t\t{k,1,Length[e]}]  \
+\>", "Input",
+ InitializationCell->True]}, Open]],
+
+Cell[CellGroupData[{Cell["Iterations", "Subsubsection"],
+
+Cell[CellGroupData[{Cell["\<\
+Given a polygon (and all the extra data with it)  a point, and ASSUMING same \
+cyclic motion
+as order of vertices, find the vertex of poly through which to move.
+
+Whereis1 returns a list of {T/F,T/F,T/F} where T in spot n means point x is \
+to the SAME side of
+line n as the triangle.  If x is inside polygon, will return all trues.  \
+Otherwise, a cyclic permutation of something like{T,T,T,F,F,F,F}. The \
+position of the LAST false is the index of the vertex to
+move through.\
+\>", "Text"],
+
+Cell["\<\
+tester[edge_,x_]:=Block[
+\t{radius=(x[[1]]-edge[[4]])^2+x[[2]]^2},
+\t
+\tIf[radius===edge[[8]] , False,
+\t\t(radius<edge[[8]])===edge[[5]]   ]]
+\t\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+WhereIs[x_,polygon_]:=\tBlock[{i,mm=polygon[[1]]},
+\tIf[ tester[polygon[[2]],x],
+\t\t\t
+\ti=mm;While[tester[polygon[[i+1]],x] && i>=2, i--]; 
+\t\t\t\tIf[i===mm,1,If[i>1,i+1,\"inside\"]],
+\t\t\t
+\ti=1; While[(!tester[polygon[[i+1]],x]) && i<mm, i++]
+\t\t\t;i 
+\t\t\t
+\t]]\
+\>", "Input",
+ InitializationCell->True]}, Open]]}, Open]],
+
+Cell[CellGroupData[{Cell["Now we iterate:", "Subsubsection"],
+
+Cell["\<\
+npt[y_]:=
+\tNewPoint[{y,trian[[WhereIs[y,trian] +1,1]]}]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+Iterate[triang_,x_,max_]:=Block[{trian=triang}
+,
+NestList[npt, x, max]]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+PlotIterates[triang_,x_,max_,range_]:= Show[Graphics[
+\t{AbsolutePointSize[.25],Evaluate [
+\tPoint /@ Iterate[triang,x,max] ]},Axes->True,
+\t\tAxesStyle->AbsoluteThickness[.01],PlotRange->range],
+ParametricPlot[Evaluate[PlotLines[triang]],{theta,0,1},
+\tPlotStyle->AbsoluteThickness[.01]] ]\
+\>", "Input",
+ InitializationCell->True]}, Open]],
+
+Cell[CellGroupData[{Cell["Examples", "Subsection"],
+
+Cell[CellGroupData[{Cell["\<\
+b=n[edges[{{10,10},{4,4},{6,2}}]]
+\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+N-0\"\.030\.01VZ\:0300\.01Z\:0300100\.01\.05p\.01VZ\:0320\.05`\.01Z\:0328.254\
+\.05P\.01VZ\:0300\.01Z\:0300\.04\.01Z\:0308\.01^\.01X\.050\.01VZ\:0320\.01Z\
+\:0320\.03\.01Z\:0328N-0\"\.05\.10\.01VZ\:0341Z\:0300150\.01\.04\:15b20\.01Z\
+\:0360\.04Z\:0368
+.67\.04\:0401VZ\:0340\.01Z\:0344\.01Z\:0308\.01^\.01X\.040\.01VZ\:0360\.01Z\
+\:0360\.03\.01Z\:0368N-0\"\.04\.10\.01VZ\:0340\.01Z\:0340200\.01\.04p\.01VZ\
+\:0360\.04`\.01Z\:0368711 \.04P\.01VZ\:0340\.04\.01Z\:0348\.01^\.01X\.040\.01\
+\:02b8.74576 .14969 L
+.73577 .13831 L
+.72671 .12571 L
+.71866 .11201 L
+.71171 .09734 L
+.70592 .08186 L
+Mistroke
+.70348 .073\.030136 .06571 L
+.69955 .05743 L
+.69806 .04905 L
+.6969 .04059 L
+.69644 .03633 L
+.69606 .03206 L
+.69577 .02777 L
+.69566 .02563 L
+.69556 .02348 L
+.69549 .0213\.03\.1046 .02026 L
+.69543 .01919 L
+.69541 .01811 L
+.69541 .01757 L
+.6954 .01704 L
+.69539 .0165 L
+.69539 .01596 L
+.69539 .01543 L
+.69539 .014\
+\>", "\<\
+{3., {{10., 10.}, {4., 4.}, 10.7703296142690080625, 14., True, 
+ 
+   1.95130270390726150553, 2.7610862764774283522, 116.}, 
+ 
+  {{4., 4.}, {6., 2.}, 4.4721359549995793928, 2., False, 
+ 
+   1.10714871779409050302, 0.4636476090008061162, 20.}, 
+ 
+  {{6., 2.}, {10., 10.}, 14.142135623730950488, 20., False, 
+ 
+   2.9996955989856293156, 2.3561944901923449288, 200.}}\
+\>"], "Output"]}, Open]],
+
+Cell["PlotIterates[b,{9.96,9.9},150,Automatic]", "Input"]}, Open]],
+
+Cell[CellGroupData[{Cell["The Web", "Subsection"],
+
+Cell["\<\
+We need one more object, and two operations: find and chop.
+The Web is a collection of strands, each lying completely within a particular \
+cone:\
+\>", "Text"],
+
+Cell["strand[end1, end2, rradius, ccenter, start, stop, cone]", "Text"],
+
+Cell[CellGroupData[{Cell["preliminary:", "Text"],
+
+Cell["\<\
+
+Intersect[strand1_,strand2_]:=
+\tBlock[{
+\t C1=strand1[[4]],
+\t C2=strand2[[4]],
+\t R1=strand1[[3]],
+\t R2=strand2[[3]],
+\t xint=(C1^2-C2^2-R1^2+R2^2)/2/(C1-C2),
+\t discrim=R1^2-(xint-C1)^2},
+   
+   n[{xint, If[ discrim<0,\"miss\", Sqrt[discrim]]}]]
+\t
+\
+\>", "Input",
+ InitializationCell->True]}, Open]],
+
+Cell[TextData[{
+ "ConeStrands[polygon_]:=Table[\n  Block[{\n\t\t\t\t\
+ithedge=polygon[[i+1]]},Block[{\n\t\t\t\trr=ithedge[[3]],\n\t\t\t\t\
+cc=ithedge[[4]],\n\t\t\t\tstt=ithedge[[6]],\n\t\t\t\tstp=ithedge[[7]],\n\t\t\t\
+\tends=If[stt<stp,    \t\t\t\t\t\t\t\t",
+ StyleBox["(*ie ith line reads right to left*)",
+  FontFamily->"Times",
+  FontWeight->"Plain"],
+ "\n\t \t\t\t\t{ {ithedge[[1]],{rr*Cos[.001]+cc,rr*Sin[.001]}},\n\t \t\t\t\t\t\
+\t{stt,.001} },\n\t \t\t\t\t{ { {cc-rr*Cos[.001],rr*Sin[.001]},ithedge[[1]]},\
+\n\t \t\t\t\t\t\t{3.140592653589793238,stt} } ",
+ StyleBox["(*note that ends always read left to right*)",
+  FontFamily->"Times",
+  FontWeight->"Plain"],
+ "]\n\t \t},  \n\t \t\n\t \tJoin[ends[[1]],{rr,cc},ends[[2]],{i+1}   ]\n\t\
+]],{i,1,polygon[[1]]} ]\n\t\n"
+}], "Input",
+ InitializationCell->True],
+
+Cell[TextData[{
+ "FirstStrands[polygon_]:=Table[\nBlock[{\n\t\t\t\t\
+ithedge=polygon[[i+1]]},Block[{\n\t\t\t\trr=ithedge[[3]],\n\t\t\t\t\
+cc=ithedge[[4]],\n\t\t\t\tstt=ithedge[[6]],\n\t\t\t\tstp=ithedge[[7]],\n\t\t\t\
+\tends=If[stt<stp,    \t\t\t\t\t\t\t\t",
+ StyleBox["(*first end is near infinity *)",
+  FontFamily->"Times",
+  FontWeight->"Plain"],
+ "\n\t\t\t\t\t\t{ { {cc-rr*Cos[.00001],rr*Sin[.00001]},ithedge[[2]]},\n\t \t\t\
+\t\t\t\t{3.141582653589793238,stp} },\n\t \t\t\t\t{ { \
+{rr*Cos[.00001]+cc,rr*Sin[.00001]},ithedge[[2]]},\n\t \t\t\t\t\t\t\
+{.00001,stp} }\n\t \t\t\t]},  \n\t \t\n\t \tJoin[ends[[1]],{rr,cc},ends[[2]],\
+\n\t \t\t{WhereIs[ends[[1,1]],polygon]},{\"infend\"} ]\n\t\
+]],{i,1,polygon[[1]]} ]"
+}], "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+
+Given strand, construct its image, then chop\
+\>", "Text"],
+
+Cell[CellGroupData[{Cell["\<\
+DivideStrand[oldstrand_,cutstrand_,cone1_,cone2_]:=
+  Block[
+   {cutpt =  Intersect[oldstrand,cutstrand] },
+   Block[{ct1=cutpt[[1]],ct2=cutpt[[2]]},
+  
+  If[ ct2===\"miss\", {oldstrand}, 
+  If[ (ct1===oldstrand[[1]][[1]]) ||
+\t\t(ct1===oldstrand[[2]][[1]]), 
+\t\t\t{Join[oldstrand[[{1,6}]],
+\t\t\t {If[ ct1===oldstrand[[1]][[1]], cone1,cone2 ] },
+\t\t\t {If[ Length[oldstrand]===8, \"infend\"]}]},
+\t\t
+  Block[
+  {ctheta=
+  \tArcCos[(ct1-oldstrand[[4]])/oldstrand[[3]]]}
+\t  , 
+  { If[Length[oldstrand]===8,{oldstrand[[1]],cutpt,
+  \t\toldstrand[[3]],oldstrand[[4]],
+  \t\t\toldstrand[[5]],ctheta,cone1,\"infend\"},
+  \t\t{oldstrand[[1]],cutpt,
+  \t\toldstrand[[3]],oldstrand[[4]],
+  \t\t\toldstrand[[5]],ctheta,cone1}],
+  \t{cutpt,oldstrand[[2]],oldstrand[[3]],oldstrand[[4]],
+  \t\tctheta,oldstrand[[6]],cone2}  } ]]]]]\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+General::spell1: 
+   Possible spelling error: new symbol name \"ctheta\"
+     is similar to existing symbol \"theta\".\
+\>", "Message"]}, Open]],
+
+Cell[TextData[{
+ "NewStrands[oldstrand_,polygon_,TheConeStrand_]:=\n\tBlock[\n\t{ nend1=\n\t\t\
+NewPoint[{oldstrand[[1]],\n\t\t\tpolygon[[oldstrand[[7]]+1,1]]  }  ],\n\t \
+newend2=\n\t\tNewPoint[{oldstrand[[2]],\n\t\t\tpolygon[[oldstrand[[7]]+1,1]]  \
+}  ]},\n\t\t\t\n\tBlock[{\n\t cone1=WhereIs[nend1,polygon],\n\t \
+cone2=WhereIs[newend2,polygon],\n\t cc=Cent[nend1,newend2],\n\t \
+rr=Rad[nend1,newend2]},\n\t ",
+ StyleBox["(*this next part actually throws away too much...*)",
+  FontFamily->"Times",
+  FontWeight->"Plain"],
+ "\n\tIf[rr>0 && !(cone1===\"inside\" || cone2===\"inside\"),\n\tBlock[{\n\t \
+sttp= ArcCos[(newend2[[1]]-cc)/rr],\n\t infinitend=(Length[oldstrand]===8)},\n\
+\tBlock[{\n\t\t   newend1=If[infinitend, \n\t\t   \t\
+If[nend1[[1]]<newend2[[1]],\n\t\t   \t{cc-rr*Cos[.00001],rr*Sin[.00001]},\n\t\
+\t   \t{cc+rr*Cos[.00001],rr*Sin[.00001]}],\n\t\t   nend1]},\n\t\
+Block[{newstrand=Join[\t\n\t{newend1,newend2,rr,cc,sttrt,sttp,cone1},\n\t\
+If[infinitend,{\"infend\"},{}]],\n\t\t   sttrt= \
+ArcCos[(newend1[[1]]-cc)/rr]},   \n\t \nIf[  cone1===cone2 , \n\t \
+If[newend1[[1]]===newend2[[1]],{flype},{newstrand}], \n\t\t \n\t\t \nIf[ \
+(cone1===1 && cone2===2)||(cone1===2 && cone2===1),\n\t\
+DivideStrand[newstrand,\n\t\tTheConeStrand[[1]],cone1,cone2],\n\nIf[ \
+(cone1===2 && cone2===3)||\n\t(cone1===3 && cone2===3),\n\t\
+DivideStrand[newstrand,\n\t\tTheConeStrand[[2]],cone1,cone2],\n\n(* then \
+(cone1===1 && cone2===3)||\n   (cone1===3 && cone2===1) *)\n\t\n\t\
+DivideStrand[newstrand,\n\t\tTheConeStrand[[3]],cone1,cone2],\n\n\t\
+\"uhoh\"]]]\t\t \n\t\t \n\t\t]]],{}]]]\n\t\t \n"
+}], "Input",
+ InitializationCell->True]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+
+Other try\
+\>", "Text"],
+
+Cell["\<\
+Initially:  (totally insensitive)
+
+If[ cone1<cone2,  \"heya\" 
+\tBlock[{strandstring,cuttingstring,i},
+\tstrandstring={}; 
+\tcuttingstring={newend1,newend2,rr,cc,sttrt,sttp,\"skip\"};
+\ti=cone1+1;
+\t\tWhile[i<=cone2, Block[
+\t\t{cuttings=DivideStrand[
+\t\t  cuttingstring,TheConeStrand[[i]],i-1,i]},
+\t\tstrandstring=Join[cuttings[[1]],strandstring];
+\t\tcuttingstring=cuttings[[2]] ];i++];strandstring]  *),
+\t
+\t
+If[ cone1>cone2,  \"hoya\" (*
+\tBlock[{strandstring,cuttingstring,i},
+\tstrandstring={}; 
+\tcuttingstring={newend1,newend2,rr,cc,sttrt,sttp,\"skip\"}; 
+\ti=cone2;
+\t\tWhile[i>cone1, Block[
+\t\t{cuttings=DivideStrand[
+\t\t  cuttingstring,TheConeStrand[[i]],i-1,i]},\t 
+\t\tstrandstring=Join[cuttings[[1]],strandstring];
+\t\tcuttingstring=cuttings[[2]] ];i--];strandstring] *)
+]
+]  \t
+]\t\t 
+]
+]\t\
+\>", "Text"]}, Open]],
+
+Cell["\<\
+
+nnnewlist[oldlist_]:=
+\tJoin @@ Table[
+\t\tNewStrands[oldlist[[i]],bb,conelist],
+\t\t{i,1,Length[oldlist]} ]
+
+\
+\>", "Input",
+ InitializationCell->True],
+
+Cell["\<\
+
+
+StrandList[b_,depth_]:=Block[{
+\tconelist=ConeStrands[b],
+\tstartlist=FirstStrands[b],
+\tbb=b},
+\t Join @@ NestList[nnnewlist, startlist,depth]]\
+\>", "Input",
+ InitializationCell->True]
+},
+AutoGeneratedPackage->Automatic,
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{740, 867},
+WindowMargins->{{124, Automatic}, {Automatic, 4}},
+ShowCellLabel->True,
+ShowCellTags->False,
+RenderingOptions->{"ObjectDithering"->True,
+"RasterDithering"->False},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[533, 21, 58, 1, 70, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[614, 24, 41, 0, 70, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[678, 26, 399, 11, 70, "Text"],
+Cell[1080, 39, 117, 5, 70, "Input",
+ InitializationCell->True],
+Cell[1200, 46, 173, 6, 70, "Input",
+ InitializationCell->True],
+Cell[1376, 54, 189, 8, 70, "Text"],
+Cell[1568, 64, 86, 1, 70, "Input",
+ InitializationCell->True],
+Cell[1657, 67, 165, 8, 70, "Input",
+ InitializationCell->True],
+Cell[1825, 77, 145, 8, 70, "Text"],
+Cell[1973, 87, 272, 9, 70, "Input",
+ InitializationCell->True],
+Cell[2248, 98, 26, 3, 70, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2315, 103, 33, 0, 70, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2371, 105, 103, 4, 70, "Text"],
+Cell[2477, 111, 310, 6, 70, "Text"],
+Cell[2790, 119, 351, 10, 70, "Input",
+ InitializationCell->True],
+Cell[3144, 131, 194, 7, 70, "Input",
+ InitializationCell->True],
+Cell[3341, 140, 112, 3, 70, "Text"],
+Cell[3456, 145, 226, 10, 70, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3723, 157, 42, 0, 70, "Subsubsection"],
+Cell[3768, 159, 244, 8, 70, "Input",
+ InitializationCell->True],
+Cell[4015, 169, 224, 7, 70, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4271, 178, 35, 0, 70, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4329, 180, 502, 11, 70, "Text"],
+Cell[4834, 193, 197, 8, 70, "Input",
+ InitializationCell->True],
+Cell[5034, 203, 323, 13, 70, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5398, 218, 40, 0, 70, "Subsubsection"],
+Cell[5441, 220, 108, 4, 70, "Input",
+ InitializationCell->True],
+Cell[5552, 226, 123, 5, 70, "Input",
+ InitializationCell->True],
+Cell[5678, 233, 342, 8, 70, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6052, 243, 30, 0, 70, "Subsection"],
+Cell[CellGroupData[{
+Cell[6105, 245, 59, 3, 70, "Input"],
+Cell[6167, 250, 1322, 45, 70, "Output"]
+}, Open  ]],
+Cell[7501, 297, 57, 0, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7590, 299, 29, 0, 70, "Subsection"],
+Cell[7622, 301, 169, 4, 70, "Text"],
+Cell[7794, 307, 71, 0, 70, "Text"],
+Cell[CellGroupData[{
+Cell[7888, 309, 28, 0, 70, "Text"],
+Cell[7919, 311, 306, 15, 70, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[8237, 328, 815, 17, 70, "Input",
+ InitializationCell->True],
+Cell[9055, 347, 758, 15, 70, "Input",
+ InitializationCell->True],
+Cell[9816, 364, 70, 4, 70, "Text"],
+Cell[CellGroupData[{
+Cell[9909, 370, 875, 26, 70, "Input",
+ InitializationCell->True],
+Cell[10787, 398, 145, 4, 70, "Message"]
+}, Open  ]],
+Cell[10944, 404, 1642, 27, 70, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12618, 433, 34, 3, 70, "Text"],
+Cell[12655, 438, 834, 30, 70, "Text"]
+}, Closed]],
+Cell[13501, 470, 163, 9, 70, "Input",
+ InitializationCell->True],
+Cell[13667, 481, 198, 9, 70, "Input",
+ InitializationCell->True]
+}
+]
+*)

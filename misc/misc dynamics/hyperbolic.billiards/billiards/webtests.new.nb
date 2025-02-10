@@ -1,0 +1,5772 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='%s' *)
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       131,          6]
+NotebookDataLength[    124124,       5766]
+NotebookOptionsPosition[    118102,       5566]
+NotebookOutlinePosition[    118617,       5590]
+CellTagsIndexPosition[    118574,       5587]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+
+Cell[CellGroupData[{Cell["\<\
+b=n[edges[{{10,10},{4,4},{6,2}}]]
+cs=ConeStrands[b]\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+{3., {{10., 10.}, {4., 4.}, 10.77032961426900806, 14., 
+ 
+   True, 1.951302703907261506, 2.761086276477428352, 116.}, 
+ 
+  {{4., 4.}, {6., 2.}, 4.472135954999579393, 2., False, 
+ 
+   1.107148717794090503, 0.4636476090008061162, 20.}, 
+ 
+  {{6., 2.}, {10., 10.}, 14.14213562373095049, 20., False, 
+ 
+   2.999695598985629316, 2.356194490192344929, 200.}}\
+\>", "\<\
+{3., {{10., 10.}, {4., 4.}, 10.77032961, 14., True, 
+ 
+   1.951302704, 2.761086276, 116.}, 
+ 
+  {{4., 4.}, {6., 2.}, 4.472135955, 2., False, 1.107148718, 
+ 
+   0.463647609, 20.}, {{6., 2.}, {10., 10.}, 14.14213562, 
+ 
+   20., False, 2.999695599, 2.35619449, 200.}}\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+{{{10., 10.}, {24.77032422910464969, 
+ 
+    0.0107703278192141621}, 10.77032961426900806, 14., 
+ 
+   1.951302703907261506, 0.001, 2}, 
+ 
+  {{-2.472133718931788232, 0.004472135209643624161}, 
+ 
+   {4., 4.}, 4.472135954999579393, 2., 
+ 
+   3.140592653589793238, 1.107148717794090503, 3}, 
+ 
+  {{5.857871447336272122, 0.01414213326670846438}, 
+ 
+   {6., 2.}, 14.14213562373095049, 20., 
+ 
+   3.140592653589793238, 2.999695598985629316, 4}}\
+\>", "\<\
+{{{10., 10.}, {24.7703, 0.0107703}, 10.77032961, 14., 
+ 
+   1.951302704, 0.001, 2}, 
+ 
+  {{-2.47213, 0.00447214}, {4., 4.}, 4.472135955, 2., 
+ 
+   3.140592653589793238, 1.107148718, 3}, 
+ 
+  {{5.85787, 0.0141421}, {6., 2.}, 14.14213562, 20., 
+ 
+   3.140592653589793238, 2.999695599, 4}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["WhereIs[{2,10},b]", "Input"],
+
+Cell[OutputFormData["\<\
+2\
+\>", "\<\
+2\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["cc=makestrand[{2,3},{-4,9},2]", "Input"],
+
+Cell[OutputFormData["\<\
+{{2, 3}, {-4, 9}, 9.486832980505137996, -7., 
+ 
+  0.3217505543966421935, 1.249045772398254426, 2}\
+\>", "\<\
+{{2, 3}, {-4, 9}, 9.486832981, -7., 0.321751, 1.24905, 2}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["ParametricPlot[Evaluate[PlotLines[b]],{theta,0,1}]", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+x\.03HH\.02\[CapitalUAcute]\.02(\[YDoubleDot]\[AAcute]\[YDoubleDot]\[AHat]\.02\
+\[UGrave]\.02F\.03G\.05(\.03\[UDoubleDot]\.02HH\.02\[CapitalUAcute]\.02(\.01d\
+\.01\.01\.01\.01\.01'\.0f\.01\.01\.02\.19\.01\.90@\.01\.05.\.01?\.9cq\
+\[CapitalCCedilla]?@?\.80?\.80\.06\\f\t\t\\pds: \\ker.\.02J\.7f\[YDoubleDot]\
+\.06\.02=\.02>\.02J\.02K\.7f\[YDoubleDot]\t\.02<\.02=\.02K\.02L\.7f\
+\[YDoubleDot]
+\.02;\.02<\.02L\.02M\.7f\[YDoubleDot]C\.02;\.02<\.02L\.02M\.7f\[YDoubleDot]G\
+\.02<\.02=\.02K\.02L\.7f\[YDoubleDot]J\.02=\.02>\.02J\.02K\.7f\[YDoubleDot]L\
+\.02>\.02?\.02I\.02J\.7f\[YDoubleDot]M\.02?\.02@\.02H\.02I\.7f\[YDoubleDot]N\
+\.02@\.02A\.02G\.02H\.7f\[YDoubleDot]O\.02A\.02B\.02F\.02G\.7f\[YDoubleDot]P\
+\.02B\.02F\.7f\[YDoubleDot]\.7f\[YDoubleDot]\.01\.0e\[RegisteredTrademark]\.10\
+\.10\.0e\.01\.8cvals0\.01\.8e$oup CellsG\[CapitalODoubleDot]oup \
+\[CapitalIHat]sU\[CapitalADoubleDot]\.01\.9fL\[NonBreakingSpace]\.03\
+\[LeftGuillemet]\[OHat]V\[Degree]:Thi\\p\\p -e footer.
+This is the second line of the \
+footer.\.9c?\.06\[Copyright]\[NonBreakingSpace]*\.1fHn\[YDoubleDot]\[OHat]/\
+\.05\[Copyright]K\.bek\.04f\.14Hn\[YDoubleDot]\[OHat]?<\.01?<\.01\[DoubleDot]\
+\[Copyright]Hn\[YDoubleDot]\[OHat]\[DoubleDot]\[Currency] n\[YDoubleDot]\
+\[CapitalThorn]\.10(\[CapitalEAcute]g\\\.0cG\.0eW\[CapitalAAcute]\
+\[CapitalAGrave]\.01gR(n
+A\[IHat]\[YDoubleDot]\[ADoubleDot]C\[IGrave]: \[CapitalUGrave] \
+\[CapitalUGrave]8,8B\[Section]N\.ba\[Thorn]pA\[IGrave]:/\.08p\.08/N\.ba\
+\[Thorn]49|\.0b8Hn\[YDoubleDot]\[OHat]?<\.01?<\.01\[DoubleDot]\[Copyright]Hn\
+\[YDoubleDot]\[OHat]\[DoubleDot]\[Cent]A\[IGrave]:C\[IHat]\[YDoubleDot]\
+\[ADoubleDot] \[CapitalUGrave] \[CapitalUGrave]9D8L\[SZ]\.18\[Eth]N^ _\\ON\
+\[CapitalEth]ICONNV\[YDoubleDot]\[OSlash]/\.07Hn\[YDoubleDot]\[UAcute]\
+\[DoubleDot]t/.\.0c\[DoubleDot]s=n\.08\[YDoubleDot]\[OSlash]>.
+`\.0e/.\.0c?\.07N\.ba\tPr\t\tPrintFile\[DoubleDot]s.\.1fN^ \
+_PON\[CapitalEth]NV\[YDoubleDot]\[Eth]/\.07BG\.10.\.08g\.02~\.01/.\.0c?.
+Hn\[YDoubleDot]\[UDoubleDot]Hn\[YDoubleDot]\[OSlash]Hn\[YDoubleDot]\[Eth]\
+\[Copyright]\.8d/.\[YDoubleDot]\[OSlash]?\.07\[Copyright]c.\.1fN^ _PON\
+\[CapitalEth]NV\[YDoubleDot]\[Eth]/.
+?.\.08Hn\[YDoubleDot]\[UDoubleDot]Hn\[YDoubleDot]\[OSlash]Hn\[YDoubleDot]\
+\[Eth]\[Copyright]\.8dBg/.\[YDoubleDot]\[OSlash]\[Copyright]`=_\[YDoubleDot]\
+\[Thorn]/.\[YDoubleDot]\[OSlash]p\.01\.90n\[YDoubleDot]\[Thorn]?\[Copyright]\
+cN^ _\\ON\[CapitalEth]NV\[YDoubleDot]\[OGrave]/.\.0c?.
+Hn\[YDoubleDot]\[Thorn]Hn\[YDoubleDot]\[UAcute]Hn\[YDoubleDot]\[OGrave]\
+\[Copyright]\.8d/.\[YDoubleDot]\[UAcute]?.\.08\[Copyright]]N^ _PON\
+\[CapitalEth]NV\[YDoubleDot]\[OGrave]/.
+?.\.08Hn\[YDoubleDot]\[Thorn]Hn\[YDoubleDot]\[UAcute]Hn\[YDoubleDot]\[OGrave]\
+\[Copyright]\.8d/.\[YDoubleDot]\[UAcute]\[Copyright]XN^ _\\ON\[CapitalEth]NV\
+\[Thorn]\[EHat]H\[CCedilla]\.03/.
+?.\.08Hn\[YDoubleDot]\[Thorn]Hn\[YDoubleDot]\[ODoubleDot]Hn\[YDoubleDot]\
+\[IHat]\[Copyright]\.8d\.02\.88))\.189\.01\.01\.06\\f\t\t\\pp\[Eth]
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1d\.9d\[Eth]\.0e\[YDoubleDot]\
+\[YDoubleDot]\[CapitalAGrave]\.1eU\[Eth]\.0f\[YDoubleDot]\[YDoubleDot]\
+\[CapitalAGrave]\.1e\[CapitalUDoubleDot]\[Eth]\.10\[YDoubleDot]\[YDoubleDot]\
+\[CapitalAGrave]\.1fp\[Eth]\.11\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1f\
+\.91\[Eth]\.03\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1bv\[Eth]\.04\
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1b\[DiscretionaryHyphen]\[Eth]\
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1b\[CapitalEGrave]\[Eth]\
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\.1f\.b4\[AGrave]\[YDoubleDot]\
+\[YDoubleDot]\[AGrave]\.1f\[AHat]\[AGrave]\.01\[YDoubleDot]\[YDoubleDot]\
+\[AGrave]#8\[AGrave]\.02\[YDoubleDot]\[YDoubleDot]\[AGrave]%\.1a\[AGrave]\.06\
+\[YDoubleDot]\[YDoubleDot]\[AGrave]%U\[AGrave]6\[YDoubleDot]\[YDoubleDot]\
+\[AGrave].\.9e\[AGrave]7\[YDoubleDot]\[YDoubleDot]\[AGrave]68\[AGrave]\
+\[YDoubleDot]\[YDoubleDot]\[AGrave]\.1f\[Thorn]\[AGrave]\.01\[YDoubleDot]\
+\[YDoubleDot]\[AGrave]#T\[AGrave]\.02\[YDoubleDot]\[YDoubleDot]\[AGrave]%3\
+\[AGrave]\.06\[YDoubleDot]\[YDoubleDot]\[AGrave]%n\[AGrave]\.0b\[YDoubleDot]\
+\[YDoubleDot]\[AGrave]%\[Paragraph]\[AGrave]
+\[YDoubleDot]\[YDoubleDot]\[AGrave]&\[AGrave]\.1f\[YDoubleDot]\[YDoubleDot]\
+\[AGrave]&\[CapitalThorn]\[AGrave] \
+\[YDoubleDot]\[YDoubleDot]\[AGrave])\[AHat]\[AGrave]!\[YDoubleDot]\
+\[YDoubleDot]\[AGrave]*r\[AGrave](\[YDoubleDot]\[YDoubleDot]\[AGrave]+v\
+\[AGrave]\"\[YDoubleDot]\[YDoubleDot]\[AGrave]+\[Thorn]\[AGrave]*\[YDoubleDot]\
+\[YDoubleDot]\[AGrave],\[OGrave]\[AGrave]+\[YDoubleDot]\[YDoubleDot]\[AGrave]-\
+\[Degree]\[AGrave]6\[YDoubleDot]\[YDoubleDot]\[AGrave].\[CapitalAHat]\[AGrave]\
+7\[YDoubleDot]\[YDoubleDot]\[AGrave]6`\[AGrave]\.0c\[YDoubleDot]\[YDoubleDot]\
+\[CapitalAGrave]\"0\[AGrave]
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]\"\.b4\[AGrave]\.0b\[YDoubleDot]\
+\[YDoubleDot]\[AGrave]%\.a6\[AGrave]
+\[YDoubleDot]\[YDoubleDot]\[AGrave]&D\[AGrave]\.1f\[YDoubleDot]\[YDoubleDot]\
+\[AGrave]&\[CapitalIHat]\[AGrave] \[YDoubleDot]\[YDoubleDot]\[AGrave])\
+\[CapitalOGrave]\[AGrave]!\[YDoubleDot]\[YDoubleDot]\[AGrave]*b\[AGrave](\
+\[YDoubleDot]\[YDoubleDot]\[AGrave]+f\[AGrave]\"\[YDoubleDot]\[YDoubleDot]\
+\[AGrave]+\[IHat]\[AGrave]*\[YDoubleDot]\[YDoubleDot]\[AGrave],\[AHat]\
+\[AGrave]+\[YDoubleDot]\[YDoubleDot]\[AGrave]-\[NonBreakingSpace]\[AGrave]E\
+\[YDoubleDot]\[YDoubleDot]\[CapitalAGrave]0(\.01\.01\.01\.01\.08Z\t\.01\
+\[CapitalCCedilla]\.02\.11\.17`\.01\[CapitalEAcute]\.0e\.08\.08\.80\.01\.01e-\
+\.98\.81\.1a\[RegisteredTrademark]\.01\.1aHH\.08\.01\.08?$\[Thorn]\.02\
+\[YDoubleDot]\[UHat]\[YDoubleDot]q\.01\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.02\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.aa\
+\[DoubleDot]\.03\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\.04\
+7#7#7#\.05v&v&v&\.06\[Micro]*\[Micro]*\[Micro]*\.07\[OHat].\[OHat].\[OHat].\
+\.08\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\t;\.13;\.13;\.13
+z\.17z\.17z\.17\.0b\.b9\.1a\.b9\.1a\.b9\.1a\.0c\[OSlash]\.1e\[OSlash]\.1e\
+\[OSlash]\.1e
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.0eUT\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.0fq\.aa\[DoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.10\[UDoubleDot]\.0e\[UDoubleDot]\.0e\
+\[UDoubleDot]\.0e\.11V,\.9d\.05$\.12UT\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.13\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.14;\.13;\.13;\.13\.15z\.17z\.17z\.17\.16\.b9\.1a\.b9\.1a\.b9\
+\.1a\.17\[OSlash]\.1e\[OSlash]\.1e\[OSlash]\.1e\.18\[YDoubleDot]\[UDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\.19?\.03?\.03?\.03\.1a~\.07~\.07~\.07\.1b\.bd\.0b\
+\.bd\.0b\.bd\.0b\.1c\[UDoubleDot]\.0e\[UDoubleDot]\.0e\[UDoubleDot]\.0e\.1dUT\
+\[UDoubleDot]\.02\.1e\.aa\[DoubleDot]\[UDoubleDot]\.02\.1f\[YDoubleDot]\
+\[UDoubleDot]\[UDoubleDot] \[YAcute]
+UT!UTUT\"\.aa\[DoubleDot]\[UDoubleDot]H#\[CapitalYAcute]k\.08\[CapitalAHat]\
+\.06\[Cent]$?\.03?\.03?\.03%~\.07~\.07~\.07&\.bd\.0b\.bd\.0b\.bd\.0b'\
+\[UDoubleDot]\.0e\[UDoubleDot]\.0e\[UDoubleDot]\.0e(\.03\[Eth]\.03\[Eth]\.03\
+\[Eth])B\[OAcute]B\[OAcute]B\[OAcute]*\.81\[Divide]\.81\[Divide]\.81\[Divide]+\
+\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat],\
+\[YAcute]\.11UT-UTUT.\.aa\[DoubleDot]UT\t/\[YDoubleDot]\[UDoubleDot]UT0\
+\[YAcute]3\.aa\[DoubleDot]1UT\.aa\[DoubleDot]2\.aa\[DoubleDot]UT3\.03\[Eth]\
+\.03\[Eth]\.03\[Eth]4B\[OAcute]B\[OAcute]B\[OAcute]5\.81\[Divide]\.81\[Divide]\
+\.81\[Divide]6\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat]\[CapitalAGrave]\
+\[UHat]7\[YAcute]#UT8\.07\[AGrave]\.07\[AGrave]\.07\[AGrave]9F\[ADoubleDot]F\
+\[ADoubleDot]F\[ADoubleDot]:\.85\[CCedilla]\.85\[CCedilla]\.85\[CCedilla];\
+\[CapitalADoubleDot]\[EDoubleDot]\[CapitalADoubleDot]\[EDoubleDot]\
+\[CapitalADoubleDot]\[EDoubleDot]<\[YAcute]\.10\.aa\[DoubleDot]=UT\.aa\
+\[DoubleDot]>\.aa\[DoubleDot]\.aa
+\[DoubleDot]?\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]@\[YAcute]3\
+\[CapitalOHat]AUT\[YDoubleDot]\[UDoubleDot]B\.aa\[DoubleDot]\.aa\[DoubleDot]C\
+\.07\[AGrave]\.07\[AGrave]\.07\[AGrave]DF\[ADoubleDot]F\[ADoubleDot]F\
+\[ADoubleDot]E\.85\[CCedilla]\.85\[CCedilla]\.85\[CCedilla]F\
+\[CapitalADoubleDot]\[EDoubleDot]\[CapitalADoubleDot]\[EDoubleDot]\
+\[CapitalADoubleDot]\[EDoubleDot]G\[YAcute]#\.aa\[DoubleDot]H\.0b\[CapitalEth]\
+\.0b\[CapitalEth]\.0b\[CapitalEth]IJ\[CapitalOHat]J\[CapitalOHat]J\
+\[CapitalOHat]J\.89\[CapitalOSlash]\.89\[CapitalOSlash]\.89\[CapitalOSlash]K\
+\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\
+\[CapitalUHat]L\[YAcute]\.0f\[YDoubleDot]\[UDoubleDot]MUT\[YDoubleDot]\
+\[UDoubleDot]N\.aa\[DoubleDot]\.0f\[YDoubleDot]\[UDoubleDot]O\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]PUT\[Thorn]\.04QUTUT\[Thorn](R\.aa\
+\[DoubleDot]\[YDoubleDot]\[UDoubleDot]S\.0b\[CapitalEth]\.0b\[CapitalEth]\.0b\
+\[CapitalEth]TJ\[CapitalOHat]J\[CapitalOHat]J\[CapitalOHat]U\.89\
+\[CapitalOSlash]\.89\[CapitalOSlash]\.89\[CapitalOSlash]V\[CapitalEGrave]\
+\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]W\
+\[YAcute]\.1b\[YDoubleDot]\[UDoubleDot]X\.0f\[CapitalAGrave]\.0f\
+\[CapitalAGrave]\.0f\[CapitalAGrave]YN\[CapitalADoubleDot]N\
+\[CapitalADoubleDot]N\[CapitalADoubleDot]Z\.8d\[CapitalEGrave]\.8d\
+\[CapitalEGrave]\.8d\[CapitalEGrave][\[UHat]\[CapitalIGrave]\.05\\UT\[Thorn]\
+\.04]UTUT\[Thorn]\.03^\.aa\[DoubleDot]UT\[Thorn]\.04_\[YDoubleDot]\
+\[UDoubleDot]UT\[Thorn]\.14`UTUTaUTUTUTb\.aa\[DoubleDot]UT\[Thorn]\.18c\.0f\
+\[CapitalAGrave]\.0f\[CapitalAGrave]\.0f\[CapitalAGrave]dN\[CapitalADoubleDot]\
+N\[CapitalADoubleDot]N\[CapitalADoubleDot]e\.8d\[CapitalEGrave]\.8d\
+\[CapitalEGrave]\.8d\[CapitalEGrave]f\[UHat]\[CapitalIGrave]\.05gUT\[Thorn]2h\
+\.13\[PlusMinus]\.13\[PlusMinus]\.13\[PlusMinus]iR\.b4R\.b4R\.b4j\.91\
+\[Cedilla]\.91\[Cedilla]\.91\[Cedilla]k\[CapitalEth]\.bc\[CapitalEth]\.bc\
+\[CapitalEth]\.bclUTUTmUTUTUTn\.aa\[DoubleDot]~UTUTo\[YDoubleDot]\[UDoubleDot]\
+UTUTpUT\.aa\[DoubleDot]qUTUT\.aa\[DoubleDot]r\.aa\[DoubleDot]UTUTs\.13\
+\[PlusMinus]\.13\[PlusMinus]\.13\[PlusMinus]tR\.b4R\.b4R\.b4u\.91\[Cedilla]\
+\.91\[Cedilla]\.91\[Cedilla]v\[CapitalEth]\.bc\[CapitalEth]\.bc\[CapitalEth]\
+\.bcwUTUTx\.17\[DownExclamation]\.17\[DownExclamation]\.17\[DownExclamation]\
+yV\[Yen]V\[Yen]V\[Yen]z\.95\[DoubleDot]\.95\[DoubleDot]\.95\[DoubleDot]{\
+\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]|UT\.aa\
+\[DoubleDot]}UTUT\.aa\[DoubleDot]~\.aa^\[DoubleDot]UT\.aa\[DoubleDot]\.7f\
+\[YDoubleDot]\[UDoubleDot]UT\.aa\[DoubleDot]\.80UT\[YDoubleDot]\[UDoubleDot]\
+\.81UTUT\[YDoubleDot]\[UDoubleDot]\.82\.aa\[DoubleDot]UT\.aa\[DoubleDot]\.83\
+\.17\[DownExclamation]\.17\[DownExclamation]\.17\[DownExclamation]\.84V\[Yen]\
+V\[Yen]V\[Yen]\.85\.95\[DoubleDot]\.95\[DoubleDot]\.95\[DoubleDot]\.86\
+\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\.87UT\.aa\
+\[DoubleDot]\.88\.1b\.91\.1b\.91\.1b\.91\.89Z\.95Z\.95Z\.95\.8a\[UHat]\.99\.19\
+\.8b\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\.8cUT\
+\[YDoubleDot]\[UDoubleDot]\.8dUTUT\[YDoubleDot]\[UDoubleDot]\.8e\.13\.aa\
+\[DoubleDot]UT\[YDoubleDot]\[UDoubleDot]\.8f\[YDoubleDot]\[UDoubleDot]UT\
+\[YDoubleDot]\[UDoubleDot]\.90\.aa\[DoubleDot]\[Thorn]\.04\.91UT\.aa\
+\[DoubleDot]\[Thorn]\.18\.92\.aa\[DoubleDot]UT\[YDoubleDot]\[UDoubleDot]\.93\
+\.1b\.91\.1b\.91\.1b\.91\.94Z\.95Z\.95Z\.95\.95\[UHat]\.995\.96\
+\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\.97UT\
+\[YDoubleDot]\[UDoubleDot]\.98\.1f\.81\.1f\.81\.1f\.81\.99^\.85^\.85^\.85\.9a\
+\.9d\.89\.9d\.89\.9d\.89\.9b\[CapitalUDoubleDot]\.8c\[CapitalUDoubleDot]\.8c\
+\[CapitalUDoubleDot]\.8c\.9c\.aa\[DoubleDot]\[Thorn]\.04\.9dUT\.aa\[DoubleDot]\
+\[Thorn]\.04\.9e\.aa\[DoubleDot]\.aa\[DoubleDot]\[Thorn]\.04\.9f\[YDoubleDot]\
+\[UDoubleDot]\.aa\[DoubleDot]\[Thorn]\.14\[NonBreakingSpace]\.aa\[DoubleDot]\
+UT\[DownExclamation]UT\.aa\[DoubleDot]UT\[Cent]\.aa\[DoubleDot]\.aa\
+\[DoubleDot]\[Thorn]$\[Sterling]\.1f\.81\.1f\.81\.1f\.81\[Currency]^\.85^\.85^\
+\.85\[Yen]\.9d\.89\.9d\.89\.9d\.89\.a6\[CapitalUDoubleDot]\.8c\
+\[CapitalUDoubleDot]\.8c\[CapitalUDoubleDot]\.8c\[Section]\.aa\[DoubleDot]\
+\[Thorn].\[DoubleDot]#r#r#r\[Copyright]bububu\.aa\[DownExclamation]y\
+\[DownExclamation]y\[DownExclamation]y\[LeftGuillemet]\[AGrave]}\[AGrave]}\
+\[AGrave]}\[Not]\.aa\[DoubleDot]UT\[DiscretionaryHyphen]UT\.aa\[DoubleDot]UTY\
+\[RegisteredTrademark]\.aa\[DoubleDot]\.aa\[DoubleDot]UT\.af\[YDoubleDot]\
+\[UDoubleDot]\.aa\[DoubleDot]UT\[Degree]\.aa\[DoubleDot]\.aa\[DoubleDot]\
+\[PlusMinus]UT\.aa\[DoubleDot]\.aa\[DoubleDot]\.b2\.aa\[DoubleDot]\.aa\
+\[DoubleDot]UT\.b3#r#r#r\.b4bububu\[Micro]\[DownExclamation]y\
+\[DownExclamation]y\[DownExclamation]y\[Paragraph]\[AGrave]}\[AGrave]}\
+\[AGrave]}\[CenterDot]\.aa\[DoubleDot]UT\[Cedilla]'b'b'b\.b9\[UHat]f\.1e\.ba\
+\[Yen]i\[Yen]i\[Yen]i\[RightGuillemet]\[ADoubleDot]m\[ADoubleDot]m\
+\[ADoubleDot]m\.bc\.aa\[DoubleDot]\.aa\[DoubleDot]\.bdUT\.aa\[DoubleDot]\.aa2\
+\[DoubleDot]\.be\.aa\[DoubleDot]\.aa\[DoubleDot]\.aa\[DoubleDot]\
+\[DownQuestion]\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\.aa\[DoubleDot]\
+\[CapitalAGrave]\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[CapitalAAcute]UT\
+\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[CapitalAHat]\.aa\[DoubleDot]\.aa\
+\[DoubleDot]\.aa\[DoubleDot]\[CapitalATilde]'b'b'b\[CapitalADoubleDot]\[UHat]\
+fE\[CapitalARing]\[Yen]i\[Yen]i\[Yen]i\[CapitalAE]\[ADoubleDot]m\[ADoubleDot]\
+m\[ADoubleDot]m\[CapitalCCedilla]\.aa\[DoubleDot]\.aa\[DoubleDot]\
+\[CapitalEGrave]+R+R+R\[CapitalEAcute]jVjVjV\[CapitalEHat]\[Copyright]Y\
+\[Copyright]Y\[Copyright]Y\[CapitalEDoubleDot]\[EGrave]]\[EGrave]]\[EGrave]]\
+\[CapitalIGrave]\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[CapitalIAcute]UT\
+\.aa\[DoubleDot]\.17\[YDoubleDot]\[UDoubleDot]\[CapitalIHat]\.aa\[DoubleDot]\
+\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[CapitalIDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[CapitalEth]\
+\[YDoubleDot]\[UDoubleDot]\[Thorn]\.04\[CapitalNTilde]UT\[YDoubleDot]\
+\[UDoubleDot]\[Thorn]T\[CapitalOGrave]\.aa\[DoubleDot]\.aa\[DoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\[CapitalOAcute]+R+R+R\[CapitalOHat]jVjVjV\
+\[CapitalOTilde]\[Copyright]Y\[Copyright]Y\[Copyright]Y\[CapitalODoubleDot]\
+\[EGrave]]\[EGrave]]\[EGrave]]\[Times]\.aa\[DoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[CapitalOSlash]/B/B/B\[CapitalUGrave]nFnFnF\[CapitalUAcute]\
+\[DiscretionaryHyphen]J\[DiscretionaryHyphen]J\[DiscretionaryHyphen]J\
+\[CapitalUHat]\[IGrave]M\[IGrave]M\[IGrave]M\[CapitalUDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[Thorn]\.03\[CapitalYAcute]UT\[YDoubleDot]\[UDoubleDot]\[Thorn]\
+\.04\[CapitalThorn]\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[Thorn]\.04\[SZ]\
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\[Thorn]\.14\[AGrave]\
+\[YDoubleDot]\[UDoubleDot]UT\[AAcute]UT\[YDoubleDot]\[UDoubleDot]UT\[AHat]\.aa\
+\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[Thorn]$\[ATilde]/B/B/B\[ADoubleDot]\
+nFnFnF\[ARing]\[DiscretionaryHyphen]J\[DiscretionaryHyphen]J\
+\[DiscretionaryHyphen]J\[AE]\[IGrave]M\[IGrave]M\[IGrave]M\[CCedilla]\
+\[YDoubleDot]\[UDoubleDot]\[Thorn]\[EGrave]\[UHat]3#\[EAcute]r6r6r6\[EHat]\
+\[PlusMinus]:\[PlusMinus]:\[PlusMinus]:\[EDoubleDot]\[Eth]>\[Eth]>\[Eth]>\
+\[IGrave]\[YDoubleDot]\[UDoubleDot]UT\[IAcute]UT-\[YDoubleDot]\[UDoubleDot]UT\
+\[IHat]\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]UT\[IDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]UT\[Eth]\[YDoubleDot]\[UDoubleDot]\.aa\
+\[DoubleDot]\[NTilde]UT\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\[OGrave]\.aa\
+\[DoubleDot]\[YDoubleDot]\[UDoubleDot]UT\[OAcute]\[UHat]3J\[OHat]r6r6r6\
+\[OTilde]\[PlusMinus]:\[PlusMinus]:\[PlusMinus]:\[ODoubleDot]\[Eth]>\[Eth]>\
+\[Eth]>\[Divide]\[YDoubleDot]\[UDoubleDot]UT\[OSlash]7#7#7#\[UGrave]v&v&v&\
+\[UAcute]\[Micro]*\[Micro]*\[Micro]*\[UHat]\[OHat].\[OHat].\[OHat].\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\[YAcute]U\.0eT\
+\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\[Thorn]\.aa\[DoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\[YDoubleDot]\.91\
+\[RegisteredTrademark]\[YDoubleDot]\[CapitalODoubleDot]\.82\.92\[YDoubleDot]\
+\[OGrave]\.82\.82\[OTilde]\.01\[YDoubleDot]\[YDoubleDot]\.90\.82\
+\[CapitalUGrave]\[YDoubleDot]\[LeftGuillemet]\.82\[UGrave]\[NTilde]\
+\[YDoubleDot]\[CapitalOTilde]\[YDoubleDot]\[CapitalCCedilla]\.82\[EGrave]\
+\[ODoubleDot]\[YDoubleDot]\[NTilde]\[UHat]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[ATilde]\.82\[CapitalEth]\[YAcute]\[YDoubleDot]\[AGrave]\[UHat]\
+\[YDoubleDot]\[AAcute]\[YDoubleDot]\[YDoubleDot]\.82\[CenterDot]\[Thorn]\
+\[YDoubleDot]\[CapitalODoubleDot]\[Thorn]\[YDoubleDot]\[YAcute]\[EGrave]\.01\
+\[YDoubleDot]\[YDoubleDot]\.9d\.9e\[Thorn]\[YDoubleDot]\[EGrave]\[EAcute]\.01\
+\[YDoubleDot]\[YDoubleDot]\[OAcute]\.01\[YDoubleDot]\[YDoubleDot]\[YAcute]\.01\
+\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[Cedilla]\.85\[Thorn]\
+\[YDoubleDot]\[CapitalEDoubleDot]\[Thorn]\[YDoubleDot]\[Divide]\[YDoubleDot]\
+\[UDoubleDot]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\
+\[CapitalOHat]\.82\[EHat]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalARing]\[Thorn]\
+\[YDoubleDot]\[UHat]\[YDoubleDot]\[UHat]\.03\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\[YDoubleDot]\[Eth]\.82\[CapitalEth]\.01\[YDoubleDot]\[YDoubleDot]\
+\[CapitalAGrave]\[Thorn]\[YDoubleDot]\[Thorn]\[YAcute]\[YDoubleDot]\.05\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[Thorn]\[YDoubleDot]\.8f\[Paragraph]\.01\
+\[YDoubleDot]\[YDoubleDot]\[CapitalIDoubleDot]\[IAcute]\.03\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\[YDoubleDot]\[Copyright]\.9d\[Thorn]\[YDoubleDot]\[EAcute]\
+\[CapitalIDoubleDot]\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[CapitalARing]\.83\
+\[YDoubleDot]\[YDoubleDot]\.b2\[Thorn]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[AAcute]\.82\[EGrave]\.01\[YDoubleDot]\
+\[YDoubleDot]\[RegisteredTrademark]\[Thorn]\[YDoubleDot]\[OSlash]\[YDoubleDot]\
+\[YAcute]\.82\[CapitalIHat]\.01\[YDoubleDot]\[YDoubleDot]\[CenterDot]\[OAcute]\
+\.01\[YDoubleDot]\[YDoubleDot]\[UAcute]\.01\[YDoubleDot]\[YDoubleDot]\.9b\.b4\
+\.01\[YDoubleDot]\[YDoubleDot]\[CapitalNTilde]\[CapitalOTilde]\.01\
+\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[Paragraph]\.99\
+\[YDoubleDot]\[EDoubleDot]\[CenterDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\
+\[CapitalOGrave]\.82\[Thorn]\.01\[YDoubleDot]\[YDoubleDot]\.9f\.04\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[IHat]\.82\[ADoubleDot]\.01\
+\[YDoubleDot]\[YDoubleDot]\[DownExclamation]\[UHat]\.02\[YDoubleDot]\
+\[YDoubleDot]\.8b\[CapitalEHat]\.01\[YDoubleDot]\[YDoubleDot]\[RightGuillemet]\
+\[CapitalThorn]\[Thorn]\[YDoubleDot]\[DoubleDot]\.af\[YDoubleDot]\
+\[CapitalOTilde]\[CapitalAAcute]\.01\[YDoubleDot]\[YDoubleDot]\
+\[CapitalADoubleDot]\.95\.01\[YDoubleDot]\[YDoubleDot]\[Eth]\[Yen]\.02\
+\[YDoubleDot]\[YDoubleDot]\[AAcute]\.82\[UGrave]\[YDoubleDot]\.92\.04\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\.82\[CapitalThorn]\
+\[YDoubleDot]\.a6\[IGrave]\[YDoubleDot]\[YAcute]\[YDoubleDot]\.9d\
+\[CapitalADoubleDot]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalAAcute]\
+\[CapitalEth]\.01\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\.ba\
+\[Copyright]\[YDoubleDot]\[CapitalUHat]\.b4\[YDoubleDot]\[UHat]\[YDoubleDot]\
+\[Times]\.8f\.01\[YDoubleDot]\[YDoubleDot]\[ODoubleDot]\.98\[YDoubleDot]\
+\[UAcute]\[YDoubleDot]\[OHat]\.82\[OAcute]\[YDoubleDot]\.91\[UHat]\
+\[YDoubleDot]\[UGrave]\[YDoubleDot]\.92\[CapitalOSlash]\[YDoubleDot]\[Not]\
+\[SZ]\[YDoubleDot]\[OSlash]\[YDoubleDot]\.af\.bd\[YDoubleDot]\
+\[CapitalCCedilla]\[CapitalATilde]\.01\[YDoubleDot]\[YDoubleDot]\[OSlash]\
+\[YDoubleDot]\[CapitalIGrave]\[Cent]\[YDoubleDot]\[AHat]\[Section]\
+\[YDoubleDot]\[ODoubleDot]\[YDoubleDot]\[EAcute]\.87\[YDoubleDot]\[YAcute]\.9a\
+\[UDoubleDot]\[YDoubleDot]\[Thorn]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\
+\[YDoubleDot]\[UGrave]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\.88\[EDoubleDot]\
+\[YDoubleDot]\.99\[YAcute]\[YDoubleDot]\[UHat]\.03\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\[YDoubleDot]\[OAcute]\[YDoubleDot]\[Yen]\[CapitalEth]\[YDoubleDot]\
+\.b4\[AAcute]\[YAcute]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\[YDoubleDot]\[OGrave]\[YDoubleDot]\[CapitalAHat]\[Micro]\
+\[YDoubleDot]\[CapitalIDoubleDot]\[CapitalAAcute]\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[Thorn]\[YDoubleDot]\[OAcute]\[YDoubleDot]\
+\[SZ]\.9b\.01\[YDoubleDot]\[YDoubleDot]\[EHat]\[Yen]\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[Eth]\[YDoubleDot]\
+\[UDoubleDot]\.82\.02\[YDoubleDot]\.90\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[IDoubleDot]\[YDoubleDot]\.9a\
+\[ADoubleDot]\[YDoubleDot]\[NonBreakingSpace]\[IDoubleDot]\[Thorn]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[IHat]\[YDoubleDot]\[CenterDot]\[CapitalEAcute]\[YDoubleDot]\[RightGuillemet]\
+\[CapitalARing]\.01\[YDoubleDot]\[YDoubleDot]\[IHat]\[YDoubleDot]\
+\[CapitalOHat]\[RegisteredTrademark]\[YDoubleDot]\[CapitalODoubleDot]\
+\[Copyright]\[YDoubleDot]\[IGrave]\[YDoubleDot]\[NTilde]\.92\[YDoubleDot]\
+\[OGrave]\.8d\[YDoubleDot]\[Divide]\[OTilde]\[YDoubleDot]\.8f\[ODoubleDot]\
+\[YDoubleDot]\.8e\[Eth]\[YDoubleDot]\[EHat]\[YDoubleDot]\[Not]\[CapitalUHat]\
+\[YDoubleDot]\[Copyright]\[CapitalOHat]\[YDoubleDot]\[EAcute]\[YDoubleDot]\
+\[CapitalEAcute]\[CapitalAGrave]\[YDoubleDot]\[CapitalADoubleDot]\[Cedilla]\
+\.01\[YDoubleDot]\[YDoubleDot]\[EAcute]\[YDoubleDot]\[AE]\[Yen]\[YDoubleDot]\
+\[SZ]\.9c\[YDoubleDot]\[EGrave]\.01\[YDoubleDot]\.8b\[YDoubleDot]\[UHat]\.82\
+\.02\[YDoubleDot]\[CCedilla]\[YDoubleDot]\[NonBreakingSpace]\[IAcute]\
+\[YDoubleDot]\.97\[ATilde]\[YDoubleDot]\[AE]\[YDoubleDot]\.bd\[CapitalOGrave]\
+\[YDoubleDot]\.b2\[CapitalCCedilla]\[YDoubleDot]\[ARing]\[YDoubleDot]\
+\[CapitalUAcute]\[Paragraph]\[YDoubleDot]\[CapitalIHat]\[LeftGuillemet]\.01\
+\[YDoubleDot]\[YDoubleDot]\[ARing]\[YDoubleDot]\[Divide]\.9b\[YDoubleDot]\
+\[EAcute]\.8f\[YDoubleDot]\[OTilde]\[IDoubleDot]\[YDoubleDot]\.95\.02\
+\[YDoubleDot]\.85\[OGrave]\[YDoubleDot]\[AHat]\[YDoubleDot]\.b2\[ATilde]\
+\[YDoubleDot]\[DownExclamation]\[CapitalODoubleDot]\[YDoubleDot]\[AHat]\
+\[YDoubleDot]\[CapitalIHat]\[CapitalEGrave]\[YDoubleDot]\.bc\.ba\[YDoubleDot]\
+\[CapitalEHat]\[DiscretionaryHyphen]\[YDoubleDot]\[Times]\.9e\.01\[YDoubleDot]\
+\[YDoubleDot]\[CCedilla]\.91\[YDoubleDot]\[OAcute]\.82\[YDoubleDot]\.83\
+\[OTilde]\[YDoubleDot]\.8f\[NTilde]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\.9f\[CapitalUAcute]\[YDoubleDot]\.aa\
+\[CapitalODoubleDot]\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\
+\[YDoubleDot]\[YAcute]\[YDoubleDot]\[RightGuillemet]\.be\[YDoubleDot]\
+\[CapitalAE]\[RightGuillemet]\.02\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[Times]\[Sterling]\
+\[YDoubleDot]\[AAcute]\[NonBreakingSpace]\.03\[YDoubleDot]\[YDoubleDot]\
+\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\[Thorn]\[YDoubleDot]\[OTilde]\
+\.87\[YDoubleDot]\[YAcute]\.84\[YDoubleDot]\[YDoubleDot]\[Thorn]\[YDoubleDot]\
+\.05\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\.90\[EDoubleDot]\
+\[YDoubleDot]\.99\[ADoubleDot]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\
+\[YDoubleDot]\[YAcute]\[YDoubleDot]\[Not]\[CapitalEth]\[YDoubleDot]\.b4\
+\[CapitalEAcute]\[Thorn]\[YDoubleDot]\[Thorn]\.01\[YDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[CapitalEGrave]\.b4\[YDoubleDot]\[CapitalEth]\
+\[NonBreakingSpace]\[YDoubleDot]\[ADoubleDot]\.99\[YDoubleDot]\[EDoubleDot]\
+\.84\.01\[YDoubleDot]\[YDoubleDot]\.82\[UDoubleDot]\[YDoubleDot]\.88\
+\[CCedilla]\[YDoubleDot]\.9d\[AAcute]\[YDoubleDot]\[Sterling]\
+\[CapitalEDoubleDot]\[YDoubleDot]\.b9\[CapitalAE]\[YDoubleDot]\.be\.af\
+\[YDoubleDot]\[CapitalOTilde]\.aa\[YDoubleDot]\[CapitalUAcute]\.93\.01\
+\[YDoubleDot]\[YDoubleDot]\[OGrave]\.8f\[YDoubleDot]\[OTilde]\.82\[ODoubleDot]\
+\[YDoubleDot]\.8e\[OGrave]\[YDoubleDot]\.92\[CapitalUAcute]\[YDoubleDot]\.aa\
+\[Times]\[YDoubleDot]\[DiscretionaryHyphen]\.be\[YDoubleDot]\[CapitalAE]\
+\[RightGuillemet]\[YDoubleDot]\[CapitalEAcute]\[Cent]\[YDoubleDot]\[AHat]\
+\[NonBreakingSpace]\[YDoubleDot]\[ADoubleDot]\.86\.01\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\.84\.01\[YDoubleDot]\.82\[EAcute]\[YDoubleDot]\.9b\
+\[EGrave]\[YDoubleDot]\.9c\[CapitalIAcute]\[YDoubleDot]\[CenterDot]\
+\[CapitalIGrave]\[YDoubleDot]\[Cedilla]\[PlusMinus]\[YDoubleDot]\
+\[CapitalOAcute]\[Degree]\[YDoubleDot]\[CapitalOHat]\.95\[YDoubleDot]\
+\[IDoubleDot]\.95\[YDoubleDot]\[IDoubleDot]\.82\[OSlash]\.01\[YDoubleDot]\
+\[YDoubleDot]\.8d\[OSlash]\[YDoubleDot]\.8c\[CapitalUDoubleDot]\[YDoubleDot]\
+\[DoubleDot]\[CapitalYAcute]\[YDoubleDot]\[Section]\[CapitalIHat]\[Thorn]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[CapitalADoubleDot]\[CapitalAAcute]\[YDoubleDot]\[CapitalATilde]\.b3\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YAcute]\
+\[YDoubleDot]\[AGrave]\.a6\[YDoubleDot]\[CapitalThorn]\.93\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[UDoubleDot]\.8a\[YDoubleDot]\
+\[UAcute]\.82\[OSlash]\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\
+\[YDoubleDot]\[YAcute]\[Thorn]\[YDoubleDot]\.9b\[IHat]\[YDoubleDot]\.96\
+\[CapitalUAcute]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YAcute]\
+\[YDoubleDot]\[Micro]\[CapitalOGrave]\[YDoubleDot]\.b2\[CapitalAHat]\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YAcute]\
+\[YDoubleDot]\[CapitalNTilde]\[CenterDot]\[YDoubleDot]\[CapitalIAcute]\[Yen]\
+\[Thorn]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\
+\[YDoubleDot]\[IAcute]\.9b\[YDoubleDot]\[EAcute]\.82\[UAcute]\[YDoubleDot]\.8a\
+\.02\[YDoubleDot]\.85\[CapitalThorn]\.01\[YDoubleDot]\[YDoubleDot]\[Section]\
+\[ATilde]\[YDoubleDot]\[DownExclamation]\[CapitalAHat]\[YDoubleDot]\
+\[CapitalAHat]\[CapitalCCedilla]\[YDoubleDot]\.bd\.a6\[YDoubleDot]\
+\[CapitalThorn]\[Not]\[YDoubleDot]\[CapitalOSlash]\.8a\[YDoubleDot]\[UAcute]\
+\.90\[YDoubleDot]\[OHat]\.82\[IAcute]\[YDoubleDot]\.97\[OHat]\[YDoubleDot]\.90\
+\[CapitalNTilde]\.01\[YDoubleDot]\[YDoubleDot]\.b4\[CapitalOSlash]\
+\[YDoubleDot]\[Not]\[Micro]\[YDoubleDot]\[CapitalIDoubleDot]\.bd\[YDoubleDot]\
+\[CapitalCCedilla]\.99\[YDoubleDot]\[EDoubleDot]\[DownExclamation]\
+\[YDoubleDot]\[ATilde]\.82\[UDoubleDot]\[YDoubleDot]\.8b\[YDoubleDot]\
+\[YDoubleDot]\.82\[AGrave]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalThorn]\
+\[YDoubleDot]\[CapitalEAcute]\[EAcute]\[YDoubleDot]\.9b\[CapitalADoubleDot]\
+\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\[ARing]\[CapitalIAcute]\
+\[YDoubleDot]\[CenterDot]\[DoubleDot]\[YDoubleDot]\[CapitalUDoubleDot]\
+\[YDoubleDot]\.b2\[YDoubleDot]\[CapitalOAcute]\.8c\[YDoubleDot]\[OSlash]\
+\[ARing]\[YDoubleDot]\.b3\[YDoubleDot]\[IHat]\.82\[IDoubleDot]\[YDoubleDot]\
+\[CapitalUDoubleDot]\[YDoubleDot]\[RightGuillemet]\[UGrave]\[YDoubleDot]\.8b\
+\[CapitalOAcute]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\
+\[Times]\[CapitalYAcute]\[YDoubleDot]\[Section]\[CenterDot]\[YDoubleDot]\
+\[CapitalUDoubleDot]\[YDoubleDot]\[OAcute]\[CapitalAAcute]\[YDoubleDot]\
+\[CapitalATilde]\[Copyright]\[Thorn]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[EAcute]\[OHat]\[YDoubleDot]\.b4\
+\[YDoubleDot]\[CapitalThorn]\.8e\[YDoubleDot]\[Thorn]\.07\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[Thorn]\[YDoubleDot]\[CapitalUDoubleDot]\
+\[YDoubleDot]\.b4\[YDoubleDot]\[UAcute]\.82\[NTilde]\[YDoubleDot]\[Thorn]\.06\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\
+\[CapitalUDoubleDot]\[YDoubleDot]\[CapitalEGrave]\[IAcute]\[YDoubleDot]\.97\
+\[CapitalOGrave]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\
+\[Thorn]\[YDoubleDot]\[CapitalThorn]\[YDoubleDot]\[ADoubleDot]\[CapitalOGrave]\
+\[YDoubleDot]\.b2\[CenterDot]\[YDoubleDot]\[YAcute]\.03\[YDoubleDot]\
+\[YDoubleDot]\[YAcute]\[YDoubleDot]\[CapitalUDoubleDot]\.01\[YDoubleDot]\
+\[Paragraph]\[YDoubleDot]\[CapitalIHat]\.9c\t\[YDoubleDot]\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[ODoubleDot]\[CCedilla]\
+\[YDoubleDot]\[Micro]\[YDoubleDot]\[EHat]\.82\[UDoubleDot]\[YDoubleDot]\
+\[Thorn]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[CapitalUDoubleDot]\[YDoubleDot]\[IHat]\[YDoubleDot]\[CapitalIAcute]\[YAcute]\
+\[YDoubleDot]\.87\[CapitalOTilde]\[YDoubleDot]\[CapitalUDoubleDot]\
+\[YDoubleDot]\[IAcute]\[YDoubleDot]\[EHat]\[AAcute]\[YDoubleDot]\[Sterling]\
+\.b9\.01\[YDoubleDot]\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\[NTilde]\
+\[UDoubleDot]\[YDoubleDot]\[CapitalEDoubleDot]\[YDoubleDot]\[DownQuestion]\.9d\
+\[YDoubleDot]\[CCedilla]\[OTilde]\[YDoubleDot]\[IGrave]\[YDoubleDot]\
+\[CapitalIAcute]\[YDoubleDot]\[CapitalUAcute]\.82\.01\[YDoubleDot]\
+\[CapitalUHat]\[YDoubleDot]\[EDoubleDot]\[YDoubleDot]\[CapitalIHat]\
+\[YDoubleDot]\[ODoubleDot]\.82\[ADoubleDot]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[EHat]\[YDoubleDot]\[SZ]\[NTilde]\[YDoubleDot]\.93\
+\[CapitalEGrave]\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[EHat]\[YDoubleDot]\
+\[UHat]\[CapitalOTilde]\[YDoubleDot]\.af\[Not]\.01\[YDoubleDot]\[YDoubleDot]\
+\[CapitalUDoubleDot]\[YDoubleDot]\[YDoubleDot]\[EDoubleDot]\[YDoubleDot]\
+\[CapitalEth]\[YDoubleDot]\[CapitalEDoubleDot]\.90\[YDoubleDot]\[OHat]\
+\[EGrave]\[YDoubleDot]\[EGrave]\[YDoubleDot]\[CapitalNTilde]\[YDoubleDot]\
+\[CCedilla]\.82\[OAcute]\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[EGrave]\
+\[YDoubleDot]\[CapitalOGrave]\.01\[YDoubleDot]\.84\[Times]\[YDoubleDot]\
+\[CapitalUHat]\[YDoubleDot]\[CCedilla]\[YDoubleDot]\[IDoubleDot]\[ADoubleDot]\
+\[YDoubleDot]\[NonBreakingSpace]\[RightGuillemet]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[Eth]\[OSlash]\[YDoubleDot]\[CapitalOAcute]\[YDoubleDot]\
+\[RightGuillemet]\.9f\.01\[YDoubleDot]\[YDoubleDot]\[AE]\[Divide]\[YDoubleDot]\
+\[AE]\[YDoubleDot]\[CapitalOHat]\[YDoubleDot]\[Times]\.83\[YDoubleDot]\
+\[CapitalUHat]\[YDoubleDot]\[ARing]\[YDoubleDot]\[CapitalOTilde]\[YDoubleDot]\
+\[OAcute]\.82\[AE]\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[ARing]\
+\[YDoubleDot]\[AHat]\[OHat]\[YDoubleDot]\.90\[CapitalEHat]\[YDoubleDot]\
+\[CapitalUHat]\[YDoubleDot]\[ADoubleDot]\[YDoubleDot]\[YDoubleDot]\
+\[CapitalOSlash]\[YDoubleDot]\[Not]\[RegisteredTrademark]\.01\[YDoubleDot]\
+\[YDoubleDot]\[CapitalUDoubleDot]\[YDoubleDot]\[YAcute]\[EGrave]\[YDoubleDot]\
+\[CapitalODoubleDot]\[YDoubleDot]\[CapitalEGrave]\.92\[YDoubleDot]\[OGrave]\
+\[EHat]\[YDoubleDot]\[ATilde]\[YDoubleDot]\[Times]\[YDoubleDot]\[ADoubleDot]\
+\.83\[YDoubleDot]\[UDoubleDot]\.01\[YDoubleDot]\[YDoubleDot]\[UDoubleDot]\
+\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[ATilde]\[YDoubleDot]\[CapitalOSlash]\
+\[YDoubleDot]\[YDoubleDot]\.82\[CCedilla]\.01\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[ATilde]\[YDoubleDot]\[NTilde]\[EGrave]\[YDoubleDot]\.9c\
+\[CapitalEHat]\[YDoubleDot]\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\
+\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[IHat]\[ODoubleDot]\[YDoubleDot]\
+\[CapitalOSlash]\[YDoubleDot]\[Cedilla]\[RegisteredTrademark]\[YDoubleDot]\
+\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\[Thorn]\[YDoubleDot]\[ARing]\
+\[UGrave]\[YDoubleDot]\[AHat]\[YDoubleDot]\[CapitalUGrave]\[YDoubleDot]\
+\[CapitalOHat]\.92\[YDoubleDot]\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\
+\[YAcute]\[YDoubleDot]\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\[AHat]\
+\[YDoubleDot]\[CapitalUGrave]\[YDoubleDot]\[Eth]\.82\[OTilde]\[YDoubleDot]\
+\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\[YAcute]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[AAcute]\[YDoubleDot]\[ADoubleDot]\[Divide]\[YDoubleDot]\.8d\
+\[CapitalUAcute]\[Thorn]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[AAcute]\.01\
+\[YDoubleDot]\[CapitalUDoubleDot]\[YDoubleDot]\[DoubleDot]\[Degree]\
+\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\[UDoubleDot]\[CCedilla]\
+\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[CapitalADoubleDot]\.94\.01\
+\[YDoubleDot]\[YDoubleDot]\[NTilde]\[EDoubleDot]\[YDoubleDot]\[AHat]\
+\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[AGrave]\.82\[Divide]\[YDoubleDot]\
+\[CapitalUAcute]\[YDoubleDot]\[AAcute]\[YDoubleDot]\[CapitalUDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\.82\[CapitalUHat]\[YDoubleDot]\[CapitalUAcute]\
+\[YDoubleDot]\[AAcute]\[YDoubleDot]\[OGrave]\[EDoubleDot]\[YDoubleDot]\.99\
+\[DownQuestion]\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\[IAcute]\[OTilde]\
+\[YDoubleDot]\[CapitalUDoubleDot]\[YDoubleDot]\[Micro]\[Sterling]\[YDoubleDot]\
+\[AAcute]\[UAcute]\[YDoubleDot]\[AAcute]\[YDoubleDot]\[CapitalUDoubleDot]\
+\[YDoubleDot]\[CapitalNTilde]\.87\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\
+\[CapitalThorn]\[YDoubleDot]\[AGrave]\[YDoubleDot]\[CapitalYAcute]\
+\[YDoubleDot]\[IAcute]\.82\[EHat]\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\
+\[AGrave]\[YDoubleDot]\[ADoubleDot]\[UAcute]\[YDoubleDot]\.8a\[CapitalIHat]\
+\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\[AGrave]\.01\[YDoubleDot]\
+\[CapitalThorn]\[YDoubleDot]\.a6\.b2\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\
+\[UAcute]\[CCedilla]\[YDoubleDot]\[CapitalThorn]\[YDoubleDot]\[CapitalAAcute]\
+\.96\[YDoubleDot]\[IHat]\[IAcute]\[YDoubleDot]\[AGrave]\[YDoubleDot]\
+\[CapitalThorn]\[YDoubleDot]\[CapitalYAcute]\.82\[UGrave]\.01\[YDoubleDot]\
+\[YDoubleDot]\[CapitalUHat]\[YDoubleDot]\[AGrave]\[YDoubleDot]\[CapitalThorn]\
+\[YDoubleDot]\[UGrave]\.82\[CapitalYAcute]\[YDoubleDot]\[CapitalUAcute]\
+\[YDoubleDot]\[AGrave]\[YDoubleDot]\[NTilde]\[IHat]\[YDoubleDot]\.96\
+\[CapitalAAcute]\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\[EDoubleDot]\
+\[OTilde]\[YDoubleDot]\[SZ]\[YDoubleDot]\.b2\[Yen]\[YDoubleDot]\[SZ]\
+\[UDoubleDot]\[YDoubleDot]\[SZ]\[YDoubleDot]\[SZ]\[YDoubleDot]\[CapitalIHat]\
+\.89\[YDoubleDot]\[UHat]\[AGrave]\[YDoubleDot]\[SZ]\[YDoubleDot]\[SZ]\
+\[YDoubleDot]\[EHat]\.82\[IGrave]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalUHat]\
+\[YDoubleDot]\[SZ]\[YDoubleDot]\[ATilde]\[YAcute]\[YDoubleDot]\.87\
+\[CapitalEth]\[YDoubleDot]\[CapitalUAcute]\[YDoubleDot]\[SZ]\[YDoubleDot]\
+\[YDoubleDot]\[AAcute]\[YDoubleDot]\[Sterling]\.b4\[YDoubleDot]\
+\[CapitalUAcute]\[YDoubleDot]\[OSlash]\[EGrave]\[YDoubleDot]\[SZ]\[YDoubleDot]\
+\[EDoubleDot]\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\[UHat]\[AHat]\
+\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\[CapitalYAcute]\[YDoubleDot]\
+\[IGrave]\[OGrave]\.03\[YDoubleDot]\[YDoubleDot]\[SZ]\[YDoubleDot]\[ARing]\
+\[CapitalOHat]\[YDoubleDot]\.82\[YDoubleDot]\[Copyright]\[YDoubleDot]\
+\[CapitalUAcute]\.82\[SZ]\[YDoubleDot]\[Yen]\.82\[CapitalATilde]\[YDoubleDot]\
+\[CapitalAAcute]\.82\[Section]\[YDoubleDot]\[CapitalYAcute]\.82\.8b\
+\[YDoubleDot]\[UGrave]\.82\.82\.82\.82\.82\.82\.82\.b2\[Thorn]\[YDoubleDot]\
+\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[ADoubleDot]\.01\[YDoubleDot]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[ADoubleDot]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[ARing]\[Thorn]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalEDoubleDot]\
+\[UGrave]\[Thorn]\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[AHat]\
+\[YDoubleDot]\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[CapitalIHat]\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[Divide]\
+\[Eth]\[YDoubleDot]\[UDoubleDot]\.03\[YDoubleDot]\[YDoubleDot]\[ADoubleDot]\
+\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\
+\[CCedilla]\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\
+\[EGrave]\[CapitalThorn]\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\
+\[YDoubleDot]\[ADoubleDot]\.01\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\
+\[YDoubleDot]\[YDoubleDot]\[CapitalODoubleDot]\[UAcute]\[YDoubleDot]\[Thorn]\
+\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[CCedilla]\[YDoubleDot]\[UHat]\.03\
+\[YDoubleDot]\[YDoubleDot]\[ARing]\.02\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\
+\[YDoubleDot]\[YDoubleDot]\[CCedilla]\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\
+\[YDoubleDot]\.02\[YDoubleDot]\[CapitalARing]\[YDoubleDot]\[Thorn]\.06\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[ARing]\.02\[YDoubleDot]\[YDoubleDot]\
+\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[OGrave]\[CapitalYAcute]\[Thorn]\
+\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[CCedilla]\[YAcute]\
+\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[AE]\.03\[YDoubleDot]\
+\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[UHat]\[EHat]\[YDoubleDot]\
+\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[CapitalAHat]\[YDoubleDot]\[Thorn]\.03\
+\[YDoubleDot]\[YDoubleDot]\[EGrave]\.05\[YDoubleDot]\[YDoubleDot]\[Thorn]\.03\
+\[YDoubleDot]\[YDoubleDot]\[CapitalOTilde]\[UDoubleDot]\[YDoubleDot]\.01\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[IAcute]\
+\[UDoubleDot]\[YDoubleDot]\.01\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[NTilde]\[UDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\.05\[YDoubleDot]\[YDoubleDot]\[IAcute]\[UDoubleDot]\
+\[YDoubleDot]\[Thorn]\[YDoubleDot]\[YAcute]\.03\[YDoubleDot]\[YDoubleDot]\
+\[CapitalATilde]\[YDoubleDot]\[YAcute]\[YDoubleDot]\.02\[YDoubleDot]\[AE]\
+\[UDoubleDot]\[YDoubleDot]\.05\[YDoubleDot]\[YDoubleDot]\[CapitalIDoubleDot]\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[EGrave]\.01\
+\[YDoubleDot]\[Thorn]\.06\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[ATilde]\
+\[YDoubleDot]\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[AE]\t\[YDoubleDot]\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[CapitalUGrave]\[IGrave]\t\
+\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[YDoubleDot]\[ATilde]\[YDoubleDot]\
+\[Thorn]\.03\[YDoubleDot]\[YDoubleDot]\[CapitalIHat]\[Thorn]\[YDoubleDot]\
+\[YAcute]\.01\[YDoubleDot]\[YDoubleDot]\[ARing]\[Thorn]\[YDoubleDot]\[YAcute]\
+\.01\[YDoubleDot]\[YDoubleDot]\[ATilde]\[Thorn]\[YDoubleDot]\[Thorn]\.01\
+\[YDoubleDot]\[YDoubleDot]\[AE]\[UDoubleDot]\[YDoubleDot]\[Thorn]\.01\
+\[YDoubleDot]\[YDoubleDot]\[OHat]\[CapitalNTilde]\[UDoubleDot]\[YDoubleDot]\
+\[Thorn]\.01\[YDoubleDot]\[YDoubleDot]\[ATilde]\[Thorn]\[YDoubleDot]\[Thorn]\
+\.01\[YDoubleDot]\[YDoubleDot]\[AHat]\.82\.82\.82\.82\.82\.82\.be;\[PlusMinus]\
+\.05\.9c\.01D\[AE]\.86-`0\.13\.10\[CapitalNTilde]\.18\.01D\.13\.17\\\[AE]\.87\
+\.16\.17Y\.88f#[`\.17Z\.8a\.04\[AE]\.88:y\[ADoubleDot]\.16\[Divide]\.85\.01\
+\.83a\.8fx#C\[CapitalIGrave]\[PlusMinus]\.05k\.01\[EDoubleDot]d\
+\[CapitalIDoubleDot]3>\.13\.01~\.a6g\[Times]\[CapitalAHat]+\.01\[CCedilla]w
+>\.19\[CapitalAHat]#\.16\.8cl\.14|\[CapitalOHat]\[CapitalEGrave]\.1b\.16\
+\[Divide]\[DoubleDot]\.98`+\.0e>\.13\[CapitalNTilde]-\.16\.17T\[EHat]a`\.99\
+\.01T>\.1b\.0e\[AAcute]V\[Cedilla]\.1af\.17Q\.8a
+\.01I\.bd\.01I``\[Divide]N\.90b\.01J\[RightGuillemet]\.17J\.90Ng*\[Paragraph]\
+5y\[CapitalIHat]\.01\[Cedilla]\.b9\.1fg#\.13\.16\[Divide]\.bagg`\.8ex#0\
+\[CapitalIGrave]\[PlusMinus]\.05\.01\.16\[Divide]\[CenterDot]\.01\[Micro]`\.8f\
+x#G\[CapitalIGrave]\[PlusMinus]\.04\[OAcute]\.16\[Divide]\[CapitalEAcute]\.98\
+\.16\.178\[EHat]a`\.99\.16ffg^g`\.7f\.8ex#7\[CapitalIGrave]\[PlusMinus]\.04\
+\[CapitalUGrave]~\.11\.8ex#6\[CapitalIGrave]\[PlusMinus]\.04\
+\[CapitalIDoubleDot]~\.1b\.8ex#5\[CapitalIGrave]\[PlusMinus]\.04\
+\[CapitalARing]\.16ffa\.80cx#4\[CapitalIGrave]\[PlusMinus]\.04\[Cedilla]\.01\
+\[CCedilla]w
+\[CapitalEGrave]ma\.11\[CapitalEDoubleDot]n#\[IAcute]\.015VW#U`/\.12\.01U\
+\[CapitalNTilde]Z\.015\.12\[AE]\.93\[OSlash]\[IDoubleDot]\[Divide]\
+\[IDoubleDot]\[IGrave]\.7f^\[YDoubleDot]\[Cedilla]G~\.0b\.01\[IAcute]u\
+\[CapitalIDoubleDot]@\[CCedilla]Bn\.16\[RegisteredTrademark]\.01\
+\[CapitalEAcute]\.0e\.08\.08\.80\.01\.01a\[Cent]\.08\.81\.1a\
+\[RegisteredTrademark]\.01\.1aHH\.08\.01\.08?$\[Thorn]\.02\[YDoubleDot]\[UHat]\
+\[YDoubleDot]q\.01\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.02\
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\.03\.aa\
+\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]\.047#7#7#\.05v&v&v&\.06\
+\[Micro]*\[Micro]*\[Micro]*\.07\[OHat].\[OHat].\[OHat].\.08\[YDoubleDot]\
+\[UDoubleDot]\.aa\[DoubleDot]\t;\.13;\.13;\.13
+z\.17z\.17z\.17\.0b\.b9\.1a\.b9\.1a\.b9\.1a\.0c\[OSlash]\.1e\[OSlash]\.1e\
+\[OSlash]\.1e
+\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.0eUT\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.0fq\.aa\[DoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]\.10\[UDoubleDot]\.0e\[UDoubleDot]\.0e\
+\[UDoubleDot]\.0e\.11V,\.9d\.05$\.12UT\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.13\.aa\[DoubleDot]\[YDoubleDot]\[UDoubleDot]\[YDoubleDot]\
+\[UDoubleDot]\.14;\.13;\.13;\.13\.15z\.17z\.17z\.17\.16\.b9\.1a\.b9\.1a\.b9\
+\.1a\.17\[OSlash]\.1e\[OSlash]\.1e\[OSlash]\.1e\.18\[YDoubleDot]\[UDoubleDot]\
+\[YDoubleDot]\[UDoubleDot]\.19?\.03?\.03?\.03\.1a~\.07~\.07~\.07\.1b\.bd\.0b\
+\.bd\.0b\.bd\.0b\.1c\[UDoubleDot]\.0e\[UDoubleDot]\.0e\[UDoubleDot]\.0e\.1dUT\
+\[UDoubleDot]\.02\.1e\.aa\[DoubleDot]\[UDoubleDot]\.02\.1f\[YDoubleDot]\
+\[UDoubleDot]\[UDoubleDot] \[YAcute]
+UT!UTUT\"\.aa\[DoubleDot]\[UDoubleDot]H#\[CapitalYAcute]k\.08\[CapitalAHat]\
+\.06\[Cent]$?\.03?\.03?\.03%~\.07~\.07~\.07&\.bd\.0b\.bd\.0b\.bd\.0b'\
+\[UDoubleDot]\.0e\[UDoubleDot]\.0e\[UDoubleDot]\.0e(\.03\[Eth]\.03\[Eth]\.03\
+\[Eth])B\[OAcute]B\[OAcute]B\[OAcute]*\.81\[Divide]\.81\[Divide]\.81\[Divide]+\
+\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat],\
+\[YAcute]\.11UT-UTUT.\.aa\[DoubleDot]UT\t/\[YDoubleDot]\[UDoubleDot]UT0\
+\[YAcute]3\.aa\[DoubleDot]1UT\.aa\[DoubleDot]2\.aa\[DoubleDot]UT3\.03\[Eth]\
+\.03\[Eth]\.03\[Eth]4B\[OAcute]B\[OAcute]B\[OAcute]5\.81\[Divide]\.81\[Divide]\
+\.81\[Divide]6\[CapitalAGrave]\[UHat]\[CapitalAGrave]\[UHat]\[CapitalAGrave]\
+\[UHat]7\[YAcute]#UT8\.07\[AGrave]\.07\[AGrave]\.07\[AGrave]9F\[ADoubleDot]F\
+\[ADoubleDot]F\[ADoubleDot]:\.85\[CCedilla]\.85\[CCedilla]\.85\[CCedilla];\
+\[CapitalADoubleDot]\[EDoubleDot]\[CapitalADoubleDot]\[EDoubleDot]\
+\[CapitalADoubleDot]\[EDoubleDot]<\[YAcute]\.10\.aa\[DoubleDot]=UT\.aa\
+\[DoubleDot]>\.aa\[DoubleDot]\.aa
+\[DoubleDot]?\[YDoubleDot]\[UDoubleDot]\.aa\[DoubleDot]@\[YAcute]3\
+\[CapitalOHat]AUT\[YDoubleDot]\[UDoubleDot]B\.aa\[DoubleDot]\.aa\[DoubleDot]C\
+\.07\[AGrave]\.07\[AGrave]\.07\[AGrave]DF\[ADoubleDot]F\[ADoubleDot]F\
+\[ADoubleDot]E\.85\[CCedilla]\.85\[CCedilla]\.85\[CCedilla]F\
+\[CapitalADoubleDot]\[EDoubleDot]\[CapitalADoubleDot]\[EDoubleDot]\
+\[CapitalADoubleDot]\[EDoubleDot]G\[YAcute]#\.aa\[DoubleDot]H\.0b\[CapitalEth]\
+\.0b\[CapitalEth]\.0b\[CapitalEth]IJ\[CapitalOHat]J\[CapitalOHat]J\
+\[CapitalOHat]J\.89\[CapitalOSlash]\.89\[CapitalOSlash]\.89\[CapitalOSlash]K\
+\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\
+\[CapitalUHat]L\[YAcute]\.0f\[YDoubleDot]\[UDoubleDot]MUT\[YDoubleDot]\
+\[UDoubleDot]N\.aa\[DoubleDot]\.0f\[YDoubleDot]\[UDoubleDot]O\[YDoubleDot]\
+\[UDoubleDot]\[YDoubleDot]\[UDoubleDot]PUT\[Thorn]\.04QUTUT\[Thorn](R\.aa\
+\[DoubleDot]\[YDoubleDot]\[UDoubleDot]S\.0b\[CapitalEth]\.0b\[CapitalEth]\.0b\
+\[CapitalEth]TJ\[CapitalOHat]J\[CapitalOHat]J\[CapitalOHat]U\.89\
+\[CapitalOSlash]\.89\[CapitalOSlash]\.89\[CapitalOSlash]V\[CapitalEGrave]\
+\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]\[CapitalEGrave]\[CapitalUHat]W\
+\[YAcute]\.1b\[YDoubleDot]\[UDoubleDot]X\.0f\[CapitalAGrave]\.0f\
+\[CapitalAGrave]\.0f\[CapitalAGrave]YN\[CapitalADoubleDot]N\
+\[CapitalADoubleDot]N\[CapitalADoubleDot]Z\.8d\[CapitalEGrave]\.8d\
+\[CapitalEGrave]\.8d\[CapitalEGrave][\[UHat]\[CapitalIGrave]\.05\\UT\[Thorn]\
+\.04]UTUT\[Thorn]\.03^\.aa\[DoubleDot]UT\[Thorn]\.04_\[YDoubleDot]\
+\[UDoubleDot]UT\[Thorn]\.14`UTUTaUTUTUTb\.aa\[DoubleDot]UT\[Thorn]\.18c\.0f\
+\[CapitalAGrave]\.0f\[CapitalAGrave]\.0f\[CapitalAGrave]dN\[CapitalADoubleDot]\
+N\[CapitalADoubleDot]N\[CapitalADoubleDot]e\.8d\[CapitalEGrave]\.8d\
+\[CapitalEGrave]\.8d\[CapitalEGrave]f\[UHat]\[CapitalIGrave]\.05gUT\[Thorn]2h\
+\.13\[PlusMinus]\.13\[PlusMinus]\.13\[PlusMinus]iR\.b4R\.b4R\.b4j\.91\
+\[Cedilla]\.91\[Cedilla]\.91\[Cedilla]k\[CapitalEth]\.bc\[CapitalEth]\.bc\
+\[CapitalEth]\.bclUTUTmUTUTUTn\.aa\[DoubleDot]~UTUTo\[YDoubleDot]\[UDoubleDot]\
+UTUTpUT\.aa\[DoubleDot]qUTUT\.aa\[DoubleDot]r\.aa\[DoubleDot]UTUTs\.13\
+\[PlusMinus]\.13\[PlusMinus]\.13\[PlusMinus]tR\.b4R\.b4R\.b4u\.91\[Cedilla]\
+\.91\[Cedilla]\.91\[Cedilla]v\[CapitalEth]\.bc\[CapitalEth]\.bc\[CapitalEth]\
+\.bcwUTUTx\.17\[DownExclamation]\.17\[DownExclamation]\.17\[DownExclamation]\
+yV\[Yen]V\[Yen]V\[Yen]z\.95\[DoubleDot]\.95\[DoubleDot]\.95\[DoubleDot]{\
+\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]|UT\.aa\
+\[DoubleDot]}UTUT\.aa\[DoubleDot]~\.aa^\[DoubleDot]UT\.aa\[DoubleDot]\.7f\
+\[YDoubleDot]\[UDoubleDot]UT\.aa\[DoubleDot]\.80UT\[YDoubleDot]\[UDoubleDot]\
+\.81UTUT\[YDoubleDot]\[UDoubleDot]\.82\.aa\[DoubleDot]UT\.aa\[DoubleDot]\.83\
+\.17\[DownExclamation]\.17\[DownExclamation]\.17\[DownExclamation]\.84V\[Yen]\
+V\[Yen]V\[Yen]\.85\.95\[DoubleDot]\.95\[DoubleDot]\.95\[DoubleDot]\.86\
+\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\[CapitalOHat]\[Not]\.87UT\.aa\
+\[DoubleDot]\.88\.1b\.91\.1b\.91\.1b\.91\.89Z\.95Z\.95Z\.95\.8a\[UHat]\.99\.19\
+\.8b\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\.8cUT\
+\[YDoubleDot]\[UDoubleDot]\.8dUTUT\[YDoubleDot]\[UDoubleDot]\.8e\.13\.aa\
+\[DoubleDot]UT\[YDoubleDot]\[UDoubleDot]\.8f\[YDoubleDot]\[UDoubleDot]UT\
+\[YDoubleDot]\[UDoubleDot]\.90\.aa\[DoubleDot]\[Thorn]\.04\.91UT\.aa\
+\[DoubleDot]\[Thorn]\.18\.92\.aa\[DoubleDot]UT\[YDoubleDot]\[UDoubleDot]\.93\
+\.1b\.91\.1b\.91\.1b\.91\.94Z\.95Z\.95Z\.95\.95\[UHat]\.995\.96\
+\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\[CapitalOSlash]\.9c\.97UT\
+\[YDoubleDot]\[UDoubleDot]\.98\.1f\.81\.1f\.81\.1f\.81\.99^\.85^\.85^\.85\.9a\
+\.9d\.89\.9d\.89\.9d\.89\.9b\[CapitalUDoubleDot]\.8c\[CapitalUDoubleDot]\.8c\
+\[CapitalUDoubleDot]\.8c\.9c\.aa\[DoubleDot]\[Thorn]\.04\.9dUT\.aa\[DoubleDot]\
+\[Thorn]\.04\.9e\.aa\[DoubleDot]\.aa\[DoubleDot]\[Thorn]\.04\.9f\[YDoubleDot]\
+\[UDoubleDot]\.aa\[DoubleDot]\[Thorn]\.14\[NonBreakingSpace]\.aa\[DoubleDot]\
+UT\[DownExclamation]UT\.aa\[DoubleDot]UT\[Cent]\.aa\[DoubleDot]\.aa\
+\[DoubleDot]\[Thorn]$\[Sterling]\.1f\.81\.1f\.81\.1f\.81\[Currency]^\.85^\.85^\
+\.85\[Yen]\.9d\.89\.9d\.89\.9d\.89\.a6\[CapitalUDoubleDot]\.8c\
+\[CapitalUDoubleDot]\.8c\[CapitalUDoubleDot]\.8c\[Section]\.aa\[DoubleDot]\
+\[Thorn].\[DoubleDot]#r#\
+\>"], "Graphics",
+ ImageSize->{350., 216.31189999999998`},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+ad or edited usi\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+WhereIs[{2,3},b]
+WhereIs[{-4,9},b]\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+\
+\>", "\<\
+3\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+\
+\>", "\<\
+2\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["N[DivideStrand[cc,cs[[2]],3,2]]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{2., 3.}, {1.388888888888888889, 4.430185459986584265}, 
+ 
+   9.486832980505137996, -7., 0.3217505543966421934, 
+ 
+   0.4858753153920106913, 3.}, 
+ 
+  {{1.388888888888888889, 4.430185459986584265}, {-4., 9.}, 
+ 
+   9.486832980505137996, -7., 0.4858753153920106913, 
+ 
+   1.249045772398254426, 2.}}\
+\>", "\<\
+{{{2., 3.}, {1.38889, 4.43019}, 9.48683, -7., 0.321751, 
+ 
+   0.485875, 3.}, {{1.38889, 4.43019}, {-4., 9.}, 9.48683, 
+ 
+   -7., 0.485875, 1.24905, 2.}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["Intersect[cc,cs[[2]]]", "Input"],
+
+Cell[OutputFormData["\<\
+ything from the line containing (*^ down to \
+\>", "\<\
+{1.388888888888888889, 4.430185459986584265}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["Intersect[cs[[2]],cc]", "Input"],
+
+Cell[OutputFormData["\<\
+name ending with \".ma\" to allow Mathematica t\
+\>", "\<\
+{1.388888888888888889, 4.4301854599865842648}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["Evaluate[DivideStrand[cc,cs[[2]],3,2]]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{2, 3}, {1.388888888888888889, 4.430185459986584265}, 
+ 
+   9.4868329805051379960, -7.0000000000000000000, 
+ 
+   0.3217505543966421934, 0.4858753153920106914, 3}, 
+ 
+  {{1.388888888888888889, 4.430185459986584265}, {-4, 9}, 
+ 
+   9.4868329805051379960, -7.0000000000000000000, 
+ 
+   0.4858753153920106914, 1.24904577239825442583, 2}}\
+\>", "\<\
+{{{2, 3}, {1.388888888888888889, 4.430185459986584265}, 
+ 
+   9.486832980505137996, -7., 0.3217505543966421934, 
+ 
+   0.4858753153920106914, 3}, 
+ 
+  {{1.388888888888888889, 4.430185459986584265}, {-4, 9}, 
+ 
+   9.486832980505137996, -7., 0.4858753153920106914, 
+ 
+   1.24904577239825442583, 2}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+old=cc
+new=cs[[2]]\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+a cr\.03)s file,
+\tbut it can be opened using any other version as well.\";
+
+\tFrontEndVersion = \"Macintosh Mathematica Not\
+\>", "\<\
+{{2, 3}, {-4, 9}, 9.486832980505137996, -7., 
+ 
+  0.3217505543966421934, 1.24904577239825442583, 2}\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+BreakBelow, nohscroll, preserveAspect, groupLikeTitle, center, M7, bold, e8,  \
+24, \"Times\"; 
+\tfontset = subtitle, inactive, noPageBreakBelow, nohscroll, preserveAspect, \
+groupLikeTitle, center, M7, bold, e6,  18,\
+\>", "\<\
+{{-2.47214, 0.000447214}, {4., 4.}, 4.4721359549995793928, 
+ 
+  2., 3.141492653589793238, 1.10714871779409050302, 3}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["cutpt=Intersect[old,new]", "Input"],
+
+Cell[OutputFormData["\<\
+pLikeTitle, center, M7, italic, e6,  14, \"Ti\
+\>", "\<\
+{1.388888888888888889, 4.430185459986584265}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["cutpt[[1]]", "Input"],
+
+Cell[OutputFormData["\<\
+gray\.16p, bold, \
+\>", "\<\
+1.388888888888888889\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["blist=StrandList[b,2]", "Input"],
+
+Cell["Part::partw: Part 2 of {<<1>>} does not exist.", "Message"],
+
+Cell["\<\
+                                    1
+Power::infy: Infinite expression -------- encountered.
+                                      -19
+                                 0. 10\
+\>", "Message"],
+
+Cell["\<\
+Infinity::indet: 
+                                 -17
+                            0. 10    ComplexInfinity
+   Indeterminate expression ------------------------
+                                       2
+     encountered.\
+\>", "Message"],
+
+Cell["\<\
+                                    1
+Power::infy: Infinite expression -------- encountered.
+                                      -19
+                                 0. 10\
+\>", "Message"],
+
+Cell["\<\
+Infinity::indet: 
+                                 -17
+                            0. 10    ComplexInfinity
+   Indeterminate expression ------------------------
+                                       2
+     encountered.\
+\>", "Message"],
+
+Cell["Part::partw: Part 2 of {<<1>>} does not exist.", "Message"],
+
+Cell["Part::partw: Part 1 of {} does not exist.", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Part::partw
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell["\<\
+Part::pspec: 
+   Part specification {}[[7]]
+     is neither an integer nor a list of non-zero integers.\
+\>", "Message"],
+
+Cell["\<\
+Thread::tdlen: 
+   Objects of unequal length in <<4>> cannot be combined.\
+\>", "Message"],
+
+Cell["\<\
+Thread::tdlen: 
+   Objects of unequal length in {} <<1>> {3. + <<3>>, <<3>>}
+     cannot be combined.\
+\>", "Message"],
+
+Cell["\<\
+Thread::tdlen: 
+   Objects of unequal length in 
+                          2
+    {} <<1>> {(3. + <<3>>) , <<3>>} cannot be combined.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Thread::tdlen
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell["\<\
+Part::pspec: 
+   Part specification {}[[7.]]
+     is neither an integer nor a list of non-zero integers.\
+\>", "Message"],
+
+Cell["\<\
+Part::pspec: 
+   Part specification {}[[7.]]
+     is neither an integer nor a list of non-zero integers.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Part::pspec
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell["\<\
+                                    1
+Power::infy: Infinite expression -------- encountered.
+                                      -19
+                                 0. 10\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Power::infy
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell["\<\
+Infinity::indet: 
+                                 -17
+                            0. 10    ComplexInfinity
+   Indeterminate expression ------------------------
+                                       2
+     encountered.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Infinity::indet
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell[OutputFormData["\<\
+{{{{3.229670439582639964, 0.001077032959631845871}, 
+ 
+    {4.0000000000000000000, 4.0000000000000000000}, 
+ 
+    10.7703296142690080625, 14.0000000000000000000, 
+ 
+    3.141492653589793238, 2.7610862764774283522, 2}, 
+ 
+   {{6.0000000000000000000, 2.00000000000000000000}, 
+ 
+    {6.472135932638899636, 0.0004472135947546019472}, 
+ 
+    4.4721359549995793928, 2.00000000000000000000, 
+ 
+    0.4636476090008061162, 0.0001, 3}, 
+ 
+   {{10.0000000000000000000, 10.0000000000000000000}, 
+ 
+    {34.14213555302027243, 0.001414213560016072446}, 
+ 
+    14.1421356237309504880, 20.0000000000000000000, 
+ 
+    2.3561944901923449288, 0.0001, 4}}, 
+ 
+  {{{3.229670439582639964, 0.001077032959631845871}, 
+ 
+    {4.0000000000000000000, 4.0000000000000000000}, 
+ 
+    10.7703296142690080625, 14.0000000000000000000, 
+ 
+    3.141492653589793238, 2.7610862764774283522, 2}, {}, 
+ 
+   {{6.000000000000000000, 2.00000000000000000}, 
+ 
+    {Indeterminate, If[discrim < 0, \"miss\", 
+ 
+      Sqrt[discrim]]}, 14.1421356237309504880, 
+ 
+    20.0000000000000000000, 2.999695598985629316, 
+ 
+    Indeterminate, 2, {10.0000000000000000000, 
+ 
+     10.0000000000000000000}, 
+ 
+    {6.000000000000000000, 2.00000000000000000}, 
+ 
+    14.1421356237309504880, 20.0000000000000000000, 
+ 
+    2.3561944901923449288, 2.999695598985629316, 1}}, 
+ 
+  {{{3.229670439582639964, 0.001077032959631845871}, 
+ 
+    {4.0000000000000000000, 4.0000000000000000000}, 
+ 
+    10.7703296142690080625, 14.0000000000000000000, 
+ 
+    3.141492653589793238, 2.7610862764774283522, 2}, 
+ 
+   {{{}, {}}, {{}, {}}, {}, {}, {}, {}, 3}, 
+ 
+   {{6.000000000000000000, 2.00000000000000000}, 
+ 
+    {Indeterminate, If[discrim < 0, \"miss\", 
+ 
+      Sqrt[discrim]]}, 14.1421356237309504880, 
+ 
+    20.0000000000000000000, 2.999695598985629316, 
+ 
+    Indeterminate, 2, {10.0000000000000000000, 
+ 
+     10.0000000000000000000}, 
+ 
+    {6.000000000000000000, 2.00000000000000000}, 
+ 
+    14.1421356237309504880, 20.0000000000000000000, 
+ 
+    2.3561944901923449288, 2.999695598985629316, 1}}}\
+\>", "\<\
+{{{{3.22967, 0.00107703}, {4., 4.}, 10.7703296142690080625, 
+ 
+    14., 3.141492653589793238, 2.7610862764774283522, 2}, 
+ 
+   {{6., 2.}, {6.47214, 0.000447214}, 
+ 
+    4.4721359549995793928, 2., 0.4636476090008061162, 
+ 
+    0.0001, 3}, {{10., 10.}, {34.1421, 0.00141421}, 
+ 
+    14.142135623730950488, 20., 2.3561944901923449288, 
+ 
+    0.0001, 4}}, {{{3.22967, 0.00107703}, {4., 4.}, 
+ 
+    10.7703296142690080625, 14., 3.141492653589793238, 
+ 
+    2.7610862764774283522, 2}, {}, 
+ 
+   {{6., 2.}, {Indeterminate, 
+ 
+     If[discrim < 0, miss, Sqrt[discrim]]}, 
+ 
+    14.142135623730950488, 20., 2.999695598985629316, 
+ 
+    Indeterminate, 2, {10., 10.}, {6., 2.}, 
+ 
+    14.142135623730950488, 20., 2.3561944901923449288, 
+ 
+    2.999695598985629316, 1}}, 
+ 
+  {{{3.22967, 0.00107703}, {4., 4.}, 
+ 
+    10.7703296142690080625, 14., 3.141492653589793238, 
+ 
+    2.7610862764774283522, 2}, 
+ 
+   {{{}, {}}, {{}, {}}, {}, {}, {}, {}, 3}, 
+ 
+   {{6., 2.}, {Indeterminate, 
+ 
+     If[discrim < 0, miss, Sqrt[discrim]]}, 
+ 
+    14.142135623730950488, 20., 2.999695598985629316, 
+ 
+    Indeterminate, 2, {10., 10.}, {6., 2.}, 
+ 
+    14.142135623730950488, 20., 2.3561944901923449288, 
+ 
+    2.999695598985629316, 1}}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["ParametricPlot[Evaluate[PlotStrands[blist]],{theta,0,1}]", "Input"],
+
+Cell[CellGroupData[{Cell["\<\
+Part::partw: 
+   Part 5 of {{{3.22967, 0.00107703}, {4., 4.}, <<4>>, 2}, 
+     <<2>>} does not exist.\
+\>", "Message"],
+
+Cell["\<\
+Part::partw: 
+   Part 6 of {{{3.22967, 0.00107703}, {4., 4.}, <<4>>, 2}, 
+     <<2>>} does not exist.\
+\>", "Message"],
+
+Cell["\<\
+Part::partw: 
+   Part 4 of {{{3.22967, 0.00107703}, {4., 4.}, <<4>>, 2}, 
+     <<2>>} does not exist.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Part::partw
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell["\<\
+ParametricPlot::pptr: 
+   {<<2>>} does not evaluate to a pair of real numbers at 
+    theta = 0..\
+\>", "Message"],
+
+Cell["\<\
+ParametricPlot::pptr: 
+   {<<2>>} does not evaluate to a pair of real numbers at 
+    theta = 0.0416667.\
+\>", "Message"],
+
+Cell["\<\
+ParametricPlot::pptr: 
+   {<<2>>} does not evaluate to a pair of real numbers at 
+    theta = 0.0833333.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of ParametricPlot::pptr
+     will be suppressed during this calculation.\
+\>", "Message"]}, Open]],
+
+Cell[OutputFormData["\<\
+$Aborted\
+\>", "\<\
+$Aborted\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["b=n[edges[{{20,24},{17,43},{31,19}}]]", "Input"],
+
+Cell[OutputFormData["\<\
+{3., {{20., 24.}, {17., 43.}, 215.0103356688799843, 
+ 
+   -193.6666666666666667, False, 0.1118556455273997559, 
+ 
+   0.2013481084366309535, 46229.44444444444444}, 
+ 
+  {{17., 43.}, {31., 19.}, 63.0726824013861206, 
+ 
+   -29.14285714285714286, True, 0.7501563503318398328, 
+ 
+   0.3059925465208795007, 3978.163265306122449}, 
+ 
+  {{31., 19.}, {20., 24.}, 24.37737062004652376, 
+ 
+   15.72727272727272727, False, 0.8937257440566686632, 
+ 
+   1.394611923279372397, 594.2561983471074381}}\
+\>", "\<\
+{3., {{20., 24.}, {17., 43.}, 215.0103357, -193.6666667, 
+ 
+   False, 0.1118556455, 0.2013481084, 46229.44444}, 
+ 
+  {{17., 43.}, {31., 19.}, 63.0726824, -29.14285714, True, 
+ 
+   0.7501563503, 0.3059925465, 3978.163265}, 
+ 
+  {{31., 19.}, {20., 24.}, 24.37737062, 15.72727273, False, 
+ 
+   0.8937257441, 1.394611923, 594.2561983}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["bstart=FirstStrands[b]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{-408.6768948303877753, 0.2150102998338258312}, 
+ 
+   {17., 43.}, 215.0103356688799843, -193.6666666666666667, 
+ 
+   3.140592653589793238, 0.2013481084366309535, 3}, 
+ 
+  {{33.92979372219040508, 0.06307267188927291264}, 
+ 
+   {31., 19.}, 63.0726824013861206, -29.14285714285714286, 
+ 
+   0.001, 0.3059925465208795007, 1}, 
+ 
+  {{-8.650085704089502185, 0.02437736655715162356}, 
+ 
+   {20., 24.}, 24.37737062004652376, 15.72727272727272727, 
+ 
+   3.140592653589793238, 1.394611923279372397, 2}}\
+\>", "\<\
+{{{-408.677, 0.21501}, {17., 43.}, 215.0103357, 
+ 
+   -193.6666667, 3.140592653589793238, 0.2013481084, 3}, 
+ 
+  {{33.9298, 0.0630727}, {31., 19.}, 63.0726824, 
+ 
+   -29.14285714, 0.001, 0.3059925465, 1}, 
+ 
+  {{-8.65009, 0.0243774}, {20., 24.}, 24.37737062, 
+ 
+   15.72727273, 3.140592653589793238, 1.394611923, 2}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["bcone=ConeStrands[b]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{20., 24.}, {21.34356149705444196, 
+ 
+    0.2150102998338258312}, 215.0103356688799843, 
+ 
+   -193.6666666666666667, 0.1118556455273997559, 0.001, 2}, 
+ 
+  {{-92.2155080079046908, 0.06307267188927291264}, 
+ 
+   {17., 43.}, 63.0726824013861206, -29.14285714285714286, 
+ 
+   3.140592653589793238, 0.7501563503318398328, 3}, 
+ 
+  {{31., 19.}, {40.10463115863495673, 
+ 
+    0.02437736655715162356}, 24.37737062004652376, 
+ 
+   15.72727272727272727, 0.8937257440566686632, 0.001, 4}}\
+\>", "\<\
+{{{20., 24.}, {21.3436, 0.21501}, 215.0103357, 
+ 
+   -193.6666667, 0.1118556455, 0.001, 2}, 
+ 
+  {{-92.2155, 0.0630727}, {17., 43.}, 63.0726824, 
+ 
+   -29.14285714, 3.140592653589793238, 0.7501563503, 3}, 
+ 
+  {{31., 19.}, {40.1046, 0.0243774}, 24.37737062, 
+ 
+   15.72727273, 0.8937257441, 0.001, 4}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["blist=StrandList[b,3]", "Input"],
+
+Cell["\<\
+Part::partd: 
+   Part specification {3., <<3>>}[[1,1]]
+     is longer than depth of object.\
+\>", "Message"],
+
+Cell["\<\
+Part::partd: 
+   Part specification {3., <<3>>}[[1.,1.]]
+     is longer than depth of object.\
+\>", "Message"],
+
+Cell["\<\
+Part::partd: 
+   Part specification {3., <<3>>}[[1.,1.]]
+     is longer than depth of object.\
+\>", "Message"],
+
+Cell["\<\
+General::stop: 
+   Further output of Part::partd
+     will be suppressed during this calculation.\
+\>", "Message"],
+
+Cell[OutputFormData["\<\
+$Aborted\
+\>", "\<\
+$Aborted\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["NewStrands[bstart[[2]],b,bcone]", "Input"],
+
+Cell[OutputFormData["\<\
+{{-21.3493697511092106, 0.1872256892781781623}, 
+ 
+  {6.854771784232365144, 22.70539419087136929}, 
+ 
+  23.24155140215580682, 1.891427526960336326, 
+ 
+  {{3.141592653589793238 - 0.09628553094303279638*I, 
+ 
+    3.141592653589793238 - 0.3075434828792200364*I}, 
+ 
+   {2.413553665857831548, 
+ 
+    3.141592653589793238 - 0.7634057761749865044*I}, 
+ 
+   3.141592653589793238 - 0.7878815387922976488*I, 
+ 
+   2.236231532952344587, 2.771876698100917657, 
+ 
+   2.905794496839803819, 
+ 
+   3.141592653589793238 - 0.09628553094303279638*I}, 
+ 
+  {{1.360363403467801704, 1.404169438840054817}, 
+ 
+   {1.084854211146636096, 1.663229313739129019}, 
+ 
+   1.684287890154637959, 0.9321354745601038912, 
+ 
+   1.285864211916286011, 1.327200195904357173, 
+ 
+   1.360363403467801704}, 2}\
+\>", "\<\
+{{-21.34936975, 0.1872256893}, {6.854771784, 22.70539419}, 
+ 
+  23.2415514, 1.891427527, 
+ 
+  {{3.14159 - 0.0962855 I, 3.14159 - 0.307543 I}, 
+ 
+   {2.41355, 3.14159 - 0.763406 I}, 3.14159 - 0.787882 I, 
+ 
+   2.23623, 2.77188, 2.90579, 3.14159 - 0.0962855 I}, 
+ 
+  {{1.36036, 1.40417}, {1.08485, 1.66323}, 1.68429, 
+ 
+   0.932135, 1.28586, 1.3272, 1.36036}, 2}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+
+tt=NewPoint[{bstart[[3,1]],b[[bstart[[3,7]]+1,1]]}  ]
+ss=NewPoint[{bstart[[3,2]],b[[bstart[[3,7]]+1,1]]}  ]
+WhereIs[tt,b]
+WhereIs[ss,b]
+cc=Cent[tt,ss]
+rr=Rad[tt,ss]
+ArcCos[(tt[[1]]-cc)/rr]
+ArcCos[(tt[[2]]-cc)/rr]
+\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+{89.08546401245546864, 0.06850869037813087654}\
+\>", "\<\
+{89.08546401, 0.06850869038}\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+{7.51794871794871796, 75.8564102564102565}\
+\>", "\<\
+{7.517948718, 75.85641026}\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+3.\
+\>", "\<\
+3.\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+3.\
+\>", "\<\
+3.\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+13.02914557447461253\
+\>", "\<\
+13.02914557\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+76.05634929300908837\
+\>", "\<\
+76.05634929\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+0.0009007623989226201515\
+\>", "\<\
+0.000900762\
+\>"], "Output"],
+
+Cell[OutputFormData["\<\
+1.742040391048742075\
+\>", "\<\
+1.74204\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["Rad[tt,ss]", "Input"],
+
+Cell[OutputFormData["\<\
+23.24155140215580682\
+\>", "\<\
+23.2415514\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["NewStrands[bstart[[1]],b,bcone]", "Input"],
+
+Cell[OutputFormData["\<\
+{{31.82105727618445227, 0.0004015125043158450644}, 
+ 
+  {33.47139364303178478, 7.590709046454767739}, 
+ 
+  18.28187120431789544, 50.1029284760932725, 
+ 
+  1.321131901896900395, 1.298672551662968273, 1}\
+\>", "\<\
+{{31.82105728, 0.0004015125043}, 
+ 
+  {33.47139364, 7.590709046}, 18.2818712, 50.10292848, 
+ 
+  1.32113, 1.29867, 1}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["Sqrt[(33.47-bcone[[3,4]])^2+7.6^2]-bcone[[3,3]]", "Input"],
+
+Cell[OutputFormData["\<\
+-5.075444004436874584\
+\>", "\<\
+-5.07544\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["ParametricPlot[Evaluate[PlotStrands[bcone]],{theta,0,1}]", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+%% Graphics
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.687535 0.00719755 0.0147151 0.00933216 [
+[(-80)] .11173 .01472 0 2 Msboxa
+[(-60)] .25568 .01472 0 2 Msboxa
+[(-40)] .39963 .01472 0 2 Msboxa
+[(-20)] .54358 .01472 0 2 Msboxa
+[(20)] .83149 .01472 0 2 Msboxa
+[(40)] .97544 .01472 0 2 Msboxa
+[(10)] .67504 .10804 1 0 Msboxa
+[(20)] .67504 .20136 1 0 Msboxa
+[(30)] .67504 .29468 1 0 Msboxa
+[(40)] .67504 .388 1 0 Msboxa
+[(50)] .67504 .48132 1 0 Msboxa
+[(60)] .67504 .57464 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 .61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+[ ] 0 setdash
+0 g
+p
+p
+.002 w
+.11173 .01472 m
+.11173 .02097 L
+s
+P
+[(-80)] .11173 .01472 0 2 Mshowa
+p
+.002 w
+.25568 .01472 m
+.25568 .02097 L
+s
+P
+[(-60)] .25568 .01472 0 2 Mshowa
+p
+.002 w
+.39963 .01472 m
+.39963 .02097 L
+s
+P
+[(-40)] .39963 .01472 0 2 Mshowa
+p
+.002 w
+.54358 .01472 m
+.54358 .02097 L
+s
+P
+[(-20)] .54358 .01472 0 2 Mshowa
+p
+.002 w
+.83149 .01472 m
+.83149 .02097 L
+s
+P
+[(20)] .83149 .01472 0 2 Mshowa
+p
+.002 w
+.97544 .01472 m
+.97544 .02097 L
+s
+P
+[(40)] .97544 .01472 0 2 Mshowa
+p
+.001 w
+.14052 .01472 m
+.14052 .01847 L
+s
+P
+p
+.001 w
+.16931 .01472 m
+.16931 .01847 L
+s
+P
+p
+.001 w
+.1981 .01472 m
+.1981 .01847 L
+s
+P
+p
+.001 w
+.22689 .01472 m
+.22689 .01847 L
+s
+P
+p
+.001 w
+.28447 .01472 m
+.28447 .01847 L
+s
+P
+p
+.001 w
+.31326 .01472 m
+.31326 .01847 L
+s
+P
+p
+.001 w
+.34205 .01472 m
+.34205 .01847 L
+s
+P
+p
+.001 w
+.37084 .01472 m
+.37084 .01847 L
+s
+P
+p
+.001 w
+.42842 .01472 m
+.42842 .01847 L
+s
+P
+p
+.001 w
+.45721 .01472 m
+.45721 .01847 L
+s
+P
+p
+.001 w
+.486 .01472 m
+.486 .01847 L
+s
+P
+p
+.001 w
+.51479 .01472 m
+.51479 .01847 L
+s
+P
+p
+.001 w
+.57237 .01472 m
+.57237 .01847 L
+s
+P
+p
+.001 w
+.60116 .01472 m
+.60116 .01847 L
+s
+P
+p
+.001 w
+.62995 .01472 m
+.62995 .01847 L
+s
+P
+p
+.001 w
+.65875 .01472 m
+.65875 .01847 L
+s
+P
+p
+.001 w
+.71633 .01472 m
+.71633 .01847 L
+s
+P
+p
+.001 w
+.74512 .01472 m
+.74512 .01847 L
+s
+P
+p
+.001 w
+.77391 .01472 m
+.77391 .01847 L
+s
+P
+p
+.001 w
+.8027 .01472 m
+.8027 .01847 L
+s
+P
+p
+.001 w
+.86028 .01472 m
+.86028 .01847 L
+s
+P
+p
+.001 w
+.88907 .01472 m
+.88907 .01847 L
+s
+P
+p
+.001 w
+.91786 .01472 m
+.91786 .01847 L
+s
+P
+p
+.001 w
+.94665 .01472 m
+.94665 .01847 L
+s
+P
+p
+.001 w
+.08294 .01472 m
+.08294 .01847 L
+s
+P
+p
+.001 w
+.05415 .01472 m
+.05415 .01847 L
+s
+P
+p
+.001 w
+.02536 .01472 m
+.02536 .01847 L
+s
+P
+p
+.002 w
+0 .01472 m
+1 .01472 L
+s
+P
+p
+.002 w
+.68754 .10804 m
+.69379 .10804 L
+s
+P
+[(10)] .67504 .10804 1 0 Mshowa
+p
+.002 w
+.68754 .20136 m
+.69379 .20136 L
+s
+P
+[(20)] .67504 .20136 1 0 Mshowa
+p
+.002 w
+.68754 .29468 m
+.69379 .29468 L
+s
+P
+[(30)] .67504 .29468 1 0 Mshowa
+p
+.002 w
+.68754 .388 m
+.69379 .388 L
+s
+P
+[(40)] .67504 .388 1 0 Mshowa
+p
+.002 w
+.68754 .48132 m
+.69379 .48132 L
+s
+P
+[(50)] .67504 .48132 1 0 Mshowa
+p
+.002 w
+.68754 .57464 m
+.69379 .57464 L
+s
+P
+[(60)] .67504 .57464 1 0 Mshowa
+p
+.001 w
+.68754 .03338 m
+.69129 .03338 L
+s
+P
+p
+.001 w
+.68754 .05204 m
+.69129 .05204 L
+s
+P
+p
+.001 w
+.68754 .07071 m
+.69129 .07071 L
+s
+P
+p
+.001 w
+.68754 .08937 m
+.69129 .08937 L
+s
+P
+p
+.001 w
+.68754 .1267 m
+.69129 .1267 L
+s
+P
+p
+.001 w
+.68754 .14537 m
+.69129 .14537 L
+s
+P
+p
+.001 w
+.68754 .16403 m
+.69129 .16403 L
+s
+P
+p
+.001 w
+.68754 .18269 m
+.69129 .18269 L
+s
+P
+p
+.001 w
+.68754 .22002 m
+.69129 .22002 L
+s
+P
+p
+.001 w
+.68754 .23869 m
+.69129 .23869 L
+s
+P
+p
+.001 w
+.68754 .25735 m
+.69129 .25735 L
+s
+P
+p
+.001 w
+.68754 .27602 m
+.69129 .27602 L
+s
+P
+p
+.001 w
+.68754 .31334 m
+.69129 .31334 L
+s
+P
+p
+.001 w
+.68754 .33201 m
+.69129 .33201 L
+s
+P
+p
+.001 w
+.68754 .35067 m
+.69129 .35067 L
+s
+P
+p
+.001 w
+.68754 .36934 m
+.69129 .36934 L
+s
+P
+p
+.001 w
+.68754 .40667 m
+.69129 .40667 L
+s
+P
+p
+.001 w
+.68754 .42533 m
+.69129 .42533 L
+s
+P
+p
+.001 w
+.68754 .44399 m
+.69129 .44399 L
+s
+P
+p
+.001 w
+.68754 .46266 m
+.69129 .46266 L
+s
+P
+p
+.001 w
+.68754 .49999 m
+.69129 .49999 L
+s
+P
+p
+.001 w
+.68754 .51865 m
+.69129 .51865 L
+s
+P
+p
+.001 w
+.68754 .53732 m
+.69129 .53732 L
+s
+P
+p
+.001 w
+.68754 .55598 m
+.69129 .55598 L
+s
+P
+p
+.001 w
+.68754 .59331 m
+.69129 .59331 L
+s
+P
+p
+.001 w
+.68754 .61197 m
+.69129 .61197 L
+s
+P
+p
+.002 w
+.68754 0 m
+.68754 .61803 L
+s
+P
+P
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+p
+p
+p
+.004 w
+.84116 .01672 m
+.84116 .0173 L
+.84116 .01788 L
+.84115 .01904 L
+.84115 .0202 L
+.84115 .02136 L
+.84114 .02367 L
+.84113 .02599 L
+.84111 .03062 L
+.84108 .03526 L
+.84099 .04452 L
+.84086 .05379 L
+.84071 .06306 L
+.84052 .07232 L
+.8403 .08159 L
+.84004 .09085 L
+.83976 .10011 L
+.83943 .10937 L
+.83908 .11862 L
+.83869 .12788 L
+.83827 .13713 L
+.83782 .14638 L
+.83734 .15563 L
+.83682 .16487 L
+.83627 .17411 L
+.83568 .18335 L
+.83507 .19258 L
+.83442 .20181 L
+.83373 .21104 L
+.83302 .22026 L
+.83227 .22947 L
+.83149 .23869 L
+s
+P
+P
+p
+p
+.004 w
+.80989 .416 m
+.77747 .45683 L
+.74208 .49328 L
+.70407 .52498 L
+.66381 .55163 L
+.62172 .57295 L
+.6001 .58155 L
+.57819 .58874 L
+.55603 .59451 L
+.54487 .59686 L
+.53367 .59884 L
+.52243 .60046 L
+.51117 .60172 L
+.50553 .60222 L
+.49989 .60262 L
+.49424 .60293 L
+.49142 .60305 L
+.48859 .60315 L
+.48718 .60319 L
+.48577 .60323 L
+.48436 .60326 L
+.48294 .60328 L
+.48153 .6033 L
+.48012 .60331 L
+.4787 .60332 L
+.47729 .60332 L
+.47588 .60331 L
+.47447 .6033 L
+.47305 .60329 L
+.47164 .60327 L
+.46881 .6032 L
+.46599 .60312 L
+.46316 .60301 L
+.46034 .60288 L
+.45469 .60256 L
+.44341 .60163 L
+.43215 .60034 L
+.42092 .59868 L
+.39857 .59429 L
+.37642 .58846 L
+.35451 .58121 L
+.31168 .56251 L
+.27049 .53838 L
+.23136 .50906 L
+.19467 .47484 L
+.16078 .43606 L
+.13004 .3931 L
+.10275 .34639 L
+.07917 .29639 L
+.05954 .24361 L
+Mistroke
+.05127 .21633 L
+.04406 .18855 L
+.03792 .16034 L
+.03288 .13177 L
+.02893 .10291 L
+.02738 .08839 L
+.0261 .07383 L
+.02511 .05923 L
+.02472 .05192 L
+.02439 .0446 L
+.02414 .03728 L
+.02404 .03362 L
+.02396 .02996 L
+.0239 .0263 L
+.02387 .02446 L
+.02385 .02263 L
+.02383 .0208 L
+.02382 .01897 L
+.02381 .01714 L
+.02381 .0153 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.97619 .01494 m
+.97619 .01521 L
+.97619 .01547 L
+.97619 .01574 L
+.97619 .016 L
+.97618 .01653 L
+.97618 .01706 L
+.97617 .01812 L
+.97616 .01917 L
+.97612 .02129 L
+.97606 .0234 L
+.97591 .02763 L
+.97569 .03185 L
+.97542 .03607 L
+.97508 .04027 L
+.97423 .04866 L
+.97313 .05701 L
+.9718 .06529 L
+.97023 .0735 L
+.96843 .08163 L
+.96639 .08967 L
+.96413 .09761 L
+.96164 .10543 L
+.95892 .11313 L
+.95599 .12069 L
+.95285 .1281 L
+.94949 .13535 L
+.94592 .14244 L
+.94216 .14936 L
+.9382 .15608 L
+.93405 .16261 L
+.92972 .16894 L
+.9252 .17505 L
+.92052 .18094 L
+.91567 .1866 L
+.91066 .19203 L
+s
+P
+P
+P
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+ ImageSize->{350., 216.3105},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["ParametricPlot[Evaluate[PlotStrands[bstart]],{theta,0,1}]", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+%% Graphics
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.903182 0.00215175 0.0147151 0.00273756 [
+[(-400)] .04248 .01472 0 2 Msboxa
+[(-300)] .25766 .01472 0 2 Msboxa
+[(-200)] .47283 .01472 0 2 Msboxa
+[(-100)] .68801 .01472 0 2 Msboxa
+[(50)] .89068 .15159 1 0 Msboxa
+[(100)] .89068 .28847 1 0 Msboxa
+[(150)] .89068 .42535 1 0 Msboxa
+[(200)] .89068 .56223 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 .61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+[ ] 0 setdash
+0 g
+p
+p
+.002 w
+.04248 .01472 m
+.04248 .02097 L
+s
+P
+[(-400)] .04248 .01472 0 2 Mshowa
+p
+.002 w
+.25766 .01472 m
+.25766 .02097 L
+s
+P
+[(-300)] .25766 .01472 0 2 Mshowa
+p
+.002 w
+.47283 .01472 m
+.47283 .02097 L
+s
+P
+[(-200)] .47283 .01472 0 2 Mshowa
+p
+.002 w
+.68801 .01472 m
+.68801 .02097 L
+s
+P
+[(-100)] .68801 .01472 0 2 Mshowa
+p
+.001 w
+.08552 .01472 m
+.08552 .01847 L
+s
+P
+p
+.001 w
+.12855 .01472 m
+.12855 .01847 L
+s
+P
+p
+.001 w
+.17159 .01472 m
+.17159 .01847 L
+s
+P
+p
+.001 w
+.21462 .01472 m
+.21462 .01847 L
+s
+P
+p
+.001 w
+.30069 .01472 m
+.30069 .01847 L
+s
+P
+p
+.001 w
+.34373 .01472 m
+.34373 .01847 L
+s
+P
+p
+.001 w
+.38676 .01472 m
+.38676 .01847 L
+s
+P
+p
+.001 w
+.4298 .01472 m
+.4298 .01847 L
+s
+P
+p
+.001 w
+.51587 .01472 m
+.51587 .01847 L
+s
+P
+p
+.001 w
+.5589 .01472 m
+.5589 .01847 L
+s
+P
+p
+.001 w
+.60194 .01472 m
+.60194 .01847 L
+s
+P
+p
+.001 w
+.64497 .01472 m
+.64497 .01847 L
+s
+P
+p
+.001 w
+.73104 .01472 m
+.73104 .01847 L
+s
+P
+p
+.001 w
+.77408 .01472 m
+.77408 .01847 L
+s
+P
+p
+.001 w
+.81711 .01472 m
+.81711 .01847 L
+s
+P
+p
+.001 w
+.86015 .01472 m
+.86015 .01847 L
+s
+P
+p
+.001 w
+.94622 .01472 m
+.94622 .01847 L
+s
+P
+p
+.001 w
+.98925 .01472 m
+.98925 .01847 L
+s
+P
+p
+.002 w
+0 .01472 m
+1 .01472 L
+s
+P
+p
+.002 w
+.90318 .15159 m
+.90943 .15159 L
+s
+P
+[(50)] .89068 .15159 1 0 Mshowa
+p
+.002 w
+.90318 .28847 m
+.90943 .28847 L
+s
+P
+[(100)] .89068 .28847 1 0 Mshowa
+p
+.002 w
+.90318 .42535 m
+.90943 .42535 L
+s
+P
+[(150)] .89068 .42535 1 0 Mshowa
+p
+.002 w
+.90318 .56223 m
+.90943 .56223 L
+s
+P
+[(200)] .89068 .56223 1 0 Mshowa
+p
+.001 w
+.90318 .04209 m
+.90693 .04209 L
+s
+P
+p
+.001 w
+.90318 .06947 m
+.90693 .06947 L
+s
+P
+p
+.001 w
+.90318 .09684 m
+.90693 .09684 L
+s
+P
+p
+.001 w
+.90318 .12422 m
+.90693 .12422 L
+s
+P
+p
+.001 w
+.90318 .17897 m
+.90693 .17897 L
+s
+P
+p
+.001 w
+.90318 .20634 m
+.90693 .20634 L
+s
+P
+p
+.001 w
+.90318 .23372 m
+.90693 .23372 L
+s
+P
+p
+.001 w
+.90318 .2611 m
+.90693 .2611 L
+s
+P
+p
+.001 w
+.90318 .31585 m
+.90693 .31585 L
+s
+P
+p
+.001 w
+.90318 .34322 m
+.90693 .34322 L
+s
+P
+p
+.001 w
+.90318 .3706 m
+.90693 .3706 L
+s
+P
+p
+.001 w
+.90318 .39797 m
+.90693 .39797 L
+s
+P
+p
+.001 w
+.90318 .45272 m
+.90693 .45272 L
+s
+P
+p
+.001 w
+.90318 .4801 m
+.90693 .4801 L
+s
+P
+p
+.001 w
+.90318 .50748 m
+.90693 .50748 L
+s
+P
+p
+.001 w
+.90318 .53485 m
+.90693 .53485 L
+s
+P
+p
+.001 w
+.90318 .5896 m
+.90693 .5896 L
+s
+P
+p
+.001 w
+.90318 .61698 m
+.90693 .61698 L
+s
+P
+p
+.002 w
+.90318 0 m
+.90318 .61803 L
+s
+P
+P
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+p
+p
+p
+.004 w
+.93976 .13243 m
+.93325 .1675 L
+.92506 .202 L
+.90379 .26877 L
+.87627 .33173 L
+.84292 .38994 L
+.80422 .44253 L
+.76076 .48871 L
+.71319 .52779 L
+.68808 .54448 L
+.66222 .55919 L
+.63571 .57185 L
+.60863 .58243 L
+.58109 .59087 L
+.56718 .59429 L
+.5532 .59716 L
+.53915 .59949 L
+.52506 .60127 L
+.518 .60195 L
+.51093 .6025 L
+.50385 .6029 L
+.50031 .60306 L
+.49677 .60317 L
+.495 .60322 L
+.49323 .60326 L
+.49146 .60328 L
+.48969 .6033 L
+.48792 .60332 L
+.48615 .60332 L
+.48438 .60331 L
+.48261 .6033 L
+.48084 .60328 L
+.47907 .60324 L
+.47553 .60315 L
+.47199 .60303 L
+.46845 .60287 L
+.46137 .60245 L
+.4543 .6019 L
+.44019 .60037 L
+.42612 .59829 L
+.41211 .59567 L
+.3843 .58879 L
+.35688 .57976 L
+.32994 .56861 L
+.27793 .54014 L
+.22904 .50379 L
+.18401 .46012 L
+.1435 .40978 L
+.10814 .35352 L
+.07844 .29218 L
+Mistroke
+.06586 .25989 L
+.05485 .22669 L
+.04546 .19269 L
+.03773 .15802 L
+.03168 .12281 L
+.02929 .10505 L
+.02733 .0872 L
+.0258 .06929 L
+.0252 .06031 L
+.0247 .05132 L
+.02432 .04233 L
+.02417 .03782 L
+.02404 .03332 L
+.02394 .02882 L
+.0239 .02657 L
+.02387 .02431 L
+.02385 .02206 L
+.02383 .01981 L
+.02381 .01756 L
+.02381 .0153 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.97619 .01489 m
+.97619 .01496 L
+.97619 .01502 L
+.97619 .01516 L
+.97619 .0153 L
+.97619 .01544 L
+.97619 .01571 L
+.97619 .01598 L
+.97618 .01653 L
+.97618 .01708 L
+.97616 .01818 L
+.97614 .01928 L
+.97609 .02147 L
+.97601 .02366 L
+.97591 .02585 L
+.97579 .02804 L
+.97564 .03023 L
+.97548 .03241 L
+.97529 .03459 L
+.97508 .03677 L
+.97485 .03894 L
+.97459 .04111 L
+.97432 .04328 L
+.97402 .04544 L
+.97371 .0476 L
+.97337 .04975 L
+.97301 .0519 L
+.97262 .05404 L
+.97222 .05617 L
+.9718 .0583 L
+.97135 .06042 L
+.97088 .06253 L
+.9704 .06463 L
+.96989 .06673 L
+s
+P
+P
+p
+p
+.004 w
+.94622 .08042 m
+.94433 .0808 L
+.94339 .08096 L
+.94244 .08109 L
+.94149 .08121 L
+.94054 .0813 L
+.94006 .08134 L
+.93959 .08137 L
+.93911 .0814 L
+.93863 .08142 L
+.93839 .08143 L
+.93816 .08143 L
+.93792 .08144 L
+.93768 .08144 L
+.93756 .08145 L
+.93744 .08145 L
+.93732 .08145 L
+.9372 .08145 L
+.93708 .08145 L
+.93696 .08145 L
+.93684 .08145 L
+.93672 .08145 L
+.93661 .08145 L
+.93649 .08145 L
+.93625 .08144 L
+.93601 .08144 L
+.93577 .08143 L
+.93529 .08141 L
+.93482 .08139 L
+.93386 .08133 L
+.93291 .08124 L
+.93101 .08101 L
+.92912 .08069 L
+.92724 .08028 L
+.92352 .0792 L
+.91987 .07778 L
+.91632 .07603 L
+.91287 .07395 L
+.90955 .07156 L
+.90637 .06887 L
+.90336 .06589 L
+.90052 .06265 L
+.89788 .05914 L
+.89545 .05541 L
+.89323 .05145 L
+.89125 .04731 L
+.88951 .04299 L
+.88802 .03852 L
+.88679 .03393 L
+.88582 .02923 L
+Mistroke
+.88544 .02685 L
+.88513 .02446 L
+.88489 .02205 L
+.88479 .02084 L
+.88471 .01963 L
+.88465 .01842 L
+.88463 .01782 L
+.88461 .01721 L
+.88459 .0166 L
+.88458 .0163 L
+.88458 .016 L
+.88457 .01569 L
+.88457 .01554 L
+.88457 .01539 L
+.88457 .01524 L
+.88457 .01509 L
+.88457 .01493 L
+.88457 .01478 L
+Mfstroke
+P
+P
+P
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+ ImageSize->{350., 216.3105},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+ParametricPlot[Evaluate[PlotStrands[
+   Join[
+   bstart,bcone
+   ]]],{theta,0,1}]\
+\>", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+%% Graphics
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.891083 0.00212215 0.0147151 0.00273756 [
+[(-400)] .04222 .01472 0 2 Msboxa
+[(-300)] .25444 .01472 0 2 Msboxa
+[(-200)] .46665 .01472 0 2 Msboxa
+[(-100)] .67887 .01472 0 2 Msboxa
+[(50)] .87858 .15159 1 0 Msboxa
+[(100)] .87858 .28847 1 0 Msboxa
+[(150)] .87858 .42535 1 0 Msboxa
+[(200)] .87858 .56223 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 .61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+[ ] 0 setdash
+0 g
+p
+p
+.002 w
+.04222 .01472 m
+.04222 .02097 L
+s
+P
+[(-400)] .04222 .01472 0 2 Mshowa
+p
+.002 w
+.25444 .01472 m
+.25444 .02097 L
+s
+P
+[(-300)] .25444 .01472 0 2 Mshowa
+p
+.002 w
+.46665 .01472 m
+.46665 .02097 L
+s
+P
+[(-200)] .46665 .01472 0 2 Mshowa
+p
+.002 w
+.67887 .01472 m
+.67887 .02097 L
+s
+P
+[(-100)] .67887 .01472 0 2 Mshowa
+p
+.001 w
+.08467 .01472 m
+.08467 .01847 L
+s
+P
+p
+.001 w
+.12711 .01472 m
+.12711 .01847 L
+s
+P
+p
+.001 w
+.16955 .01472 m
+.16955 .01847 L
+s
+P
+p
+.001 w
+.212 .01472 m
+.212 .01847 L
+s
+P
+p
+.001 w
+.29688 .01472 m
+.29688 .01847 L
+s
+P
+p
+.001 w
+.33932 .01472 m
+.33932 .01847 L
+s
+P
+p
+.001 w
+.38177 .01472 m
+.38177 .01847 L
+s
+P
+p
+.001 w
+.42421 .01472 m
+.42421 .01847 L
+s
+P
+p
+.001 w
+.5091 .01472 m
+.5091 .01847 L
+s
+P
+p
+.001 w
+.55154 .01472 m
+.55154 .01847 L
+s
+P
+p
+.001 w
+.59398 .01472 m
+.59398 .01847 L
+s
+P
+p
+.001 w
+.63642 .01472 m
+.63642 .01847 L
+s
+P
+p
+.001 w
+.72131 .01472 m
+.72131 .01847 L
+s
+P
+p
+.001 w
+.76375 .01472 m
+.76375 .01847 L
+s
+P
+p
+.001 w
+.8062 .01472 m
+.8062 .01847 L
+s
+P
+p
+.001 w
+.84864 .01472 m
+.84864 .01847 L
+s
+P
+p
+.001 w
+.93353 .01472 m
+.93353 .01847 L
+s
+P
+p
+.001 w
+.97597 .01472 m
+.97597 .01847 L
+s
+P
+p
+.002 w
+0 .01472 m
+1 .01472 L
+s
+P
+p
+.002 w
+.89108 .15159 m
+.89733 .15159 L
+s
+P
+[(50)] .87858 .15159 1 0 Mshowa
+p
+.002 w
+.89108 .28847 m
+.89733 .28847 L
+s
+P
+[(100)] .87858 .28847 1 0 Mshowa
+p
+.002 w
+.89108 .42535 m
+.89733 .42535 L
+s
+P
+[(150)] .87858 .42535 1 0 Mshowa
+p
+.002 w
+.89108 .56223 m
+.89733 .56223 L
+s
+P
+[(200)] .87858 .56223 1 0 Mshowa
+p
+.001 w
+.89108 .04209 m
+.89483 .04209 L
+s
+P
+p
+.001 w
+.89108 .06947 m
+.89483 .06947 L
+s
+P
+p
+.001 w
+.89108 .09684 m
+.89483 .09684 L
+s
+P
+p
+.001 w
+.89108 .12422 m
+.89483 .12422 L
+s
+P
+p
+.001 w
+.89108 .17897 m
+.89483 .17897 L
+s
+P
+p
+.001 w
+.89108 .20634 m
+.89483 .20634 L
+s
+P
+p
+.001 w
+.89108 .23372 m
+.89483 .23372 L
+s
+P
+p
+.001 w
+.89108 .2611 m
+.89483 .2611 L
+s
+P
+p
+.001 w
+.89108 .31585 m
+.89483 .31585 L
+s
+P
+p
+.001 w
+.89108 .34322 m
+.89483 .34322 L
+s
+P
+p
+.001 w
+.89108 .3706 m
+.89483 .3706 L
+s
+P
+p
+.001 w
+.89108 .39797 m
+.89483 .39797 L
+s
+P
+p
+.001 w
+.89108 .45272 m
+.89483 .45272 L
+s
+P
+p
+.001 w
+.89108 .4801 m
+.89483 .4801 L
+s
+P
+p
+.001 w
+.89108 .50748 m
+.89483 .50748 L
+s
+P
+p
+.001 w
+.89108 .53485 m
+.89483 .53485 L
+s
+P
+p
+.001 w
+.89108 .5896 m
+.89483 .5896 L
+s
+P
+p
+.001 w
+.89108 .61698 m
+.89483 .61698 L
+s
+P
+p
+.002 w
+.89108 0 m
+.89108 .61803 L
+s
+P
+P
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+p
+p
+p
+.004 w
+.92716 .13243 m
+.92074 .1675 L
+.91266 .202 L
+.89169 .26877 L
+.86455 .33173 L
+.83164 .38994 L
+.79348 .44253 L
+.75062 .48871 L
+.7037 .52779 L
+.67894 .54448 L
+.65344 .55919 L
+.62729 .57185 L
+.60058 .58243 L
+.57342 .59087 L
+.55971 .59429 L
+.54592 .59716 L
+.53206 .59949 L
+.51816 .60127 L
+.5112 .60195 L
+.50422 .6025 L
+.49725 .6029 L
+.49376 .60306 L
+.49026 .60317 L
+.48852 .60322 L
+.48677 .60326 L
+.48503 .60328 L
+.48328 .6033 L
+.48153 .60332 L
+.47979 .60332 L
+.47804 .60331 L
+.4763 .6033 L
+.47455 .60328 L
+.4728 .60324 L
+.46931 .60315 L
+.46582 .60303 L
+.46233 .60287 L
+.45535 .60245 L
+.44838 .6019 L
+.43446 .60037 L
+.42059 .59829 L
+.40676 .59567 L
+.37934 .58879 L
+.3523 .57976 L
+.32573 .56861 L
+.27443 .54014 L
+.22622 .50379 L
+.1818 .46012 L
+.14186 .40978 L
+.10698 .35352 L
+.07769 .29218 L
+Mistroke
+.06528 .25989 L
+.05442 .22669 L
+.04517 .19269 L
+.03754 .15802 L
+.03157 .12281 L
+.02922 .10505 L
+.02728 .0872 L
+.02577 .06929 L
+.02518 .06031 L
+.02469 .05132 L
+.02431 .04233 L
+.02416 .03782 L
+.02404 .03332 L
+.02394 .02882 L
+.0239 .02657 L
+.02387 .02431 L
+.02384 .02206 L
+.02383 .01981 L
+.02381 .01756 L
+.02381 .0153 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.96309 .01489 m
+.96309 .01496 L
+.96309 .01502 L
+.96309 .01516 L
+.96309 .0153 L
+.96309 .01544 L
+.96308 .01571 L
+.96308 .01598 L
+.96308 .01653 L
+.96307 .01708 L
+.96306 .01818 L
+.96304 .01928 L
+.96298 .02147 L
+.96291 .02366 L
+.96281 .02585 L
+.96269 .02804 L
+.96255 .03023 L
+.96238 .03241 L
+.9622 .03459 L
+.96199 .03677 L
+.96176 .03894 L
+.96151 .04111 L
+.96124 .04328 L
+.96095 .04544 L
+.96064 .0476 L
+.9603 .04975 L
+.95995 .0519 L
+.95957 .05404 L
+.95917 .05617 L
+.95875 .0583 L
+.95831 .06042 L
+.95785 .06253 L
+.95737 .06463 L
+.95687 .06673 L
+s
+P
+P
+p
+p
+.004 w
+.93353 .08042 m
+.93167 .0808 L
+.93073 .08096 L
+.9298 .08109 L
+.92886 .08121 L
+.92792 .0813 L
+.92746 .08134 L
+.92699 .08137 L
+.92652 .0814 L
+.92605 .08142 L
+.92581 .08143 L
+.92558 .08143 L
+.92534 .08144 L
+.9251 .08144 L
+.92499 .08145 L
+.92487 .08145 L
+.92475 .08145 L
+.92463 .08145 L
+.92452 .08145 L
+.9244 .08145 L
+.92428 .08145 L
+.92416 .08145 L
+.92405 .08145 L
+.92393 .08145 L
+.92369 .08144 L
+.92346 .08144 L
+.92322 .08143 L
+.92275 .08141 L
+.92228 .08139 L
+.92134 .08133 L
+.9204 .08124 L
+.91853 .08101 L
+.91667 .08069 L
+.91481 .08028 L
+.91114 .0792 L
+.90754 .07778 L
+.90404 .07603 L
+.90064 .07395 L
+.89736 .07156 L
+.89423 .06887 L
+.89126 .06589 L
+.88846 .06265 L
+.88586 .05914 L
+.88346 .05541 L
+.88127 .05145 L
+.87932 .04731 L
+.8776 .04299 L
+.87613 .03852 L
+.87492 .03393 L
+.87396 .02923 L
+Mistroke
+.87359 .02685 L
+.87328 .02446 L
+.87304 .02205 L
+.87294 .02084 L
+.87287 .01963 L
+.87281 .01842 L
+.87278 .01782 L
+.87276 .01721 L
+.87275 .0166 L
+.87274 .0163 L
+.87274 .016 L
+.87273 .01569 L
+.87273 .01554 L
+.87273 .01539 L
+.87273 .01524 L
+.87273 .01509 L
+.87273 .01493 L
+.87273 .01478 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.93638 .0153 m
+.93638 .01547 L
+.93638 .01564 L
+.93638 .01598 L
+.93638 .01632 L
+.93637 .01666 L
+.93637 .01734 L
+.93637 .01802 L
+.93636 .01938 L
+.93635 .02074 L
+.93633 .02346 L
+.93629 .02618 L
+.93624 .0289 L
+.93619 .03161 L
+.93612 .03433 L
+.93605 .03705 L
+.93596 .03976 L
+.93587 .04248 L
+.93576 .0452 L
+.93565 .04791 L
+.93553 .05063 L
+.93539 .05334 L
+.93525 .05605 L
+.9351 .05876 L
+.93493 .06147 L
+.93476 .06418 L
+.93458 .06689 L
+.93439 .0696 L
+.93419 .07231 L
+.93398 .07501 L
+.93376 .07771 L
+.93353 .08042 L
+s
+P
+P
+p
+p
+.004 w
+.92716 .13243 m
+.9176 .14441 L
+.90716 .1551 L
+.89596 .1644 L
+.88409 .17222 L
+.87168 .17847 L
+.8653 .18099 L
+.85884 .1831 L
+.85231 .1848 L
+.84902 .18548 L
+.84572 .18607 L
+.8424 .18654 L
+.83908 .18691 L
+.83742 .18706 L
+.83576 .18718 L
+.83409 .18727 L
+.83326 .1873 L
+.83243 .18733 L
+.83201 .18734 L
+.83159 .18735 L
+.83118 .18736 L
+.83076 .18737 L
+.83034 .18737 L
+.82993 .18738 L
+.82951 .18738 L
+.82909 .18738 L
+.82868 .18738 L
+.82826 .18738 L
+.82784 .18737 L
+.82743 .18736 L
+.82659 .18735 L
+.82576 .18732 L
+.82493 .18729 L
+.8241 .18725 L
+.82243 .18716 L
+.8191 .18688 L
+.81578 .18651 L
+.81247 .18602 L
+.80588 .18473 L
+.79935 .18302 L
+.79289 .18089 L
+.78026 .17541 L
+.76812 .16833 L
+.75658 .15973 L
+.74576 .14969 L
+.73577 .13831 L
+.72671 .12571 L
+.71866 .11201 L
+.71171 .09734 L
+.70592 .08186 L
+Mistroke
+.70348 .07386 L
+.70136 .06571 L
+.69955 .05743 L
+.69806 .04905 L
+.6969 .04059 L
+.69644 .03633 L
+.69606 .03206 L
+.69577 .02777 L
+.69566 .02563 L
+.69556 .02348 L
+.69549 .02134 L
+.69546 .02026 L
+.69543 .01919 L
+.69541 .01811 L
+.69541 .01757 L
+.6954 .01704 L
+.69539 .0165 L
+.69539 .01596 L
+.69539 .01543 L
+.69539 .01489 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.97619 .01478 m
+.97619 .01486 L
+.97619 .01494 L
+.97619 .01501 L
+.97619 .01509 L
+.97619 .01525 L
+.97619 .0154 L
+.97618 .01571 L
+.97618 .01602 L
+.97617 .01664 L
+.97615 .01726 L
+.97611 .0185 L
+.97604 .01974 L
+.97596 .02098 L
+.97586 .02221 L
+.97561 .02467 L
+.97529 .02712 L
+.9749 .02955 L
+.97443 .03196 L
+.9739 .03435 L
+.9733 .0367 L
+.97263 .03903 L
+.9719 .04133 L
+.9711 .04358 L
+.97024 .0458 L
+.96931 .04798 L
+.96832 .0501 L
+.96727 .05218 L
+.96616 .05421 L
+.96499 .05618 L
+.96377 .0581 L
+.96249 .05996 L
+.96116 .06175 L
+.95978 .06348 L
+.95835 .06514 L
+.95687 .06673 L
+s
+P
+P
+P
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+ ImageSize->{350., 216.3105},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+Show[Graphics[{AbsoluteThickness[.01],ParametricPlot[Evaluate[PlotStrands[
+   Join[
+   bstart,bcone,
+   Table[NewStrands[bstart[[i]],b,bcone],{i,1,3}]
+   ]]],{theta,0,1}]}]]\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+ParametricPlot[Evaluate[PlotStrands[
+   Join[
+   bstart,bcone,
+   Table[NewStrands[bstart[[i]],b,bcone],{i,1,3}]
+   ]]],{theta,0,1}]\
+\>", "Input"],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["abel=StrandList[b,1]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{-408.6770023247961342, 0.002150103356652964787}, 
+ 
+   {17., 43.}, 215.0103356688799843, -193.6666666666666667, 
+ 
+   3.141582653589793238, 0.2013481084366309535, 3}, 
+ 
+  {{33.92982525537534362, 0.0006307268240033490922}, 
+ 
+   {31., 19.}, 63.0726824013861206, -29.14285714285714286, 
+ 
+   0.00001, 0.3059925465208795007, 1}, 
+ 
+  {{-8.650097891554927951, 0.0002437737061964023425}, 
+ 
+   {20., 24.}, 24.37737062004652376, 15.72727272727272727, 
+ 
+   3.141582653589793238, 1.394611923279372397, 2}, 
+ 
+  {{31.82105727177581789, 4.01512470908226966*10^-6}, 
+ 
+   {33.47139364303178478, 7.590709046454767739}, 
+ 
+   18.28187120431789493, 50.10292847609327192, 
+ 
+   1.321131901956720462, 1.298672551662968273, 1}, 
+ 
+  {{-21.35012379978185109, 0.001872287109008601356}, 
+ 
+   {6.854771784232365144, 22.70539419087136929}, 
+ 
+   23.24155140215580682, 1.891427526960336316, 
+ 
+   2.039829027215607746, 1.652067332056418324, 2}, 
+ 
+  {{89.08549486439819818, 0.0006850869856477890955}, 
+ 
+   {7.51794871794871796, 75.8564102564102565}, 
+ 
+   76.05634929300908839, 13.02914557447461272, 
+ 
+   9.007623543314284119*10^-6, 1.643321912372895265, 3.}}\
+\>", "\<\
+{{{-408.677, 0.0021501}, {17., 43.}, 215.0103357, 
+ 
+   -193.6666667, 3.141582653589793238, 0.2013481084, 3}, 
+ 
+  {{33.9298, 0.000630727}, {31., 19.}, 63.0726824, 
+ 
+   -29.14285714, 0.00001, 0.3059925465, 1}, 
+ 
+  {{-8.6501, 0.000243774}, {20., 24.}, 24.37737062, 
+ 
+   15.72727273, 3.141582653589793238, 1.394611923, 2}, 
+ 
+                               -6
+  {{31.82105727, 4.015124709 10  }, 
+ 
+   {33.47139364, 7.590709046}, 18.2818712, 50.10292848, 
+ 
+   1.32113, 1.29867, 1}, 
+ 
+  {{-21.3501238, 0.001872287109}, 
+ 
+   {6.854771784, 22.70539419}, 23.2415514, 1.891427527, 
+ 
+   2.03983, 1.65207, 2}, 
+ 
+  {{89.08549486, 0.0006850869856}, 
+ 
+   {7.517948718, 75.85641026}, 76.05634929, 13.02914557, 
+ 
+             -6
+   9.00762 10  , 1.64332, 3.}}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+ParametricPlot[Evaluate[PlotStrands[
+   Join[
+    bcone, abel
+   (*Table[NewStrands[bstart[[i]],b,bcone],{i,1,3}]*)
+   ]]],{theta,0,1}]\
+\>", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+%% Graphics
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.805741 0.00191332 0.0147151 0.00273756 [
+[(-400)] .04041 .01472 0 2 Msboxa
+[(-300)] .23174 .01472 0 2 Msboxa
+[(-200)] .42308 .01472 0 2 Msboxa
+[(-100)] .61441 .01472 0 2 Msboxa
+[(100)] .99707 .01472 0 2 Msboxa
+[(50)] .79324 .15159 1 0 Msboxa
+[(100)] .79324 .28847 1 0 Msboxa
+[(150)] .79324 .42535 1 0 Msboxa
+[(200)] .79324 .56223 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 .61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+[ ] 0 setdash
+0 g
+p
+p
+.002 w
+.04041 .01472 m
+.04041 .02097 L
+s
+P
+[(-400)] .04041 .01472 0 2 Mshowa
+p
+.002 w
+.23174 .01472 m
+.23174 .02097 L
+s
+P
+[(-300)] .23174 .01472 0 2 Mshowa
+p
+.002 w
+.42308 .01472 m
+.42308 .02097 L
+s
+P
+[(-200)] .42308 .01472 0 2 Mshowa
+p
+.002 w
+.61441 .01472 m
+.61441 .02097 L
+s
+P
+[(-100)] .61441 .01472 0 2 Mshowa
+p
+.002 w
+.99707 .01472 m
+.99707 .02097 L
+s
+P
+[(100)] .99707 .01472 0 2 Mshowa
+p
+.001 w
+.07868 .01472 m
+.07868 .01847 L
+s
+P
+p
+.001 w
+.11694 .01472 m
+.11694 .01847 L
+s
+P
+p
+.001 w
+.15521 .01472 m
+.15521 .01847 L
+s
+P
+p
+.001 w
+.19348 .01472 m
+.19348 .01847 L
+s
+P
+p
+.001 w
+.27001 .01472 m
+.27001 .01847 L
+s
+P
+p
+.001 w
+.30828 .01472 m
+.30828 .01847 L
+s
+P
+p
+.001 w
+.34654 .01472 m
+.34654 .01847 L
+s
+P
+p
+.001 w
+.38481 .01472 m
+.38481 .01847 L
+s
+P
+p
+.001 w
+.46134 .01472 m
+.46134 .01847 L
+s
+P
+p
+.001 w
+.49961 .01472 m
+.49961 .01847 L
+s
+P
+p
+.001 w
+.53788 .01472 m
+.53788 .01847 L
+s
+P
+p
+.001 w
+.57614 .01472 m
+.57614 .01847 L
+s
+P
+p
+.001 w
+.65268 .01472 m
+.65268 .01847 L
+s
+P
+p
+.001 w
+.69094 .01472 m
+.69094 .01847 L
+s
+P
+p
+.001 w
+.72921 .01472 m
+.72921 .01847 L
+s
+P
+p
+.001 w
+.76747 .01472 m
+.76747 .01847 L
+s
+P
+p
+.001 w
+.84401 .01472 m
+.84401 .01847 L
+s
+P
+p
+.001 w
+.88227 .01472 m
+.88227 .01847 L
+s
+P
+p
+.001 w
+.92054 .01472 m
+.92054 .01847 L
+s
+P
+p
+.001 w
+.95881 .01472 m
+.95881 .01847 L
+s
+P
+p
+.001 w
+.00214 .01472 m
+.00214 .01847 L
+s
+P
+p
+.002 w
+0 .01472 m
+1 .01472 L
+s
+P
+p
+.002 w
+.80574 .15159 m
+.81199 .15159 L
+s
+P
+[(50)] .79324 .15159 1 0 Mshowa
+p
+.002 w
+.80574 .28847 m
+.81199 .28847 L
+s
+P
+[(100)] .79324 .28847 1 0 Mshowa
+p
+.002 w
+.80574 .42535 m
+.81199 .42535 L
+s
+P
+[(150)] .79324 .42535 1 0 Mshowa
+p
+.002 w
+.80574 .56223 m
+.81199 .56223 L
+s
+P
+[(200)] .79324 .56223 1 0 Mshowa
+p
+.001 w
+.80574 .04209 m
+.80949 .04209 L
+s
+P
+p
+.001 w
+.80574 .06947 m
+.80949 .06947 L
+s
+P
+p
+.001 w
+.80574 .09684 m
+.80949 .09684 L
+s
+P
+p
+.001 w
+.80574 .12422 m
+.80949 .12422 L
+s
+P
+p
+.001 w
+.80574 .17897 m
+.80949 .17897 L
+s
+P
+p
+.001 w
+.80574 .20634 m
+.80949 .20634 L
+s
+P
+p
+.001 w
+.80574 .23372 m
+.80949 .23372 L
+s
+P
+p
+.001 w
+.80574 .2611 m
+.80949 .2611 L
+s
+P
+p
+.001 w
+.80574 .31585 m
+.80949 .31585 L
+s
+P
+p
+.001 w
+.80574 .34322 m
+.80949 .34322 L
+s
+P
+p
+.001 w
+.80574 .3706 m
+.80949 .3706 L
+s
+P
+p
+.001 w
+.80574 .39797 m
+.80949 .39797 L
+s
+P
+p
+.001 w
+.80574 .45273 m
+.80949 .45273 L
+s
+P
+p
+.001 w
+.80574 .4801 m
+.80949 .4801 L
+s
+P
+p
+.001 w
+.80574 .50748 m
+.80949 .50748 L
+s
+P
+p
+.001 w
+.80574 .53485 m
+.80949 .53485 L
+s
+P
+p
+.001 w
+.80574 .5896 m
+.80949 .5896 L
+s
+P
+p
+.001 w
+.80574 .61698 m
+.80949 .61698 L
+s
+P
+p
+.002 w
+.80574 0 m
+.80574 .61803 L
+s
+P
+P
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+p
+p
+p
+.004 w
+.84658 .0153 m
+.84658 .01547 L
+.84658 .01564 L
+.84658 .01598 L
+.84658 .01632 L
+.84658 .01666 L
+.84657 .01734 L
+.84657 .01802 L
+.84657 .01938 L
+.84656 .02074 L
+.84653 .02346 L
+.8465 .02618 L
+.84646 .0289 L
+.84641 .03161 L
+.84635 .03433 L
+.84628 .03705 L
+.84621 .03976 L
+.84612 .04248 L
+.84603 .0452 L
+.84592 .04791 L
+.84581 .05063 L
+.84569 .05334 L
+.84556 .05605 L
+.84542 .05876 L
+.84528 .06147 L
+.84512 .06418 L
+.84496 .06689 L
+.84479 .0696 L
+.8446 .07231 L
+.84441 .07501 L
+.84422 .07771 L
+.84401 .08042 L
+s
+P
+P
+p
+p
+.004 w
+.83827 .13243 m
+.82965 .14441 L
+.82024 .1551 L
+.81014 .1644 L
+.79944 .17222 L
+.78824 .17847 L
+.7825 .18099 L
+.77667 .1831 L
+.77078 .1848 L
+.76782 .18548 L
+.76484 .18607 L
+.76185 .18654 L
+.75886 .18691 L
+.75736 .18706 L
+.75586 .18718 L
+.75436 .18727 L
+.75361 .1873 L
+.75286 .18733 L
+.75248 .18734 L
+.75211 .18735 L
+.75173 .18736 L
+.75135 .18737 L
+.75098 .18737 L
+.7506 .18738 L
+.75023 .18738 L
+.74985 .18738 L
+.74948 .18738 L
+.7491 .18738 L
+.74873 .18737 L
+.74835 .18736 L
+.7476 .18735 L
+.74685 .18732 L
+.7461 .18729 L
+.74535 .18725 L
+.74384 .18716 L
+.74085 .18689 L
+.73785 .18651 L
+.73487 .18602 L
+.72893 .18473 L
+.72304 .18302 L
+.71721 .18089 L
+.70583 .17541 L
+.69488 .16833 L
+.68448 .15973 L
+.67472 .14969 L
+.66571 .13831 L
+.65754 .12571 L
+.65029 .11201 L
+.64402 .09734 L
+.6388 .08186 L
+Mistroke
+.6366 .07386 L
+.63469 .06571 L
+.63305 .05743 L
+.63171 .04905 L
+.63067 .04059 L
+.63025 .03633 L
+.62991 .03206 L
+.62965 .02777 L
+.62954 .02563 L
+.62946 .02348 L
+.62939 .02134 L
+.62937 .02026 L
+.62934 .01919 L
+.62933 .01811 L
+.62932 .01757 L
+.62931 .01704 L
+.62931 .0165 L
+.62931 .01596 L
+.6293 .01543 L
+.6293 .01489 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.88247 .01478 m
+.88247 .01486 L
+.88247 .01494 L
+.88247 .01501 L
+.88247 .01509 L
+.88247 .01525 L
+.88247 .0154 L
+.88247 .01571 L
+.88247 .01602 L
+.88245 .01664 L
+.88244 .01726 L
+.8824 .0185 L
+.88234 .01974 L
+.88227 .02098 L
+.88218 .02221 L
+.88195 .02467 L
+.88166 .02712 L
+.88131 .02955 L
+.88089 .03196 L
+.88041 .03435 L
+.87987 .0367 L
+.87927 .03903 L
+.87861 .04133 L
+.87788 .04358 L
+.8771 .0458 L
+.87627 .04798 L
+.87538 .0501 L
+.87443 .05218 L
+.87343 .05421 L
+.87238 .05618 L
+.87127 .0581 L
+.87012 .05996 L
+.86892 .06175 L
+.86768 .06348 L
+.86639 .06514 L
+.86505 .06673 L
+s
+P
+P
+p
+p
+.004 w
+.83827 .13243 m
+.83248 .16751 L
+.82519 .20202 L
+.80627 .26881 L
+.78179 .33179 L
+.75211 .39001 L
+.71768 .44261 L
+.67902 .4888 L
+.6367 .52788 L
+.61436 .54456 L
+.59136 .55926 L
+.56777 .57192 L
+.54368 .58248 L
+.51918 .59092 L
+.50681 .59433 L
+.49437 .5972 L
+.48188 .59952 L
+.46934 .60129 L
+.46306 .60197 L
+.45677 .60251 L
+.45048 .60291 L
+.44733 .60306 L
+.44575 .60313 L
+.44418 .60318 L
+.4426 .60322 L
+.44103 .60326 L
+.43945 .60329 L
+.43788 .60331 L
+.4363 .60332 L
+.43473 .60332 L
+.43315 .60331 L
+.43158 .6033 L
+.43 .60327 L
+.42843 .60324 L
+.42528 .60315 L
+.42213 .60302 L
+.41898 .60286 L
+.41269 .60244 L
+.4064 .60188 L
+.39385 .60034 L
+.38134 .59825 L
+.36887 .59562 L
+.34414 .58872 L
+.31975 .57967 L
+.2958 .5685 L
+.24954 .53998 L
+.20607 .50358 L
+.16604 .45985 L
+.13004 .40946 L
+.09861 .35314 L
+Mistroke
+.07223 .29175 L
+.06105 .25944 L
+.05128 .22621 L
+.04296 .19219 L
+.0361 .1575 L
+.03074 .12228 L
+.02862 .10451 L
+.02689 .08665 L
+.02555 .06873 L
+.02502 .05975 L
+.02458 .05075 L
+.02424 .04175 L
+.02411 .03725 L
+.024 .03275 L
+.02392 .02824 L
+.02388 .02599 L
+.02386 .02373 L
+.02384 .02148 L
+.02382 .01923 L
+.02381 .01697 L
+.02381 .01472 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.86505 .06673 m
+.86551 .06463 L
+.86594 .06251 L
+.86636 .06039 L
+.86676 .05827 L
+.86714 .05613 L
+.8675 .05399 L
+.86784 .05185 L
+.86816 .04969 L
+.86846 .04754 L
+.86874 .04537 L
+.86901 .0432 L
+.86925 .04103 L
+.86947 .03885 L
+.86968 .03667 L
+.86987 .03449 L
+.87003 .0323 L
+.87018 .03011 L
+.87031 .02791 L
+.87041 .02572 L
+.8705 .02352 L
+.87057 .02132 L
+.8706 .02022 L
+.87062 .01912 L
+.87064 .01802 L
+.87064 .01747 L
+.87065 .01692 L
+.87065 .01637 L
+.87066 .01609 L
+.87066 .01582 L
+.87066 .01554 L
+.87066 .0154 L
+.87066 .01527 L
+.87066 .01513 L
+.87066 .01506 L
+.87066 .01499 L
+.87066 .01492 L
+.87066 .01485 L
+.87066 .01479 L
+.87066 .01472 L
+s
+P
+P
+p
+p
+.004 w
+.84401 .08042 m
+.84233 .0808 L
+.84149 .08096 L
+.84065 .08109 L
+.8398 .08121 L
+.83896 .0813 L
+.83853 .08134 L
+.83811 .08137 L
+.83768 .0814 L
+.83726 .08142 L
+.83705 .08143 L
+.83684 .08143 L
+.83662 .08144 L
+.83641 .08144 L
+.8363 .08145 L
+.8362 .08145 L
+.83609 .08145 L
+.83599 .08145 L
+.83588 .08145 L
+.83577 .08145 L
+.83567 .08145 L
+.83556 .08145 L
+.83546 .08145 L
+.83535 .08145 L
+.83514 .08144 L
+.83493 .08144 L
+.83471 .08143 L
+.83429 .08141 L
+.83387 .08139 L
+.83302 .08133 L
+.83217 .08124 L
+.83048 .08101 L
+.8288 .08069 L
+.82713 .08028 L
+.82382 .0792 L
+.82057 .07778 L
+.81741 .07602 L
+.81434 .07394 L
+.81138 .07155 L
+.80856 .06885 L
+.80588 .06587 L
+.80336 .06262 L
+.80101 .05911 L
+.79885 .05537 L
+.79688 .05142 L
+.79512 .04727 L
+.79357 .04294 L
+.79225 .03847 L
+.79115 .03387 L
+.7903 .02917 L
+Mistroke
+.78996 .02679 L
+.78968 .0244 L
+.78947 .02199 L
+.78938 .02078 L
+.78931 .01957 L
+.78926 .01836 L
+.78924 .01775 L
+.78922 .01714 L
+.78921 .01654 L
+.7892 .01623 L
+.7892 .01593 L
+.78919 .01563 L
+.78919 .01547 L
+.78919 .01532 L
+.78919 .01517 L
+.78919 .01502 L
+.78919 .01487 L
+.78919 .01472 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.91101 .06292 m
+.91097 .06293 L
+.91094 .06295 L
+.91091 .06296 L
+.91088 .06297 L
+.91085 .06298 L
+.91082 .063 L
+.91078 .06301 L
+.91075 .06302 L
+.91072 .06303 L
+.91069 .06304 L
+.91066 .06306 L
+.91063 .06307 L
+.9106 .06308 L
+.91056 .06309 L
+.91053 .06311 L
+.9105 .06312 L
+.91047 .06313 L
+.91044 .06314 L
+.91041 .06315 L
+.91037 .06316 L
+.91034 .06318 L
+.91031 .06319 L
+.91028 .0632 L
+.91025 .06321 L
+s
+P
+P
+p
+p
+.004 w
+.80575 .07813 m
+.80503 .07804 L
+.80432 .07793 L
+.80361 .07781 L
+.8029 .07766 L
+.80219 .07751 L
+.80148 .07733 L
+.80077 .07714 L
+.80007 .07694 L
+.79937 .07671 L
+.79867 .07647 L
+.79797 .07622 L
+.79728 .07595 L
+.79659 .07566 L
+.7959 .07536 L
+.79522 .07504 L
+.79454 .0747 L
+.79386 .07435 L
+.79319 .07399 L
+.79253 .0736 L
+.79186 .07321 L
+.7912 .0728 L
+.79055 .07237 L
+.7899 .07193 L
+.78926 .07147 L
+s
+P
+P
+p
+p
+.004 w
+.82013 .22238 m
+.82261 .2226 L
+.82386 .2227 L
+.8251 .22277 L
+.82634 .22283 L
+.82759 .22288 L
+.82821 .22289 L
+.82883 .22291 L
+.82915 .22291 L
+.82946 .22292 L
+.82977 .22292 L
+.83008 .22292 L
+.83039 .22292 L
+.8307 .22292 L
+.83101 .22292 L
+.83133 .22292 L
+.83164 .22292 L
+.83195 .22292 L
+.83257 .22291 L
+.83319 .22289 L
+.83382 .22288 L
+.83506 .22283 L
+.83631 .22277 L
+.83755 .22269 L
+.84004 .22249 L
+.84252 .22223 L
+.845 .22191 L
+.84995 .22109 L
+.85488 .22002 L
+.85977 .21872 L
+.86946 .21539 L
+.87897 .21112 L
+.88824 .20593 L
+.89725 .19985 L
+.90595 .1929 L
+.91429 .18511 L
+.92225 .17653 L
+.92977 .16718 L
+.93683 .15712 L
+.94339 .1464 L
+.94942 .13506 L
+.9549 .12315 L
+.95979 .11073 L
+.96408 .09787 L
+.96774 .08461 L
+.97077 .07103 L
+.97313 .05719 L
+.97406 .05018 L
+.97483 .04314 L
+.97542 .03606 L
+Mistroke
+.97566 .03252 L
+.97585 .02896 L
+.976 .0254 L
+.97606 .02362 L
+.97611 .02184 L
+.97614 .02006 L
+.97616 .01917 L
+.97617 .01828 L
+.97618 .01739 L
+.97618 .01694 L
+.97619 .0165 L
+.97619 .01605 L
+.97619 .01561 L
+.97619 .01516 L
+.97619 .01472 L
+Mfstroke
+P
+P
+P
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+ ImageSize->{350., 216.3105},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["axel=StrandList[b,3]", "Input"],
+
+Cell[OutputFormData["\<\
+{{{-408.6770023247961342, 0.002150103356652964787}, 
+ 
+   {17., 43.}, 215.0103356688799843, -193.6666666666666667, 
+ 
+   3.141582653589793238, 0.2013481084366309535, 3}, 
+ 
+  {{33.92982525537534362, 0.0006307268240033490922}, 
+ 
+   {31., 19.}, 63.0726824013861206, -29.14285714285714286, 
+ 
+   0.00001, 0.3059925465208795007, 1}, 
+ 
+  {{-8.650097891554927951, 0.0002437737061964023425}, 
+ 
+   {20., 24.}, 24.37737062004652376, 15.72727272727272727, 
+ 
+   3.141582653589793238, 1.394611923279372397, 2}, 
+ 
+  {{31.82105727177581789, 4.01512470908226966*10^-6}, 
+ 
+   {33.47139364303178478, 7.590709046454767739}, 
+ 
+   18.28187120431789493, 50.10292847609327192, 
+ 
+   1.321131901956720462, 1.298672551662968273, 1}, 
+ 
+  {{-21.35012379978185109, 0.001872287109008601356}, 
+ 
+   {6.854771784232365144, 22.70539419087136929}, 
+ 
+   23.24155140215580682, 1.891427526960336316, 
+ 
+   2.039829027215607746, 1.652067332056418324, 2}, 
+ 
+  {{89.08549486439819818, 0.0006850869856477890955}, 
+ 
+   {7.51794871794871796, 75.8564102564102565}, 
+ 
+   76.05634929300908839, 13.02914557447461272, 
+ 
+   9.007623543314284119*10^-6, 1.643321912372895265, 3.}, 
+ 
+  {{-28.72660598432275167, 0.00001655041466929461427}, 
+ 
+   {-12.45340870511336449, 18.286480936857046}, 
+ 
+   18.41102041783838435, -10.31558556649180624, 
+ 
+   2.151976500591512072, 1.9124528716361533, 2}, 
+ 
+  {{65.21366432208140247, 0.002353833918752940848}, 
+ 
+   {47.33099853068454001, 67.8818911901455226}, 
+ 
+   137.7798181775227864, -72.56615383533490463, 
+ 
+   0.8146408911774725879, 1.102904413019910147, 3.}, 
+ 
+  {{24.78502325249111498, 0.00007330228821777080158}, 
+ 
+   {32.34436345704823036, 4.342831241899415444}, 
+ 
+   5.027145588760456996, 29.81216884071715087, 
+ 
+   1.415606144874177519, 1.31402474289101203, 1}, 
+ 
+  {{57.43597726526396102, 0.00001463550982829848997}, 
+ 
+   {62.31110157792095977, 28.13190838209487605}, 
+ 
+   83.60516101772592506, 141.0411382829886051, 
+ 
+   0.9473119148808523123, 0.865884907910463213, 3.}, \"hoy\\
+ 
+   a\", \"hoya\"}\
+\>", "\<\
+{{{-408.677, 0.0021501}, {17., 43.}, 215.0103357, 
+ 
+   -193.6666667, 3.141582653589793238, 0.2013481084, 3}, 
+ 
+  {{33.9298, 0.000630727}, {31., 19.}, 63.0726824, 
+ 
+   -29.14285714, 0.00001, 0.3059925465, 1}, 
+ 
+  {{-8.6501, 0.000243774}, {20., 24.}, 24.37737062, 
+ 
+   15.72727273, 3.141582653589793238, 1.394611923, 2}, 
+ 
+                               -6
+  {{31.82105727, 4.015124709 10  }, 
+ 
+   {33.47139364, 7.590709046}, 18.2818712, 50.10292848, 
+ 
+   1.32113, 1.29867, 1}, 
+ 
+  {{-21.3501238, 0.001872287109}, 
+ 
+   {6.854771784, 22.70539419}, 23.2415514, 1.891427527, 
+ 
+   2.03983, 1.65207, 2}, 
+ 
+  {{89.08549486, 0.0006850869856}, 
+ 
+   {7.517948718, 75.85641026}, 76.05634929, 13.02914557, 
+ 
+             -6
+   9.00762 10  , 1.64332, 3.}, 
+ 
+  {{-28.72660598, 0.00001655041467}, 
+ 
+   {-12.45340871, 18.28648094}, 18.41102042, -10.31558557, 
+ 
+   2.15198, 1.91245, 2}, 
+ 
+  {{65.21366432, 0.002353833919}, 
+ 
+   {47.33099853, 67.88189119}, 137.7798182, -72.56615384, 
+ 
+   0.814641, 1.1029, 3.}, 
+ 
+  {{24.78502325, 0.00007330228822}, 
+ 
+   {32.34436346, 4.342831242}, 5.027145589, 29.81216884, 
+ 
+   1.41561, 1.31402, 1}, 
+ 
+  {{57.43597727, 0.00001463550983}, 
+ 
+   {62.31110158, 28.13190838}, 83.60516102, 141.0411383, 
+ 
+   0.947312, 0.865885, 3.}, hoya, hoya}\
+\>"], "Output"]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+ParametricPlot[Evaluate[PlotStrands[
+   Join[
+   bstart,bcone, axel[[{1,2,3,4,5,6,7,8,9,10}]]
+   (*Table[NewStrands[bstart[[i]],b,bcone],{i,1,3}]*)
+   ]]],{theta,0,1}]\
+\>", "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: .61803 
+MathPictureStart
+%% Graphics
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.586135 0.00199809 0.0147151 0.00273756 [
+[(-200)] .18652 .01472 0 2 Msboxa
+[(-100)] .38633 .01472 0 2 Msboxa
+[(100)] .78594 .01472 0 2 Msboxa
+[(200)] .98575 .01472 0 2 Msboxa
+[(50)] .57364 .15159 1 0 Msboxa
+[(100)] .57364 .28847 1 0 Msboxa
+[(150)] .57364 .42535 1 0 Msboxa
+[(200)] .57364 .56223 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 .61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+[ ] 0 setdash
+0 g
+p
+p
+.002 w
+.18652 .01472 m
+.18652 .02097 L
+s
+P
+[(-200)] .18652 .01472 0 2 Mshowa
+p
+.002 w
+.38633 .01472 m
+.38633 .02097 L
+s
+P
+[(-100)] .38633 .01472 0 2 Mshowa
+p
+.002 w
+.78594 .01472 m
+.78594 .02097 L
+s
+P
+[(100)] .78594 .01472 0 2 Mshowa
+p
+.002 w
+.98575 .01472 m
+.98575 .02097 L
+s
+P
+[(200)] .98575 .01472 0 2 Mshowa
+p
+.001 w
+.22648 .01472 m
+.22648 .01847 L
+s
+P
+p
+.001 w
+.26644 .01472 m
+.26644 .01847 L
+s
+P
+p
+.001 w
+.3064 .01472 m
+.3064 .01847 L
+s
+P
+p
+.001 w
+.34636 .01472 m
+.34636 .01847 L
+s
+P
+p
+.001 w
+.42629 .01472 m
+.42629 .01847 L
+s
+P
+p
+.001 w
+.46625 .01472 m
+.46625 .01847 L
+s
+P
+p
+.001 w
+.50621 .01472 m
+.50621 .01847 L
+s
+P
+p
+.001 w
+.54617 .01472 m
+.54617 .01847 L
+s
+P
+p
+.001 w
+.6261 .01472 m
+.6261 .01847 L
+s
+P
+p
+.001 w
+.66606 .01472 m
+.66606 .01847 L
+s
+P
+p
+.001 w
+.70602 .01472 m
+.70602 .01847 L
+s
+P
+p
+.001 w
+.74598 .01472 m
+.74598 .01847 L
+s
+P
+p
+.001 w
+.82591 .01472 m
+.82591 .01847 L
+s
+P
+p
+.001 w
+.86587 .01472 m
+.86587 .01847 L
+s
+P
+p
+.001 w
+.90583 .01472 m
+.90583 .01847 L
+s
+P
+p
+.001 w
+.94579 .01472 m
+.94579 .01847 L
+s
+P
+p
+.001 w
+.14656 .01472 m
+.14656 .01847 L
+s
+P
+p
+.001 w
+.10659 .01472 m
+.10659 .01847 L
+s
+P
+p
+.001 w
+.06663 .01472 m
+.06663 .01847 L
+s
+P
+p
+.001 w
+.02667 .01472 m
+.02667 .01847 L
+s
+P
+p
+.002 w
+0 .01472 m
+1 .01472 L
+s
+P
+p
+.002 w
+.58614 .15159 m
+.59239 .15159 L
+s
+P
+[(50)] .57364 .15159 1 0 Mshowa
+p
+.002 w
+.58614 .28847 m
+.59239 .28847 L
+s
+P
+[(100)] .57364 .28847 1 0 Mshowa
+p
+.002 w
+.58614 .42535 m
+.59239 .42535 L
+s
+P
+[(150)] .57364 .42535 1 0 Mshowa
+p
+.002 w
+.58614 .56223 m
+.59239 .56223 L
+s
+P
+[(200)] .57364 .56223 1 0 Mshowa
+p
+.001 w
+.58614 .04209 m
+.58989 .04209 L
+s
+P
+p
+.001 w
+.58614 .06947 m
+.58989 .06947 L
+s
+P
+p
+.001 w
+.58614 .09684 m
+.58989 .09684 L
+s
+P
+p
+.001 w
+.58614 .12422 m
+.58989 .12422 L
+s
+P
+p
+.001 w
+.58614 .17897 m
+.58989 .17897 L
+s
+P
+p
+.001 w
+.58614 .20634 m
+.58989 .20634 L
+s
+P
+p
+.001 w
+.58614 .23372 m
+.58989 .23372 L
+s
+P
+p
+.001 w
+.58614 .2611 m
+.58989 .2611 L
+s
+P
+p
+.001 w
+.58614 .31585 m
+.58989 .31585 L
+s
+P
+p
+.001 w
+.58614 .34322 m
+.58989 .34322 L
+s
+P
+p
+.001 w
+.58614 .3706 m
+.58989 .3706 L
+s
+P
+p
+.001 w
+.58614 .39797 m
+.58989 .39797 L
+s
+P
+p
+.001 w
+.58614 .45272 m
+.58989 .45272 L
+s
+P
+p
+.001 w
+.58614 .4801 m
+.58989 .4801 L
+s
+P
+p
+.001 w
+.58614 .50748 m
+.58989 .50748 L
+s
+P
+p
+.001 w
+.58614 .53485 m
+.58989 .53485 L
+s
+P
+p
+.001 w
+.58614 .5896 m
+.58989 .5896 L
+s
+P
+p
+.001 w
+.58614 .61698 m
+.58989 .61698 L
+s
+P
+p
+.002 w
+.58614 0 m
+.58614 .61803 L
+s
+P
+P
+0 0 m
+1 0 L
+1 .61803 L
+0 .61803 L
+closepath
+clip
+newpath
+p
+p
+p
+.004 w
+.6201 .13243 m
+.61406 .1675 L
+.60645 .202 L
+.5867 .26877 L
+.56115 .33173 L
+.53017 .38994 L
+.49424 .44253 L
+.45388 .48871 L
+.40971 .52779 L
+.3864 .54448 L
+.36239 .55919 L
+.33776 .57185 L
+.31262 .58243 L
+.28705 .59087 L
+.27413 .59429 L
+.26115 .59716 L
+.2481 .59949 L
+.23502 .60127 L
+.22846 .60195 L
+.22189 .6025 L
+.21532 .6029 L
+.21204 .60306 L
+.20875 .60317 L
+.20711 .60322 L
+.20546 .60326 L
+.20382 .60328 L
+.20217 .6033 L
+.20053 .60332 L
+.19889 .60332 L
+.19724 .60331 L
+.1956 .6033 L
+.19395 .60328 L
+.19231 .60324 L
+.18902 .60315 L
+.18573 .60303 L
+.18245 .60287 L
+.17588 .60245 L
+.16931 .6019 L
+.15621 .60037 L
+.14314 .59829 L
+.13013 .59567 L
+.10431 .58879 L
+.07885 .57976 L
+.05383 .56861 L
+.00554 .54014 L
+s
+0 .53571 m
+.00554 .54014 L
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+P
+P
+p
+p
+.004 w
+.64808 .06673 m
+.64855 .06463 L
+.649 .06253 L
+.64944 .06042 L
+.64985 .0583 L
+.65024 .05617 L
+.65062 .05404 L
+.65097 .0519 L
+.65131 .04975 L
+.65162 .0476 L
+.65192 .04544 L
+.65219 .04328 L
+.65245 .04111 L
+.65268 .03894 L
+.6529 .03677 L
+.65309 .03459 L
+.65327 .03241 L
+.65342 .03023 L
+.65355 .02804 L
+.65367 .02585 L
+.65376 .02366 L
+.65383 .02147 L
+.65386 .02037 L
+.65389 .01928 L
+.6539 .01818 L
+.65391 .01763 L
+.65392 .01708 L
+.65392 .01653 L
+.65392 .01626 L
+.65393 .01598 L
+.65393 .01571 L
+.65393 .01557 L
+.65393 .01544 L
+.65393 .0153 L
+.65393 .01516 L
+.65393 .01509 L
+.65393 .01502 L
+.65393 .01496 L
+.65393 .01489 L
+s
+P
+P
+p
+p
+.004 w
+.6261 .08042 m
+.62435 .0808 L
+.62347 .08096 L
+.62259 .08109 L
+.62171 .08121 L
+.62082 .0813 L
+.62038 .08134 L
+.61994 .08137 L
+.6195 .0814 L
+.61905 .08142 L
+.61883 .08143 L
+.61861 .08143 L
+.61839 .08144 L
+.61817 .08144 L
+.61806 .08145 L
+.61795 .08145 L
+.61784 .08145 L
+.61773 .08145 L
+.61761 .08145 L
+.6175 .08145 L
+.61739 .08145 L
+.61728 .08145 L
+.61717 .08145 L
+.61706 .08145 L
+.61684 .08144 L
+.61662 .08144 L
+.6164 .08143 L
+.61595 .08141 L
+.61551 .08139 L
+.61463 .08133 L
+.61374 .08124 L
+.61198 .08101 L
+.61022 .08069 L
+.60848 .08028 L
+.60502 .0792 L
+.60164 .07778 L
+.59833 .07603 L
+.59513 .07395 L
+.59205 .07156 L
+.5891 .06887 L
+.5863 .06589 L
+.58367 .06265 L
+.58121 .05914 L
+.57895 .05541 L
+.5769 .05145 L
+.57506 .04731 L
+.57344 .04299 L
+.57206 .03852 L
+.57091 .03393 L
+.57002 .02923 L
+Mistroke
+.56966 .02685 L
+.56937 .02446 L
+.56915 .02205 L
+.56906 .02084 L
+.56898 .01963 L
+.56893 .01842 L
+.5689 .01782 L
+.56889 .01721 L
+.56887 .0166 L
+.56887 .0163 L
+.56886 .016 L
+.56886 .01569 L
+.56886 .01554 L
+.56885 .01539 L
+.56885 .01524 L
+.56885 .01509 L
+.56885 .01493 L
+.56885 .01478 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.62878 .0153 m
+.62878 .01547 L
+.62878 .01564 L
+.62878 .01598 L
+.62878 .01632 L
+.62878 .01666 L
+.62878 .01734 L
+.62877 .01802 L
+.62877 .01938 L
+.62876 .02074 L
+.62873 .02346 L
+.6287 .02618 L
+.62866 .0289 L
+.6286 .03161 L
+.62854 .03433 L
+.62847 .03705 L
+.62839 .03976 L
+.6283 .04248 L
+.62821 .0452 L
+.6281 .04791 L
+.62798 .05063 L
+.62786 .05334 L
+.62772 .05605 L
+.62758 .05876 L
+.62742 .06147 L
+.62726 .06418 L
+.62709 .06689 L
+.62691 .0696 L
+.62672 .07231 L
+.62652 .07501 L
+.62631 .07771 L
+.6261 .08042 L
+s
+P
+P
+p
+p
+.004 w
+.6201 .13243 m
+.6111 .14441 L
+.60128 .1551 L
+.59072 .1644 L
+.57955 .17222 L
+.56786 .17847 L
+.56186 .18099 L
+.55578 .1831 L
+.54963 .1848 L
+.54653 .18548 L
+.54342 .18607 L
+.5403 .18654 L
+.53718 .18691 L
+.53561 .18706 L
+.53404 .18718 L
+.53248 .18727 L
+.53169 .1873 L
+.53091 .18733 L
+.53052 .18734 L
+.53012 .18735 L
+.52973 .18736 L
+.52934 .18737 L
+.52895 .18737 L
+.52855 .18738 L
+.52816 .18738 L
+.52777 .18738 L
+.52738 .18738 L
+.52699 .18738 L
+.52659 .18737 L
+.5262 .18736 L
+.52542 .18735 L
+.52463 .18732 L
+.52385 .18729 L
+.52306 .18725 L
+.5215 .18716 L
+.51836 .18688 L
+.51524 .18651 L
+.51212 .18602 L
+.50592 .18473 L
+.49977 .18302 L
+.49369 .18089 L
+.4818 .17541 L
+.47036 .16833 L
+.4595 .15973 L
+.44931 .14969 L
+.43991 .13831 L
+.43137 .12571 L
+.42379 .11201 L
+.41725 .09734 L
+.4118 .08186 L
+Mistroke
+.4095 .07386 L
+.4075 .06571 L
+.4058 .05743 L
+.4044 .04905 L
+.4033 .04059 L
+.40287 .03633 L
+.40252 .03206 L
+.40224 .02777 L
+.40213 .02563 L
+.40204 .02348 L
+.40197 .02134 L
+.40195 .02026 L
+.40192 .01919 L
+.4019 .01811 L
+.4019 .01757 L
+.40189 .01704 L
+.40189 .0165 L
+.40188 .01596 L
+.40188 .01543 L
+.40188 .01489 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.66627 .01478 m
+.66627 .01486 L
+.66627 .01494 L
+.66627 .01501 L
+.66627 .01509 L
+.66627 .01525 L
+.66627 .0154 L
+.66626 .01571 L
+.66626 .01602 L
+.66625 .01664 L
+.66623 .01726 L
+.66619 .0185 L
+.66613 .01974 L
+.66605 .02098 L
+.66596 .02221 L
+.66572 .02467 L
+.66542 .02712 L
+.66505 .02955 L
+.66461 .03196 L
+.66411 .03435 L
+.66355 .0367 L
+.66292 .03903 L
+.66223 .04133 L
+.66147 .04358 L
+.66066 .0458 L
+.65979 .04798 L
+.65885 .0501 L
+.65787 .05218 L
+.65682 .05421 L
+.65572 .05618 L
+.65457 .0581 L
+.65337 .05996 L
+.65211 .06175 L
+.65081 .06348 L
+.64947 .06514 L
+.64808 .06673 L
+s
+P
+P
+p
+p
+.004 w
+.6201 .13243 m
+.61405 .16751 L
+.60645 .20202 L
+.58669 .26881 L
+.56112 .33179 L
+.53013 .39001 L
+.49417 .44261 L
+.4538 .4888 L
+.4096 .52787 L
+.38628 .54456 L
+.36225 .55926 L
+.33762 .57192 L
+.31246 .58248 L
+.28688 .59092 L
+.27396 .59433 L
+.26097 .5972 L
+.24792 .59952 L
+.23483 .60129 L
+.22827 .60197 L
+.2217 .60251 L
+.21513 .60291 L
+.21184 .60306 L
+.2102 .60313 L
+.20855 .60318 L
+.20691 .60322 L
+.20527 .60326 L
+.20362 .60329 L
+.20198 .60331 L
+.20033 .60332 L
+.19869 .60332 L
+.19704 .60331 L
+.1954 .6033 L
+.19375 .60327 L
+.19211 .60324 L
+.18882 .60315 L
+.18553 .60302 L
+.18224 .60286 L
+.17567 .60244 L
+.16911 .60188 L
+.156 .60034 L
+.14293 .59825 L
+.12991 .59562 L
+.10409 .58872 L
+.07862 .57967 L
+.0536 .5685 L
+.0053 .53998 L
+s
+0 .53573 m
+.0053 .53998 L
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+P
+P
+p
+p
+.004 w
+.64808 .06673 m
+.64855 .06463 L
+.649 .06251 L
+.64944 .06039 L
+.64985 .05827 L
+.65025 .05613 L
+.65063 .05399 L
+.65098 .05185 L
+.65132 .04969 L
+.65163 .04754 L
+.65193 .04537 L
+.6522 .0432 L
+.65246 .04103 L
+.65269 .03885 L
+.65291 .03667 L
+.6531 .03449 L
+.65327 .0323 L
+.65343 .03011 L
+.65356 .02791 L
+.65367 .02572 L
+.65377 .02352 L
+.65384 .02132 L
+.65387 .02022 L
+.65389 .01912 L
+.65391 .01802 L
+.65391 .01747 L
+.65392 .01692 L
+.65392 .01637 L
+.65393 .01609 L
+.65393 .01582 L
+.65393 .01554 L
+.65393 .0154 L
+.65393 .01527 L
+.65393 .01513 L
+.65393 .01506 L
+.65393 .01499 L
+.65393 .01492 L
+.65393 .01485 L
+.65393 .01479 L
+.65393 .01472 L
+s
+P
+P
+p
+p
+.004 w
+.6261 .08042 m
+.62435 .0808 L
+.62347 .08096 L
+.62259 .08109 L
+.6217 .08121 L
+.62082 .0813 L
+.62038 .08134 L
+.61994 .08137 L
+.61949 .0814 L
+.61905 .08142 L
+.61883 .08143 L
+.61861 .08143 L
+.61839 .08144 L
+.61816 .08144 L
+.61805 .08145 L
+.61794 .08145 L
+.61783 .08145 L
+.61772 .08145 L
+.61761 .08145 L
+.6175 .08145 L
+.61739 .08145 L
+.61728 .08145 L
+.61717 .08145 L
+.61706 .08145 L
+.61683 .08144 L
+.61661 .08144 L
+.61639 .08143 L
+.61595 .08141 L
+.61551 .08139 L
+.61462 .08133 L
+.61374 .08124 L
+.61197 .08101 L
+.61021 .08069 L
+.60847 .08028 L
+.60501 .0792 L
+.60162 .07778 L
+.59832 .07602 L
+.59511 .07394 L
+.59203 .07155 L
+.58908 .06885 L
+.58628 .06587 L
+.58365 .06262 L
+.5812 .05911 L
+.57894 .05537 L
+.57688 .05142 L
+.57504 .04727 L
+.57342 .04294 L
+.57204 .03847 L
+.5709 .03387 L
+.57001 .02917 L
+Mistroke
+.56966 .02679 L
+.56937 .0244 L
+.56914 .02199 L
+.56905 .02078 L
+.56898 .01957 L
+.56892 .01836 L
+.5689 .01775 L
+.56888 .01714 L
+.56887 .01654 L
+.56886 .01623 L
+.56886 .01593 L
+.56886 .01563 L
+.56885 .01547 L
+.56885 .01532 L
+.56885 .01517 L
+.56885 .01502 L
+.56885 .01487 L
+.56885 .01472 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.69606 .06292 m
+.69603 .06293 L
+.696 .06295 L
+.69596 .06296 L
+.69593 .06297 L
+.6959 .06298 L
+.69587 .063 L
+.69583 .06301 L
+.6958 .06302 L
+.69577 .06303 L
+.69573 .06304 L
+.6957 .06306 L
+.69567 .06307 L
+.69563 .06308 L
+.6956 .06309 L
+.69557 .06311 L
+.69554 .06312 L
+.6955 .06313 L
+.69547 .06314 L
+.69544 .06315 L
+.6954 .06316 L
+.69537 .06318 L
+.69534 .06319 L
+.6953 .0632 L
+.69527 .06321 L
+s
+P
+P
+p
+p
+.004 w
+.58614 .07813 m
+.5854 .07804 L
+.58465 .07793 L
+.58391 .07781 L
+.58316 .07766 L
+.58242 .07751 L
+.58168 .07733 L
+.58094 .07714 L
+.58021 .07694 L
+.57948 .07671 L
+.57875 .07647 L
+.57802 .07622 L
+.5773 .07595 L
+.57658 .07566 L
+.57586 .07536 L
+.57515 .07504 L
+.57444 .0747 L
+.57373 .07435 L
+.57303 .07399 L
+.57233 .0736 L
+.57164 .07321 L
+.57095 .0728 L
+.57027 .07237 L
+.56959 .07193 L
+.56892 .07147 L
+s
+P
+P
+p
+p
+.004 w
+.60116 .22238 m
+.60375 .2226 L
+.60505 .2227 L
+.60635 .22277 L
+.60765 .22283 L
+.60895 .22288 L
+.6096 .22289 L
+.61025 .22291 L
+.61058 .22291 L
+.6109 .22292 L
+.61123 .22292 L
+.61155 .22292 L
+.61188 .22292 L
+.6122 .22292 L
+.61253 .22292 L
+.61285 .22292 L
+.61318 .22292 L
+.6135 .22292 L
+.61415 .22291 L
+.6148 .22289 L
+.61545 .22288 L
+.61675 .22283 L
+.61805 .22277 L
+.61935 .22269 L
+.62195 .22249 L
+.62455 .22223 L
+.62714 .22191 L
+.6323 .22109 L
+.63745 .22002 L
+.64256 .21872 L
+.65268 .21539 L
+.6626 .21112 L
+.67229 .20593 L
+.6817 .19985 L
+.69078 .1929 L
+.6995 .18511 L
+.7078 .17653 L
+.71566 .16718 L
+.72303 .15712 L
+.72988 .1464 L
+.73618 .13506 L
+.7419 .12315 L
+.74701 .11073 L
+.75149 .09787 L
+.75532 .08461 L
+.75847 .07103 L
+.76094 .05719 L
+.76191 .05018 L
+.76271 .04314 L
+.76333 .03606 L
+Mistroke
+.76358 .03252 L
+.76378 .02896 L
+.76394 .0254 L
+.764 .02362 L
+.76405 .02184 L
+.76409 .02006 L
+.7641 .01917 L
+.76411 .01828 L
+.76412 .01739 L
+.76413 .01694 L
+.76413 .0165 L
+.76413 .01605 L
+.76413 .01561 L
+.76414 .01516 L
+.76414 .01472 L
+Mfstroke
+P
+P
+p
+p
+.004 w
+.5532 .0622 m
+.55285 .06203 L
+.55251 .06186 L
+.55217 .06168 L
+.55182 .06149 L
+.55148 .0613 L
+.55115 .06111 L
+.55081 .06091 L
+.55047 .06071 L
+.55014 .0605 L
+.54981 .06028 L
+.54948 .06007 L
+.54915 .05985 L
+.54882 .05962 L
+.54849 .05939 L
+.54817 .05915 L
+.54784 .05891 L
+.54752 .05867 L
+.5472 .05842 L
+.54689 .05817 L
+.54657 .05791 L
+.54626 .05765 L
+.54594 .05739 L
+.54564 .05712 L
+.54533 .05684 L
+s
+P
+P
+p
+p
+.004 w
+.5653 .35136 m
+.56824 .34929 L
+.57117 .34717 L
+.57407 .34501 L
+.57696 .3428 L
+.57982 .34054 L
+.58267 .33823 L
+.5855 .33588 L
+.5883 .33348 L
+.59109 .33104 L
+.59385 .32855 L
+.59659 .32601 L
+.59931 .32343 L
+.602 .32081 L
+.60467 .31814 L
+.60732 .31543 L
+.60994 .31267 L
+.61254 .30987 L
+.61512 .30703 L
+.61767 .30414 L
+.62019 .30122 L
+.62269 .29825 L
+.62517 .29524 L
+.62761 .29219 L
+.63003 .28911 L
+s
+P
+P
+p
+p
+.004 w
+.64825 .02803 m
+.64821 .02804 L
+.64817 .02806 L
+.64813 .02807 L
+.64809 .02808 L
+.64805 .0281 L
+.64801 .02811 L
+.64796 .02812 L
+.64792 .02814 L
+.64788 .02815 L
+.64784 .02816 L
+.6478 .02817 L
+.64776 .02819 L
+.64772 .0282 L
+.64767 .02821 L
+.64763 .02822 L
+.64759 .02823 L
+.64755 .02824 L
+.64751 .02825 L
+.64746 .02826 L
+.64742 .02827 L
+.64738 .02828 L
+.64734 .02829 L
+.6473 .0283 L
+.64725 .02831 L
+s
+P
+P
+p
+p
+.004 w
+.97619 .18904 m
+.97576 .18954 L
+.97532 .19004 L
+.97489 .19054 L
+.97445 .19104 L
+.97402 .19153 L
+.97358 .19202 L
+.97314 .19251 L
+.9727 .193 L
+.97226 .19349 L
+.97181 .19397 L
+.97137 .19445 L
+.97092 .19493 L
+.97048 .19541 L
+.97003 .19589 L
+.96958 .19636 L
+.96913 .19683 L
+.96868 .1973 L
+.96822 .19777 L
+.96777 .19823 L
+.96731 .1987 L
+.96686 .19916 L
+.9664 .19962 L
+.96594 .20007 L
+.96548 .20053 L
+s
+P
+P
+P
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+ ImageSize->{350., 216.3105},
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics[\"<<>>\"]\
+\>", "\<\
+-Graphics-\
+\>"], "Output"]}, Open]]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{740, 867},
+WindowMargins->{{140, Automatic}, {Automatic, 44}},
+ShowCellLabel->True,
+ShowCellTags->False,
+RenderingOptions->{"ObjectDithering"->True,
+"RasterDithering"->False},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[553, 21, 76, 3, 70, "Input"],
+Cell[632, 26, 670, 22, 70, "Output"],
+Cell[1305, 50, 776, 30, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2113, 82, 34, 0, 70, "Input"],
+Cell[2150, 84, 56, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2238, 90, 46, 0, 70, "Input"],
+Cell[2287, 92, 208, 6, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2527, 100, 67, 0, 70, "Input"],
+Cell[2597, 102, 45857, 630, 70, "Graphics"],
+Cell[48457, 734, 80, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48569, 740, 59, 3, 70, "Input"],
+Cell[48631, 745, 55, 4, 70, "Output"],
+Cell[48689, 751, 55, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48776, 757, 48, 0, 70, "Input"],
+Cell[48827, 759, 505, 18, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49364, 779, 38, 0, 70, "Input"],
+Cell[49405, 781, 142, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49579, 787, 38, 0, 70, "Input"],
+Cell[49620, 789, 146, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49798, 795, 55, 0, 70, "Input"],
+Cell[49856, 797, 684, 24, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50572, 823, 43, 3, 70, "Input"],
+Cell[50618, 828, 277, 9, 70, "Output"],
+Cell[50898, 839, 387, 9, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51317, 850, 41, 0, 70, "Input"],
+Cell[51361, 852, 143, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51536, 858, 27, 0, 70, "Input"],
+Cell[51566, 860, 91, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51689, 866, 38, 0, 70, "Input"],
+Cell[51730, 868, 65, 0, 70, "Message"],
+Cell[51798, 870, 200, 5, 70, "Message"],
+Cell[52001, 877, 246, 7, 70, "Message"],
+Cell[52250, 886, 200, 5, 70, "Message"],
+Cell[52453, 893, 246, 7, 70, "Message"],
+Cell[52702, 902, 65, 0, 70, "Message"],
+Cell[52770, 904, 60, 0, 70, "Message"],
+Cell[52833, 906, 124, 4, 70, "Message"],
+Cell[52960, 912, 130, 4, 70, "Message"],
+Cell[53093, 918, 100, 3, 70, "Message"],
+Cell[53196, 923, 128, 4, 70, "Message"],
+Cell[53327, 929, 159, 5, 70, "Message"],
+Cell[53489, 936, 126, 4, 70, "Message"],
+Cell[53618, 942, 131, 4, 70, "Message"],
+Cell[53752, 948, 131, 4, 70, "Message"],
+Cell[53886, 954, 124, 4, 70, "Message"],
+Cell[54013, 960, 200, 5, 70, "Message"],
+Cell[54216, 967, 124, 4, 70, "Message"],
+Cell[54343, 973, 246, 7, 70, "Message"],
+Cell[54592, 982, 128, 4, 70, "Message"],
+Cell[54723, 988, 3301, 128, 70, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[58056, 1118, 73, 0, 70, "Input"],
+Cell[CellGroupData[{
+Cell[58152, 1120, 128, 4, 70, "Message"],
+Cell[58283, 1126, 128, 4, 70, "Message"],
+Cell[58414, 1132, 128, 4, 70, "Message"],
+Cell[58545, 1138, 124, 4, 70, "Message"],
+Cell[58672, 1144, 124, 4, 70, "Message"],
+Cell[58799, 1150, 131, 4, 70, "Message"],
+Cell[58933, 1156, 131, 4, 70, "Message"],
+Cell[59067, 1162, 133, 4, 70, "Message"]
+}, Closed]],
+Cell[59212, 1168, 70, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59314, 1174, 54, 0, 70, "Input"],
+Cell[59371, 1176, 869, 30, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60272, 1208, 39, 0, 70, "Input"],
+Cell[60314, 1210, 864, 30, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61210, 1242, 37, 0, 70, "Input"],
+Cell[61250, 1244, 835, 30, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62117, 1276, 38, 0, 70, "Input"],
+Cell[62158, 1278, 118, 4, 70, "Message"],
+Cell[62279, 1284, 120, 4, 70, "Message"],
+Cell[62402, 1290, 120, 4, 70, "Message"],
+Cell[62525, 1296, 124, 4, 70, "Message"],
+Cell[62652, 1302, 70, 4, 70, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[62754, 1308, 48, 0, 70, "Input"],
+Cell[62805, 1310, 1183, 46, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64020, 1358, 239, 11, 70, "Input"],
+Cell[64262, 1371, 128, 4, 70, "Output"],
+Cell[64393, 1377, 122, 4, 70, "Output"],
+Cell[64518, 1383, 58, 4, 70, "Output"],
+Cell[64579, 1389, 58, 4, 70, "Output"],
+Cell[64640, 1395, 85, 4, 70, "Output"],
+Cell[64728, 1401, 85, 4, 70, "Output"],
+Cell[64816, 1407, 89, 4, 70, "Output"],
+Cell[64908, 1413, 81, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65021, 1419, 27, 0, 70, "Input"],
+Cell[65051, 1421, 84, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65167, 1427, 48, 0, 70, "Input"],
+Cell[65218, 1429, 371, 14, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65621, 1445, 64, 0, 70, "Input"],
+Cell[65688, 1447, 83, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65803, 1453, 73, 0, 70, "Input"],
+Cell[65879, 1455, 6540, 617, 70, "Graphics"],
+Cell[72422, 2074, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72536, 2080, 74, 0, 70, "Input"],
+Cell[72613, 2082, 5908, 518, 70, "Graphics"],
+Cell[78524, 2602, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78638, 2608, 106, 5, 70, "Input"],
+Cell[78747, 2615, 8151, 675, 70, "Graphics"],
+Cell[86901, 3292, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87015, 3298, 198, 6, 70, "Input"],
+Cell[87216, 3306, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87330, 3312, 157, 6, 70, "Input"],
+Cell[87490, 3320, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87604, 3326, 37, 0, 70, "Input"],
+Cell[87644, 3328, 1953, 74, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[89629, 3404, 160, 6, 70, "Input"],
+Cell[89792, 3412, 10401, 842, 70, "Graphics"],
+Cell[100196, 4256, 82, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[100310, 4262, 37, 0, 70, "Input"],
+Cell[100350, 4264, 3359, 132, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103741, 4398, 192, 6, 70, "Input"],
+Cell[103936, 4406, 14069, 1153, 70, "Graphics"],
+Cell[118008, 5561, 82, 4, 70, "Output"]
+}, Open  ]]
+}
+]
+*)

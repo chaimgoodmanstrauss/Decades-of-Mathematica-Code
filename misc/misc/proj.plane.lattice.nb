@@ -1,0 +1,319 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='%s' *)
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       131,          6]
+NotebookDataLength[      7397,        313]
+NotebookOptionsPosition[      5599,        242]
+NotebookOutlinePosition[      6158,        269]
+CellTagsIndexPosition[      6115,        266]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+
+Cell[" ", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[CellGroupData[{Cell["\<\
+Clear[u,v,r,a,b,c,theta]
+Spher= {Cos[u]Sin[v],  Cos[u]Cos[v],Sin[u]}
+Cir = {r Cos[theta]+a, r Sin[theta]+b, c}
+NCir ={r Cos[-theta]-a, r Sin[-theta]-b, -c}
+Norm[vect_]:=Sqrt[vect.vect]
+
+\
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{Cos[u]*Sin[v], Cos[u]*Cos[v], Sin[u]}\
+\>", "\<\
+{Cos[u] Sin[v], Cos[u] Cos[v], Sin[u]}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{a + r*Cos[theta], b + r*Sin[theta], c}\
+\>", "\<\
+{a + r Cos[theta], b + r Sin[theta], c}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{-a + r*Cos[theta], -b - r*Sin[theta], -c}\
+\>", "\<\
+{-a + r Cos[theta], -b - r Sin[theta], -c}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell["\<\
+Rotation taking \"top\" w.r.t to z to \"bottom\", respecting rt hand rule\
+\>", "Text",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[CellGroupData[{Cell["Rot={ {-1,0,0},{0,1,0},{0,0,-1}}", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{{-1, 0, 0}, {0, 1, 0}, {0, 0, -1}}\
+\>", "\<\
+{{-1, 0, 0}, {0, 1, 0}, {0, 0, -1}}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell[CellGroupData[{Cell["Lattice points in a disk of radius R", "Text",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell["\<\
+Gaussians[R_]:= (RR=R^2; rr=Round[R];
+Join @@ Join @@
+Table[
+
+If[ a^2+b^2<=RR, {{a,b}},{}],{a,-rr,rr},{b,-rr,rr}])
+
+\
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+<<Geomview.m 
+
+SetOptions[Geomview, DisplayHost -> \"strauss@voronoi\" ]
+\
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell["\<\
+ -- Geomview graphics initialized -- 
+Geomview.m: graphics will display remotely on 
+ 
+  strauss@quasifuchs.geom.umn.edu
+To change this, see DisplayHost in Options[Geomview].\
+\>", "Print",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{DisplayHost -> \"strauss@voronoi\", MachType -> \"sgi\", 
+ 
+  XDisplay -> \":0\", GeomviewCommand -> \"geomview\"}\
+\>", "\<\
+{DisplayHost -> strauss@voronoi, MachType -> sgi, 
+ 
+  XDisplay -> :0, GeomviewCommand -> geomview}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell["<<Graphics/ParametricPlot3D.m", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[CellGroupData[{Cell["\<\
+c=1;Clear[r,theta,a,b];
+ParametricPlot3D[ Evaluate[GG=Gaussians[10];
+ 
+
+Join @@ Table[a=GG[[k,1]];b=GG[[k,2]];
+CC=N[Cir];NN=CC/Norm[CC];
+{NN,Rot.NN},{k,1,Length[GG]}]
+]
+,
+\t\t\t{r,0,.5},{theta,0,2 Pi},
+\t\t\tPlotPoints->{3,16}] \
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics3D[\"<<>>\"]\
+\>", "\<\
+-Graphics3D-\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+Clear[a,b,theta,bb]
+Hyp={Sinh[theta]+a,Cosh[theta]+b+bb,1}
+NHyp={Sinh[-theta]+a,Cosh[-theta]+b+bb,-1}
+\
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{a + Sinh[theta], b + bb + Cosh[theta], 1}\
+\>", "\<\
+{a + Sinh[theta], b + bb + Cosh[theta], 1}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+{a - Sinh[theta], b + bb + Cosh[theta], -1}\
+\>", "\<\
+{a - Sinh[theta], b + bb + Cosh[theta], -1}\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+c=1;Clear[r,theta,a,b];
+ParametricPlot3D[ Evaluate[
+ 
+
+Join @@ Table[a=4;b=k;
+CC=N[Hyp];NN=CC/Norm[CC];NR=Rot.NN;
+
+{NN,-NN,NR,-NR},{k,-0,1}]
+]
+,
+\t\t\t{bb,0,.5},{theta,-3 Pi,3  Pi},
+\t\t\tPlotPoints->{2,300}] \
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics3D[\"<<>>\"]\
+\>", "\<\
+-Graphics3D-\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell[CellGroupData[{Cell["\<\
+c=1;Clear[r,theta,a,b];
+ParametricPlot3D[ Evaluate[
+ 
+
+Join @@ Table[a=5;b=2;
+CC=N[Cir];NN=Cir/Norm[Cir];r=k+bb;
+NCC=N[NCir];NNN=NCC/Norm[NCC];
+{NN,NNN},{k,0,10}]
+]
+,
+\t\t\t{bb,0,.5},{theta,0 Pi,2Pi },
+\t\t\tPlotPoints->{2,140}] \
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics3D[\"<<>>\"]\
+\>", "\<\
+-Graphics3D-\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell["Stereo[vect_]:=(zz=vect[[3]]-1;{vect[[1]],vect[[2]]}/zz)", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell["", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[CellGroupData[{Cell["\<\
+Clear[r,theta,a,b,u,v];
+R={{1,0,0},
+\t{0,Cos[.3Pi],Sin[.3Pi]},
+\t{0,-Sin[.3Pi],Cos[.3Pi]}}//N;
+ParametricPlot3D[ Evaluate[
+ 
+Join @@ 
+ 
+
+Table[u=rho+phi;CC=Join[N[Stereo[R.Spher]],{1}];
+{NN=CC/Norm[CC],-NN},
+{rho,-Pi/2,Pi/2-2Pi/22,4Pi/22}]]
+
+,
+\t\t\t{phi,0,2Pi/22},{v,0 Pi,2Pi },
+\t\t\tPlotPoints->{3,100},PlotRange->All] \
+\>", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}],
+
+Cell[OutputFormData["\<\
+Graphics3D[\"<<>>\"]\
+\>", "\<\
+-Graphics3D-\
+\>"], "Output",
+ ImageRegion->{{0., 1.}, {0., 1.}}]}, Open]],
+
+Cell["Spher= {Cos[u]Sin[v],  Cos[u]Cos[v],Sin[u]}", "Input",
+ ImageRegion->{{0., 1.}, {0., 1.}}]
+},
+WindowToolbars->{},
+Evaluator->"nonabel",
+CellGrouping->Manual,
+Evaluatable->False,
+CellHorizontalScrolling->False,
+PageBreakWithin->Automatic,
+ShowCellLabel->True,
+ShowCellTags->False,
+AspectRatioFixed->True,
+RenderingOptions->{"ObjectDithering"->True,
+"RasterDithering"->False},
+FontSize->12,
+FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[556, 22, 54, 1, 70, "Input"],
+Cell[CellGroupData[{
+Cell[633, 25, 247, 9, 70, "Input"],
+Cell[883, 36, 166, 5, 70, "Output"],
+Cell[1052, 43, 168, 5, 70, "Output"],
+Cell[1223, 50, 174, 5, 70, "Output"]
+}, Open  ]],
+Cell[1409, 57, 133, 3, 70, "Text"],
+Cell[CellGroupData[{
+Cell[1565, 62, 85, 1, 70, "Input"],
+Cell[1653, 65, 160, 5, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1845, 72, 88, 1, 70, "Text"],
+Cell[1936, 75, 177, 9, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2145, 86, 134, 6, 70, "Input"],
+Cell[2282, 94, 235, 7, 70, "Print"],
+Cell[2520, 103, 304, 9, 70, "Output"]
+}, Open  ]],
+Cell[2836, 114, 82, 1, 70, "Input"],
+Cell[CellGroupData[{
+Cell[2941, 117, 289, 13, 70, "Input"],
+Cell[3233, 132, 122, 5, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3387, 139, 163, 6, 70, "Input"],
+Cell[3553, 147, 174, 5, 70, "Output"],
+Cell[3730, 154, 176, 5, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3938, 161, 270, 14, 70, "Input"],
+Cell[4211, 177, 122, 5, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4365, 184, 290, 14, 70, "Input"],
+Cell[4658, 200, 122, 5, 70, "Output"]
+}, Open  ]],
+Cell[4792, 207, 109, 1, 70, "Input"],
+Cell[4904, 210, 53, 1, 70, "Input"],
+Cell[CellGroupData[{
+Cell[4980, 213, 383, 18, 70, "Input"],
+Cell[5366, 233, 122, 5, 70, "Output"]
+}, Open  ]],
+Cell[5500, 240, 96, 1, 70, "Input"]
+}
+]
+*)

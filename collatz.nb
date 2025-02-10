@@ -1,0 +1,748 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     21567,        739]
+NotebookOptionsPosition[     16365,        585]
+NotebookOutlinePosition[     16905,        604]
+CellTagsIndexPosition[     16862,        601]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Collatz", "[", "n_", "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"EvenQ", "[", "n", "]"}], ",", 
+     RowBox[{"n", "/", "2"}], ",", 
+     RowBox[{
+      RowBox[{"3", "n"}], "+", "1"}]}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.39332481738476*^9, 3.393324818759983*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Collatz", "[", "1", "]"}], "=", "1"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DoCollatz", "[", "n_", "]"}], ":=", "\n", "\t\t\t", "\n", "\t\t\t",
+   
+  RowBox[{
+   RowBox[{"FixedPointList", "[", 
+    RowBox[{"Collatz", ",", "n"}], "]"}], "//", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Print", "[", 
+       RowBox[{"Length", "[", "#", "]"}], "]"}], ";", "#"}], ")"}], 
+    "&"}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DoCollatz", "[", "4", "]"}]], "Input"],
+
+Cell[BoxData["4"], "Print"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "2", ",", "1", ",", "1"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"DoCollatz", "[", "n", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "100"}], "}"}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["2"], "Print"],
+
+Cell[BoxData["3"], "Print"],
+
+Cell[BoxData["9"], "Print"],
+
+Cell[BoxData["4"], "Print"],
+
+Cell[BoxData["7"], "Print"],
+
+Cell[BoxData["10"], "Print"],
+
+Cell[BoxData["18"], "Print"],
+
+Cell[BoxData["5"], "Print"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData["8"], "Print"],
+
+Cell[BoxData["16"], "Print"],
+
+Cell[BoxData["11"], "Print"],
+
+Cell[BoxData["11"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["6"], "Print"],
+
+Cell[BoxData["14"], "Print"],
+
+Cell[BoxData["22"], "Print"],
+
+Cell[BoxData["22"], "Print"],
+
+Cell[BoxData["9"], "Print"],
+
+Cell[BoxData["9"], "Print"],
+
+Cell[BoxData["17"], "Print"],
+
+Cell[BoxData["17"], "Print"],
+
+Cell[BoxData["12"], "Print"],
+
+Cell[BoxData["25"], "Print"],
+
+Cell[BoxData["12"], "Print"],
+
+Cell[BoxData["113"], "Print"],
+
+Cell[BoxData["20"], "Print"],
+
+Cell[BoxData["20"], "Print"],
+
+Cell[BoxData["20"], "Print"],
+
+Cell[BoxData["108"], "Print"],
+
+Cell[BoxData["7"], "Print"],
+
+Cell[BoxData["28"], "Print"],
+
+Cell[BoxData["15"], "Print"],
+
+Cell[BoxData["15"], "Print"],
+
+Cell[BoxData["23"], "Print"],
+
+Cell[BoxData["23"], "Print"],
+
+Cell[BoxData["23"], "Print"],
+
+Cell[BoxData["36"], "Print"],
+
+Cell[BoxData["10"], "Print"],
+
+Cell[BoxData["111"], "Print"],
+
+Cell[BoxData["10"], "Print"],
+
+Cell[BoxData["31"], "Print"],
+
+Cell[BoxData["18"], "Print"],
+
+Cell[BoxData["18"], "Print"],
+
+Cell[BoxData["18"], "Print"],
+
+Cell[BoxData["106"], "Print"],
+
+Cell[BoxData["13"], "Print"],
+
+Cell[BoxData["26"], "Print"],
+
+Cell[BoxData["26"], "Print"],
+
+Cell[BoxData["26"], "Print"],
+
+Cell[BoxData["13"], "Print"],
+
+Cell[BoxData["13"], "Print"],
+
+Cell[BoxData["114"], "Print"],
+
+Cell[BoxData["114"], "Print"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData["34"], "Print"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData["34"], "Print"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData["109"], "Print"],
+
+Cell[BoxData["109"], "Print"],
+
+Cell[BoxData["8"], "Print"],
+
+Cell[BoxData["29"], "Print"],
+
+Cell[BoxData["29"], "Print"],
+
+Cell[BoxData["29"], "Print"],
+
+Cell[BoxData["16"], "Print"],
+
+Cell[BoxData["16"], "Print"],
+
+Cell[BoxData["16"], "Print"],
+
+Cell[BoxData["104"], "Print"],
+
+Cell[BoxData["24"], "Print"],
+
+Cell[BoxData["117"], "Print"],
+
+Cell[BoxData["24"], "Print"],
+
+Cell[BoxData["16"], "Print"],
+
+Cell[BoxData["24"], "Print"],
+
+Cell[BoxData["24"], "Print"],
+
+Cell[BoxData["37"], "Print"],
+
+Cell[BoxData["37"], "Print"],
+
+Cell[BoxData["11"], "Print"],
+
+Cell[BoxData["24"], "Print"],
+
+Cell[BoxData["112"], "Print"],
+
+Cell[BoxData["112"], "Print"],
+
+Cell[BoxData["11"], "Print"],
+
+Cell[BoxData["11"], "Print"],
+
+Cell[BoxData["32"], "Print"],
+
+Cell[BoxData["32"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["32"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["94"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["19"], "Print"],
+
+Cell[BoxData["107"], "Print"],
+
+Cell[BoxData["107"], "Print"],
+
+Cell[BoxData["14"], "Print"],
+
+Cell[BoxData["120"], "Print"],
+
+Cell[BoxData["27"], "Print"],
+
+Cell[BoxData["27"], "Print"],
+
+Cell[BoxData["27"], "Print"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2", ",", "3", ",", "9", ",", "4", ",", "7", ",", "10", ",", "18", ",", "5",
+    ",", "21", ",", "8", ",", "16", ",", "11", ",", "11", ",", "19", ",", 
+   "19", ",", "6", ",", "14", ",", "22", ",", "22", ",", "9", ",", "9", ",", 
+   "17", ",", "17", ",", "12", ",", "25", ",", "12", ",", "113", ",", "20", 
+   ",", "20", ",", "20", ",", "108", ",", "7", ",", "28", ",", "15", ",", 
+   "15", ",", "23", ",", "23", ",", "23", ",", "36", ",", "10", ",", "111", 
+   ",", "10", ",", "31", ",", "18", ",", "18", ",", "18", ",", "106", ",", 
+   "13", ",", "26", ",", "26", ",", "26", ",", "13", ",", "13", ",", "114", 
+   ",", "114", ",", "21", ",", "34", ",", "21", ",", "34", ",", "21", ",", 
+   "21", ",", "109", ",", "109", ",", "8", ",", "29", ",", "29", ",", "29", 
+   ",", "16", ",", "16", ",", "16", ",", "104", ",", "24", ",", "117", ",", 
+   "24", ",", "16", ",", "24", ",", "24", ",", "37", ",", "37", ",", "11", 
+   ",", "24", ",", "112", ",", "112", ",", "11", ",", "11", ",", "32", ",", 
+   "32", ",", "19", ",", "32", ",", "19", ",", "94", ",", "19", ",", "19", 
+   ",", "107", ",", "107", ",", "14", ",", "120", ",", "27", ",", "27", ",", 
+   "27"}], "}"}]], "Output"]
+}, Closed]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ReverseCollatz", "[", "n_", "]"}], ":=", "\n", "\t", 
+   RowBox[{"Switch", "[", 
+    RowBox[{
+     RowBox[{"Mod", "[", 
+      RowBox[{"n", ",", "6"}], "]"}], ",", "\n", "\t\t", "0", ",", "n", ",", 
+     "\n", "\t\t", "1", ",", 
+     RowBox[{"2", "n"}], ",", "\n", "\t\t", "2", ",", 
+     RowBox[{"2", "n"}], ",", "\n", "\t\t", "3", ",", "n", ",", "\n", "\t\t", 
+     "4", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", "-", "1"}], ")"}], "/", "3"}], ",", "\n", "\t\t", "5", 
+     ",", 
+     RowBox[{"2", "n"}]}], "]"}]}], "\n", "\t", "\n"}], "\n", 
+ RowBox[{"\t"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FixedPointList", "[", 
+  RowBox[{"ReverseCollatz", ",", "976"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "976", ",", "325", ",", "650", ",", "1300", ",", "433", ",", "866", ",", 
+   "1732", ",", "577", ",", "1154", ",", "2308", ",", "769", ",", "1538", ",",
+    "3076", ",", "1025", ",", "2050", ",", "683", ",", "1366", ",", "455", 
+   ",", "910", ",", "303", ",", "303"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DoCollatz", "[", "9", "]"}]], "Input"],
+
+Cell[BoxData["21"], "Print"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "9", ",", "28", ",", "14", ",", "7", ",", "22", ",", "11", ",", "34", ",", 
+   "17", ",", "52", ",", "26", ",", "13", ",", "40", ",", "20", ",", "10", 
+   ",", "5", ",", "16", ",", "8", ",", "4", ",", "2", ",", "1", ",", "1"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Collatz", "[", "1", "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Collatz", "[", "n_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Collatz", "[", "n", "]"}], "=", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"EvenQ", "[", "n", "]"}], ",", 
+       RowBox[{"n", "/", "2"}], ",", 
+       RowBox[{
+        RowBox[{"3", "n"}], "+", "1"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CountCollatz", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "m_"}], "}"}], "]"}], ":=", "m"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CountCollatz", "[", 
+   RowBox[{"{", 
+    RowBox[{"n_", ",", "m_"}], "}"}], "]"}], ":=", 
+  RowBox[{"CountCollatz", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Collatz", "[", "n", "]"}], ",", 
+     RowBox[{"m", "+", "1"}]}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.393324884472067*^9, 3.3933250199624434`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountCollatz", "[", 
+  RowBox[{"{", 
+   RowBox[{"27", ",", "0"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.393324996205291*^9, 3.393325009101066*^9}}],
+
+Cell[BoxData["111"], "Output",
+ CellChangeTimes->{{3.393325002454886*^9, 3.39332502342688*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"CountCollatz", "[", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "0"}], "}"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "2", ",", "20000"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.393325048422306*^9, 3.393325126325878*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   PanelBox[
+    TagBox[GridBox[{
+       {
+        StyleBox[
+         StyleBox[
+          DynamicBox[ToBoxes[
+            FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+            StandardForm],
+           ImageSizeCache->{305.625, {3., 9.}}],
+          StripOnInput->False,
+          DynamicUpdating->True], "Panel",
+         StripOnInput->False,
+         FontSize->1 + Inherited,
+         Background->None]},
+       {
+        ItemBox[
+         TagBox[
+          RowBox[{"{", 
+           RowBox[{
+           "1", ",", "7", ",", "2", ",", "5", ",", "8", ",", "16", ",", "3", 
+            ",", "19", ",", "6", ",", "14", ",", "9", ",", "9", ",", "17", 
+            ",", "17", ",", "4", ",", "12", ",", "20", ",", "20", ",", "7", 
+            ",", "7", ",", "15", ",", "15", ",", "10", ",", "23", ",", "10", 
+            ",", "111", ",", "18", ",", "18", ",", "18", ",", "106", ",", "5",
+             ",", "26", ",", "13", ",", "13", ",", "21", ",", "21", ",", "21",
+             ",", "34", ",", "8", ",", "109", ",", "8", ",", "29", ",", "16", 
+            ",", "16", ",", "16", ",", "104", ",", "11", ",", "24", ",", "24",
+             ",", "24", ",", "11", ",", "11", ",", "112", ",", "112", ",", 
+            "19", ",", "32", ",", "19", ",", "32", ",", "19", ",", "19", ",", 
+            "107", ",", "107", ",", "6", ",", "27", ",", "27", ",", "27", ",",
+             "14", ",", "14", ",", 
+            RowBox[{"\[LeftSkeleton]", "19863", "\[RightSkeleton]"}], ",", 
+            "105", ",", "74", ",", "74", ",", "136", ",", "74", ",", "92", 
+            ",", "92", ",", "118", ",", "118", ",", "118", ",", "74", ",", 
+            "136", ",", "118", ",", "136", ",", "118", ",", "167", ",", "167",
+             ",", "167", ",", "211", ",", "136", ",", "136", ",", "43", ",", 
+            "43", ",", "136", ",", "136", ",", "74", ",", "74", ",", "74", 
+            ",", "74", ",", "74", ",", "74", ",", "74", ",", "74", ",", "167",
+             ",", "167", ",", "43", ",", "211", ",", "92", ",", "92", ",", 
+            "167", ",", "167", ",", "167", ",", "167", ",", "92", ",", "167", 
+            ",", "92", ",", "167", ",", "92", ",", "92", ",", "167", ",", 
+            "167", ",", "180", ",", "92", ",", "74", ",", "74", ",", "180", 
+            ",", "180", ",", "66", ",", "66", ",", "180", ",", "66", ",", 
+            "180", ",", "66", ",", "92", ",", "92", ",", "92", ",", "66", ",",
+             "30"}], "}"}],
+          Short[#, 5]& ],
+         Background->GrayLevel[1],
+         BaseStyle->{Deployed -> False},
+         Frame->True,
+         FrameStyle->GrayLevel[0, 0.2],
+         StripOnInput->False]},
+       {
+        RowBox[{
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+              StandardForm],
+             ImageSizeCache->{54.375, {1., 9.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->Automatic,
+          ButtonFrame->"DialogBox",
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 18, 22238375392963726031, 5/2],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+              StandardForm],
+             ImageSizeCache->{58.125, {1., 9.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->Automatic,
+          ButtonFrame->"DialogBox",
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 18, 22238375392963726031, 5 2],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+              StandardForm],
+             ImageSizeCache->{90.8125, {3., 9.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->Automatic,
+          ButtonFrame->"DialogBox",
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 18, 22238375392963726031, Infinity],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+              StandardForm],
+             ImageSizeCache->{81., {1., 9.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->Automatic,
+          ButtonFrame->"DialogBox",
+          ButtonFunction:>FrontEndExecute[{
+             FrontEnd`SetOptions[
+             FrontEnd`$FrontEnd, 
+              FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+             FrontEnd`FrontEndToken["PreferencesDialog"]}],
+          Evaluator->None,
+          Method->"Preemptive"]}]}
+      },
+      ColumnsEqual->False,
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxDividers->{
+       "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[1.2]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}},
+      RowsEqual->False],
+     "Column"],
+    DefaultBaseStyle->{},
+    FrameMargins->5],
+   Deployed->True,
+   StripOnInput->False],
+  Out[18]]], "Output",
+ CellChangeTimes->{{3.3933250812648153`*^9, 3.3933250970386543`*^9}, 
+   3.393325132748033*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Max", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.393325099284665*^9, 3.393325104552618*^9}}],
+
+Cell[BoxData["278"], "Output",
+ CellChangeTimes->{3.393325105092929*^9, 3.3933251371014013`*^9}]
+}, Open  ]]
+},
+WindowSize->{959, 878},
+WindowMargins->{{200, Automatic}, {Automatic, 11}},
+MacintoshSystemPageSetup -> \
+"00<0001804P000000]P2:?oQon82n@960dL5:0?l0080001804P000000]P2:001\n\
+0000I00000400`<300000BL?00400@0000000000000006P801T1T00000000000\n\
+00000000000000000000000000000000",
+FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 278, 9, 27, "Input"],
+Cell[849, 32, 91, 1, 27, "Input"],
+Cell[943, 35, 102, 3, 27, "Input"],
+Cell[1048, 40, 368, 12, 58, "Input"],
+Cell[CellGroupData[{
+Cell[1441, 56, 62, 1, 27, "Input"],
+Cell[1506, 59, 27, 0, 20, "Print"],
+Cell[1536, 61, 93, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1666, 68, 214, 6, 27, "Input"],
+Cell[CellGroupData[{
+Cell[1905, 78, 27, 0, 20, "Print"],
+Cell[1935, 80, 27, 0, 20, "Print"],
+Cell[1965, 82, 27, 0, 20, "Print"],
+Cell[1995, 84, 27, 0, 20, "Print"],
+Cell[2025, 86, 27, 0, 20, "Print"],
+Cell[2055, 88, 28, 0, 20, "Print"],
+Cell[2086, 90, 28, 0, 20, "Print"],
+Cell[2117, 92, 27, 0, 20, "Print"],
+Cell[2147, 94, 28, 0, 20, "Print"],
+Cell[2178, 96, 27, 0, 20, "Print"],
+Cell[2208, 98, 28, 0, 20, "Print"],
+Cell[2239, 100, 28, 0, 20, "Print"],
+Cell[2270, 102, 28, 0, 20, "Print"],
+Cell[2301, 104, 28, 0, 20, "Print"],
+Cell[2332, 106, 28, 0, 20, "Print"],
+Cell[2363, 108, 27, 0, 20, "Print"],
+Cell[2393, 110, 28, 0, 20, "Print"],
+Cell[2424, 112, 28, 0, 20, "Print"],
+Cell[2455, 114, 28, 0, 20, "Print"],
+Cell[2486, 116, 27, 0, 20, "Print"],
+Cell[2516, 118, 27, 0, 20, "Print"],
+Cell[2546, 120, 28, 0, 20, "Print"],
+Cell[2577, 122, 28, 0, 20, "Print"],
+Cell[2608, 124, 28, 0, 20, "Print"],
+Cell[2639, 126, 28, 0, 20, "Print"],
+Cell[2670, 128, 28, 0, 20, "Print"],
+Cell[2701, 130, 29, 0, 20, "Print"],
+Cell[2733, 132, 28, 0, 20, "Print"],
+Cell[2764, 134, 28, 0, 20, "Print"],
+Cell[2795, 136, 28, 0, 20, "Print"],
+Cell[2826, 138, 29, 0, 20, "Print"],
+Cell[2858, 140, 27, 0, 20, "Print"],
+Cell[2888, 142, 28, 0, 20, "Print"],
+Cell[2919, 144, 28, 0, 20, "Print"],
+Cell[2950, 146, 28, 0, 20, "Print"],
+Cell[2981, 148, 28, 0, 20, "Print"],
+Cell[3012, 150, 28, 0, 20, "Print"],
+Cell[3043, 152, 28, 0, 20, "Print"],
+Cell[3074, 154, 28, 0, 20, "Print"],
+Cell[3105, 156, 28, 0, 20, "Print"],
+Cell[3136, 158, 29, 0, 20, "Print"],
+Cell[3168, 160, 28, 0, 20, "Print"],
+Cell[3199, 162, 28, 0, 20, "Print"],
+Cell[3230, 164, 28, 0, 20, "Print"],
+Cell[3261, 166, 28, 0, 20, "Print"],
+Cell[3292, 168, 28, 0, 20, "Print"],
+Cell[3323, 170, 29, 0, 20, "Print"],
+Cell[3355, 172, 28, 0, 20, "Print"],
+Cell[3386, 174, 28, 0, 20, "Print"],
+Cell[3417, 176, 28, 0, 20, "Print"],
+Cell[3448, 178, 28, 0, 20, "Print"],
+Cell[3479, 180, 28, 0, 20, "Print"],
+Cell[3510, 182, 28, 0, 20, "Print"],
+Cell[3541, 184, 29, 0, 20, "Print"],
+Cell[3573, 186, 29, 0, 20, "Print"],
+Cell[3605, 188, 28, 0, 20, "Print"],
+Cell[3636, 190, 28, 0, 20, "Print"],
+Cell[3667, 192, 28, 0, 20, "Print"],
+Cell[3698, 194, 28, 0, 20, "Print"],
+Cell[3729, 196, 28, 0, 20, "Print"],
+Cell[3760, 198, 28, 0, 20, "Print"],
+Cell[3791, 200, 29, 0, 20, "Print"],
+Cell[3823, 202, 29, 0, 20, "Print"],
+Cell[3855, 204, 27, 0, 20, "Print"],
+Cell[3885, 206, 28, 0, 20, "Print"],
+Cell[3916, 208, 28, 0, 20, "Print"],
+Cell[3947, 210, 28, 0, 20, "Print"],
+Cell[3978, 212, 28, 0, 20, "Print"],
+Cell[4009, 214, 28, 0, 20, "Print"],
+Cell[4040, 216, 28, 0, 20, "Print"],
+Cell[4071, 218, 29, 0, 20, "Print"],
+Cell[4103, 220, 28, 0, 20, "Print"],
+Cell[4134, 222, 29, 0, 20, "Print"],
+Cell[4166, 224, 28, 0, 20, "Print"],
+Cell[4197, 226, 28, 0, 20, "Print"],
+Cell[4228, 228, 28, 0, 20, "Print"],
+Cell[4259, 230, 28, 0, 20, "Print"],
+Cell[4290, 232, 28, 0, 20, "Print"],
+Cell[4321, 234, 28, 0, 20, "Print"],
+Cell[4352, 236, 28, 0, 20, "Print"],
+Cell[4383, 238, 28, 0, 20, "Print"],
+Cell[4414, 240, 29, 0, 20, "Print"],
+Cell[4446, 242, 29, 0, 20, "Print"],
+Cell[4478, 244, 28, 0, 20, "Print"],
+Cell[4509, 246, 28, 0, 20, "Print"],
+Cell[4540, 248, 28, 0, 20, "Print"],
+Cell[4571, 250, 28, 0, 20, "Print"],
+Cell[4602, 252, 28, 0, 20, "Print"],
+Cell[4633, 254, 28, 0, 20, "Print"],
+Cell[4664, 256, 28, 0, 20, "Print"],
+Cell[4695, 258, 28, 0, 20, "Print"],
+Cell[4726, 260, 28, 0, 20, "Print"],
+Cell[4757, 262, 28, 0, 20, "Print"],
+Cell[4788, 264, 29, 0, 20, "Print"],
+Cell[4820, 266, 29, 0, 20, "Print"],
+Cell[4852, 268, 28, 0, 20, "Print"],
+Cell[4883, 270, 29, 0, 20, "Print"],
+Cell[4915, 272, 28, 0, 20, "Print"],
+Cell[4946, 274, 28, 0, 20, "Print"],
+Cell[4977, 276, 28, 0, 20, "Print"]
+}, Open  ]],
+Cell[5020, 279, 1219, 18, 73, "Output"]
+}, Closed]],
+Cell[6254, 300, 637, 17, 172, "Input"],
+Cell[CellGroupData[{
+Cell[6916, 321, 105, 2, 27, "Input"],
+Cell[7024, 325, 329, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7390, 336, 62, 1, 27, "Input"],
+Cell[7455, 339, 28, 0, 20, "Print"],
+Cell[7486, 341, 290, 6, 27, "Output"]
+}, Open  ]],
+Cell[7791, 350, 1025, 33, 88, "Input"],
+Cell[CellGroupData[{
+Cell[8841, 387, 179, 4, 27, "Input"],
+Cell[9023, 393, 95, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9155, 399, 301, 8, 27, "Input"],
+Cell[9459, 409, 6632, 163, 172, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16128, 577, 122, 2, 27, "Input"],
+Cell[16253, 581, 96, 1, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
