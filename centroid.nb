@@ -1,0 +1,155 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4677,        145]
+NotebookOptionsPosition[      4145,        129]
+NotebookOutlinePosition[      4540,        145]
+CellTagsIndexPosition[      4497,        142]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Allegedly, this is the centroid of a list of points, or perhaps the sheet \
+containing them (same by scaling symmetry for a convex body?)
+\
+\>", "Text",
+ CellChangeTimes->{{3.9511182867755003`*^9, 
+  3.951118334710896*^9}},ExpressionUUID->"704b9ccf-ae41-4055-abf8-\
+61755531023b"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "centroid", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"centroid", "[", 
+    RowBox[{"a_", "/;", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "a", "]"}], ">=", "3"}], " ", "&&", " ", 
+       RowBox[{"(", 
+        RowBox[{"And", "@@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Length", "[", "#", "]"}], "==", "2"}], "&"}], "/@", 
+           "a"}], ")"}]}], ")"}]}], ")"}]}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Plus", "@@", 
+      RowBox[{"(", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "+", 
+            RowBox[{"a", "[", 
+             RowBox[{"[", 
+              RowBox[{
+               RowBox[{"Mod", "[", 
+                RowBox[{"i", ",", 
+                 RowBox[{"Length", "[", "a", "]"}]}], "]"}], "+", "1"}], 
+              "]"}], "]"}]}], ")"}], 
+          RowBox[{"Det", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"a", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", 
+             RowBox[{"a", "[", 
+              RowBox[{"[", 
+               RowBox[{
+                RowBox[{"Mod", "[", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Length", "[", "a", "]"}]}], "]"}], "+", "1"}], 
+               "]"}], "]"}]}], "}"}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "]"}], ")"}]}], "/", 
+     "3"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"Plus", "@@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Det", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"a", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"Mod", "[", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "a", "]"}]}], "]"}], "+", "1"}], "]"}],
+             "]"}]}], "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "]"}]}], ")"}]}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9511184066955643`*^9, 3.951118411275456*^9}, 
+   3.9511185574694242`*^9, {3.951118604224008*^9, 3.951118742867859*^9}, {
+   3.951118787587035*^9, 3.951118814648477*^9}, {3.951118898162155*^9, 
+   3.95111891972038*^9}},
+ CellLabel->
+  "In[259]:=",ExpressionUUID->"d045b60e-6e9c-45c0-8c39-3274c36ef9ef"],
+
+Cell[BoxData[
+ RowBox[{"drawcentroid", "=", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Disk", "[", 
+         RowBox[{"#", ",", ".1"}], "]"}], "&"}], "/@", "#"}], ",", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{"centroid", "[", "#", "]"}], ",", ".2"}], "]"}]}], "}"}], 
+    "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{{3.951118819564259*^9, 
+  3.95111889001075*^9}},ExpressionUUID->"3781d16a-57b8-4cc4-b1e6-\
+dd589743e8d4"]
+},
+WindowSize->{808, 690},
+WindowMargins->{{20, Automatic}, {-169, Automatic}},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"377508e4-c08f-4a70-8eae-e6a38213a023"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 290, 7, 81, "Text",ExpressionUUID->"704b9ccf-ae41-4055-abf8-61755531023b"],
+Cell[851, 29, 2768, 80, 229, "Input",ExpressionUUID->"d045b60e-6e9c-45c0-8c39-3274c36ef9ef"],
+Cell[3622, 111, 519, 16, 30, "Input",ExpressionUUID->"3781d16a-57b8-4cc4-b1e6-dd589743e8d4"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
