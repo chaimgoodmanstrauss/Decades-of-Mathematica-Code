@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5702,        151]
+NotebookOptionsPosition[      5135,        133]
+NotebookOutlinePosition[      5530,        149]
+CellTagsIndexPosition[      5487,        146]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["a colorful mesh", "Text",
+ CellChangeTimes->{{3.954246664047345*^9, 
+  3.954246666788871*^9}},ExpressionUUID->"09c022db-b50f-47e2-9e70-\
+0ebc06f7b0c5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Thickness", "[", 
+       RowBox[{"thickness", " ", 
+        RowBox[{"nn", "/", "20"}]}], "]"}], ",", 
+      RowBox[{"Opacity", "[", ".6", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Hue", "[", "i", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"i", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1"}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "0", ",", "1", ",", 
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"nn", "-", "1"}], ")"}]}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Hue", "[", "i", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "i"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "i"}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "0", ",", "1", ",", 
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"nn", "-", "1"}], ")"}]}]}], "}"}]}], "]"}]}], "}"}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"nn", ",", "10", ",", "20", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"thickness", ",", ".05", ",", ".3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.954236257191571*^9, 3.954236417589622*^9}, {
+  3.954246672601303*^9, 3.954246732291181*^9}, {3.954246777331236*^9, 
+  3.954246831223494*^9}},
+ CellLabel->
+  "In[1637]:=",ExpressionUUID->"7b282144-0ed0-45bc-928d-7bc9be89d52f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`nn$$ = 10, $CellContext`thickness$$ = 
+    0.1555, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`nn$$], 10, 20, 1}, {
+      Hold[$CellContext`thickness$$], 0.05, 0.3}}, Typeset`size$$ = {
+    360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`nn$$ = 10, $CellContext`thickness$$ = 
+        0.05}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{
+         Thickness[$CellContext`thickness$$ ($CellContext`nn$$/20)], 
+         Opacity[0.6], 
+         Table[{
+           Hue[$CellContext`i], 
+           Line[{{$CellContext`i, 0}, {$CellContext`i, 1}}]}, {$CellContext`i,
+            0, 1, 1/($CellContext`nn$$ - 1)}], 
+         Table[{
+           Hue[$CellContext`i], 
+           Line[{{0, $CellContext`i}, {1, $CellContext`i}}]}, {$CellContext`i,
+            0, 1, 1/($CellContext`nn$$ - 1)}]}], 
+      "Specifications" :> {{$CellContext`nn$$, 10, 20, 
+         1}, {$CellContext`thickness$$, 0.05, 0.3}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{404., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9542363775849733`*^9, 3.9542364178532047`*^9}, 
+   3.9542467341157084`*^9, {3.9542467930269423`*^9, 3.9542468316070642`*^9}},
+ CellLabel->
+  "Out[1637]=",ExpressionUUID->"b96c7cef-0ed5-494d-b436-e8e029bdb701"]
+}, Open  ]]
+},
+WindowSize->{808, 805},
+WindowMargins->{{158, Automatic}, {-36, Automatic}},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fc7285bb-6088-4490-afc6-dbb8a432c9c5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 157, 3, 35, "Text",ExpressionUUID->"09c022db-b50f-47e2-9e70-0ebc06f7b0c5"],
+Cell[CellGroupData[{
+Cell[740, 27, 2093, 54, 199, "Input",ExpressionUUID->"7b282144-0ed0-45bc-928d-7bc9be89d52f"],
+Cell[2836, 83, 2283, 47, 535, "Output",ExpressionUUID->"b96c7cef-0ed5-494d-b436-e8e029bdb701"]
+}, Open  ]]
+}
+]
+*)
+
