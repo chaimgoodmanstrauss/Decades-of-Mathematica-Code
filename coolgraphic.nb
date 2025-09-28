@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   3646300,      63005]
-NotebookOptionsPosition[   3644113,      62962]
-NotebookOutlinePosition[   3644534,      62979]
-CellTagsIndexPosition[   3644491,      62976]
+NotebookDataLength[   3646287,      63005]
+NotebookOptionsPosition[   3644100,      62962]
+NotebookOutlinePosition[   3644521,      62979]
+CellTagsIndexPosition[   3644478,      62976]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60066,8 +60066,8 @@ gZxlp9r4KRpYzdz6xt5MAY2PtG+SNBr83/8Q+P//If8DYn65mw==
          "Meta" -> <|
          "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
           ParametricPlot, "GroupHighlight" -> False|>|>],
-      ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
-       4.503599627370496*^15, -4.503599627370496*^15}}]},
+      ImageSizeCache->{{505.08347389563187`, 
+       766.325600107794}, {-164.81561342956635`, -57.78541446135168}}]},
     Annotation[{{{{}, {}, 
         Annotation[{
           Directive[
@@ -63005,7 +63005,7 @@ Cell[1172015, 20326, 427925, 7562, 1129, "Output",ExpressionUUID->"41535354-e15f
 Cell[1599955, 27891, 4390, 115, 896, "Input",ExpressionUUID->"f5763512-c533-4842-9d67-d00793d4cbc9"],
 Cell[CellGroupData[{
 Cell[1604370, 28010, 4837, 139, 1287, "Input",ExpressionUUID->"7f6b3b92-d4a6-44e2-84ff-d1496dff6530"],
-Cell[1609210, 28151, 2034887, 34808, 1131, "Output",ExpressionUUID->"eadf644b-be42-475d-9f62-318e05ca489e"]
+Cell[1609210, 28151, 2034874, 34808, 1131, "Output",ExpressionUUID->"eadf644b-be42-475d-9f62-318e05ca489e"]
 }, Open  ]]
 }
 ]
